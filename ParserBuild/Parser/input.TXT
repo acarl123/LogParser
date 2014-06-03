@@ -1,0 +1,12 @@
+#If log files are in the same directory as parser.exe then use their direct name as shown below.
+#if log files are not in the same directory as parser.exe then use full extension e.g.
+#C:\workdir\IPEM_Timing_Proto\ipem_log.txt
+#C:\workdir\IPEM_Timing_Proto\txdlog.txt
+#C:\workdir\IPEM_Timing_Proto\manage_update_txdlog.txt
+#C:\workdir\IPEM_Timing_Proto\open_session_txdlog.txt
+#Log files need to be in format below. with or without full paths. Empty lines will be skipped. Any line that has a '#' in it will be skipped
+
+ipem_log.txt
+txdlog.txt
+manage_update_txdlog.txt
+open_session_txdlog.txt

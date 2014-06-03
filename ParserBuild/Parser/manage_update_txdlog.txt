@@ -1,0 +1,2195 @@
+INFO (    0.000): Teamcenter Integration for Pro/ENGINEER 9.1.1 Release Fri 02/14/2014
+INFO (    0.328): Creo Parametric 2.0 (M090 2013410)
+INFO (    0.406): Teamcenter <UNKNOWN VERSION>
+INFO (    0.406): {java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\obj\jre\bin, java.vm.version=11.3-b02, java.vm.vendor=Sun Microsystems Inc., java.vendor.url=http://java.sun.com/, path.separator=;, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, sun.java.launcher=SUN_STANDARD, user.country=US, sun.os.patch.level=Service Pack 1, java.vm.specification.name=Java Virtual Machine Specification, user.dir=C:\ipem_work, java.runtime.version=1.6.0_13-b03, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.endorsed.dirs=C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\obj\jre\lib\endorsed, os.arch=amd64, java.io.tmpdir=C:\Users\infodba\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Sun Microsystems Inc., user.variant=, os.name=Windows Vista, sun.jnu.encoding=Cp1252, java.library.path=C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\obj\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;;C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\obj\jre\bin;C:\Program Files\PTC\Creo 2.0\Parametric\bin;;C:\Tc91\Root\tccs\bin;C:\Tc91\Root\tccs\lib;C:\Tc91\Root\portal;C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\lib;C:\Program Files\Siemens\Translators\ProE;C:\PROGRA~1\PTC\MKSTOO~1\bin64;C:\PROGRA~1\PTC\MKSTOO~1\bin;C:\PROGRA~1\PTC\MKSTOO~1\bin\X11;C:\PROGRA~1\PTC\MKSTOO~1\mksnt;C:\oracle\product\11.2.0\db_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\UnixUtilities\usr\local\wbin;C:\UnixUtilites\bin;C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\deflib;C:\Program Files\PTC\Creo 2.0\Common Files\M090\libs\dfor\lib, TXD_USE_SOA=1, java.specification.name=Java Platform API Specification, java.class.version=50.0, sun.management.compiler=HotSpot 64-Bit Server Compiler, os.version=6.1, user.home=C:\Users\infodba, user.timezone=, java.awt.printerjob=sun.awt.windows.WPrinterJob, file.encoding=Cp1252, java.specification.version=1.6, java.class.path=;C:\ipem;C:\Tc91\Root\portal\plugins\configuration_8000.3.0;C:\Tc91\Root\portal\plugins\configuration_9000.0.0;C:\Tc91\Root\portal\plugins\configuration_9000.1.0;C:\Tc91\Root\portal\plugins\configuration_10000.1.0;;C:\ipem\ipemsync.jar;C:\Program Files\PTC\Creo 2.0\Common Files\M090\text\java\pfc.jar;C:\Tc91\Root\tccs\jar\fccjavaclientproxy.jar;C:\Tc91\Root\tccs\jar\fmsutil.jar;C:\Tc91\Root\tccs\jar\tcserverjavabinding.jar;C:\ipem\ipem_manifest.jar;C:\Program Files\PTC\Creo 2.0\Common Files\M090\text\java\pfc.jar, user.name=infodba, java.vm.specification.version=1.0, java.home=C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\obj\jre, sun.arch.data.model=64, user.language=en, java.specification.vendor=Sun Microsystems Inc., awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.6.0_13, java.ext.dirs=C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\obj\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, sun.boot.class.path=C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\obj\jre\lib\resources.jar;C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\obj\jre\lib\rt.jar;C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\obj\jre\lib\sunrsasign.jar;C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\obj\jre\lib\jsse.jar;C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\obj\jre\lib\jce.jar;C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\obj\jre\lib\charsets.jar;C:\Program Files\PTC\Creo 2.0\Common Files\M090\x86e_win64\obj\jre\classes, java.vendor=Sun Microsystems Inc., file.separator=\, java.vendor.url.bug=http://java.sun.com/cgi-bin/bugreport.cgi, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=windows, sun.cpu.isalist=amd64}
+DEBUG (    0.406): log.file = c:\ipem_work\txdlog.txt
+DEBUG (    0.406): pe.command = "C:\Program Files\PTC\Creo 2.0\Parametric\bin\parametric"
+DEBUG (    0.406): log.suppress = 300
+DEBUG (    0.406): log.enable = true
+DEBUG (    0.406): checkin.deferredrename.enable = false
+DEBUG (    0.858): Loaded DLL: C:\ipem\lib\x86e_win64\creo2\txdpe.dll
+DEBUG (    0.858): iPEM DLL for Pro/ENGINEER loaded
+DEBUG (    1.186): Teamcenter menu command for txd_iManUpBOMName disabled.
+DEBUG (    1.186): Teamcenter menu command for txd_iManUpAllBtnName disabled.
+DEBUG (    1.186): Teamcenter menu command for txd_iManUpAllCOBtnName disabled.
+DEBUG (    1.186): Teamcenter menu command for txd_iManUpBtnName disabled.
+DEBUG (    1.186): Teamcenter menu command for txd_iManUpDirBtnName disabled.
+DEBUG (    1.435): Teamcenter menu command for txd_iManCIAllCOBtnName disabled.
+DEBUG (    1.623): Teamcenter menu command for txd_iManCIBtnName disabled.
+DEBUG (    1.638): Teamcenter menu command for txd_iManNewBtnName disabled.
+DEBUG (    1.638): Menu installed
+LEVEL 4 (    2.044): PECheckOutActionListener title is: Insert Assembly Component
+LEVEL 4 (    2.044): PECheckOutActionListener in-session macro is: ~ Activate `file_open` `In Session`;~ Activate `file_open` `Inputname` `{cad_name,lower}.{cad_type,lower}`;
+LEVEL 4 (    2.044): PECheckOutActionListener in-session multi-model macro is: ~ Activate `file_open` `In Session`;~ Select `file_open` `Ph_list.Filelist` 1 `{cad_name,lower}.{cad_type,lower}`;
+LEVEL 4 (    2.044): PECheckOutActionListener in-directory macro is: ~ Update `file_open` `Inputname` `{cad_directory,escape}`;~ Activate `file_open` `Inputname`;~ Select `file_open` `Ph_list.Filelist` 1 `{top_generic_cad_name,lower}.{cad_type,lower}`;
+LEVEL 4 (    2.044): PECheckOutActionListener in-directory multi-model macro is: ~ Update `file_open` `Inputname` `{cad_directory,escape}`;~ Activate `file_open` `Inputname`;~ Select `file_open` `Ph_list.Filelist` 1 `{top_generic_cad_name,lower}.{cad_type,lower}`;
+LEVEL 4 (    2.044): PECheckOutActionListener prefix macro is: ~ Command `ProCmdCompAssem`;
+LEVEL 4 (    2.044): PECheckOutActionListener suffix macro is: null
+LEVEL 4 (    2.075): PECheckOutActionListener title is: Insert User Defined Feature
+LEVEL 4 (    2.075): PECheckOutActionListener in-session macro is: ~ Activate `file_open` `In Session`;~ Activate `file_open` `Inputname` `{cad_name,lower}.{cad_type,lower}`;
+LEVEL 4 (    2.075): PECheckOutActionListener in-session multi-model macro is: ~ Activate `file_open` `In Session`;~ Select `file_open` `Ph_list.Filelist` 1 `{cad_name,lower}.{cad_type,lower}`;
+LEVEL 4 (    2.075): PECheckOutActionListener in-directory macro is: ~ Update `file_open` `Inputname` `{cad_directory,escape}`;~ Activate `file_open` `Inputname`;~ Select `file_open` `Ph_list.Filelist` 1 `{top_generic_cad_name,lower}.{cad_type,lower}`;
+LEVEL 4 (    2.075): PECheckOutActionListener in-directory multi-model macro is: ~ Update `file_open` `Inputname` `{cad_directory,escape}`;~ Activate `file_open` `Inputname`;~ Select `file_open` `Ph_list.Filelist` 1 `{top_generic_cad_name,lower}.{cad_type,lower}`;
+LEVEL 4 (    2.075): PECheckOutActionListener prefix macro is: ~ Command `ProCmdUserDefined`;
+LEVEL 4 (    2.075): PECheckOutActionListener suffix macro is: null
+DEBUG (    2.153): Custom commands installed
+DEBUG (    2.169): Exiting MainSync.start
+INFO (   23.884): PERF: Teamcenter -> Open begins
+DEBUG (   23.884): Entering Operations.checkOut
+DEBUG (   23.884): Beginning PERF SUM
+DEBUG (   23.899): Setting Operation In Progress true
+DEBUG (   23.946): Auto-refresh set to true
+DEBUG (   23.946): Auto-refresh cache cleared, size 0
+DEBUG (   24.102): Entering SOARelationCache.clear
+DEBUG (   24.102): Exiting SOARelationCache.clear
+INFO (   24.102): PERF: SOA Call starts - refresh
+INFO (   24.102): PERF: SOA Call ends - refresh
+DEBUG (   24.102): OperationMonitor enabled
+DEBUG (   24.102): OperationMonitor started: com.transcendata.ipemsoa.Operations.lblCheckOut
+DEBUG (   24.305): Pausing PERF SUM
+DEBUG (   24.305): OperationMonitor disabled
+DEBUG (   35.241): Resuming PERF SUM
+DEBUG (   35.241): OperationMonitor enabled
+DEBUG (   35.241): OperationMonitor started: com.transcendata.cadpdm.soa.SOAConnectionImpl.msgLogin
+DEBUG (   36.052): Entering SOAConnectionImpl.newConnection
+DEBUG (   36.255): Exiting SOAConnectionImpl.newConnection
+DEBUG (   36.255): Teamcenter client Meta-cache disabled
+DEBUG (   38.298): Incrementing PERF SUM SOA count
+DEBUG (   38.298): ISWin7x64Tc91.67464.01.Anonymous.00001 - Service Request: Core-2008-06-Session:login
+DEBUG (   45.318): ISWin7x64Tc91.67464.01.Anonymous.00001 - Service Response: Core-2008-06-Session:login
+DEBUG (   45.474): Incrementing PERF SUM SOA count
+DEBUG (   45.474): ISWin7x64Tc91.67464.01.Anonymous.00001.01.infodba.00002 - Service Request: Core-2007-01-Session:getTCSessionInfo
+DEBUG (   45.490): ISWin7x64Tc91.67464.01.Anonymous.00001.01.infodba.00002 - Service Response: Core-2007-01-Session:getTCSessionInfo
+DEBUG (   45.973): Incrementing PERF SUM SOA count
+DEBUG (   45.973): ISWin7x64Tc91.67464.01.Anonymous.00001.01.infodba.00002.01.infodba.00003 - Service Request: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   46.597): ISWin7x64Tc91.67464.01.Anonymous.00001.01.infodba.00002.01.infodba.00003 - Service Response: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   47.268): Incrementing PERF SUM SOA count
+DEBUG (   47.268): ISWin7x64Tc91.67464.01.Anonymous.00001.01.infodba.00004 - Service Request: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   47.346): ISWin7x64Tc91.67464.01.Anonymous.00001.01.infodba.00004 - Service Response: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   47.377): Entering SOAConnectionImpl.processLoginResponse
+DEBUG (   47.471): Value of preference maxOperationBracketTime is:1200
+DEBUG (   47.471): Value of preference maxOperationBracketInactiveTime is:120
+DEBUG (   47.471): Incrementing PERF SUM SOA count
+DEBUG (   47.471): ISWin7x64Tc91.67464.01.infodba.00005 - Service Request: Core-2007-12-Session:setUserSessionState
+DEBUG (   47.471): ISWin7x64Tc91.67464.01.infodba.00005 - Service Response: Core-2007-12-Session:setUserSessionState
+DEBUG (   47.502): Incrementing PERF SUM SOA count
+DEBUG (   47.502): ISWin7x64Tc91.67464.01.infodba.00006 - Service Request: Core-2007-01-Session:getTCSessionInfo
+DEBUG (   47.518): ISWin7x64Tc91.67464.01.infodba.00006 - Service Response: Core-2007-01-Session:getTCSessionInfo
+INFO (   47.518): Teamcenter log:C:\Users\infodba\AppData\Local\Temp\tcserver.exe350d3c6.syslog
+INFO (   47.518): DEBUG (   47.518): Incrementing PERF SUM SOA count
+DEBUG (   47.518): ISWin7x64Tc91.67464.01.infodba.00007 - Service Request: Core-2007-01-Session:getTCSessionInfo
+DEBUG (   47.533): ISWin7x64Tc91.67464.01.infodba.00007 - Service Response: Core-2007-01-Session:getTCSessionInfo
+Teamcenter V9000.1.0.27_20140212.00
+DEBUG (   47.549): Incrementing PERF SUM SOA count
+DEBUG (   47.549): ISWin7x64Tc91.67464.01.infodba.00008 - Service Request: Core-2006-03-Session:getAvailableServices
+DEBUG (   48.001): ISWin7x64Tc91.67464.01.infodba.00008 - Service Response: Core-2006-03-Session:getAvailableServices
+DEBUG (   48.064): Deferred Rename Enabled on Open: true
+DEBUG (   48.064): Deferred Rename Enabled on Save: false
+DEBUG (   48.064): Deferred Rename Enabled by Pro/TOOLKIT: true
+DEBUG (   48.064): Setting property policy "ipem_attribute_policy" on the SOA Connection.
+DEBUG (   48.064): Incrementing PERF SUM SOA count
+DEBUG (   48.064): ISWin7x64Tc91.67464.01.infodba.00009 - Service Request: Core-2007-01-Session:setObjectPropertyPolicy
+DEBUG (   48.126): ISWin7x64Tc91.67464.01.infodba.00009 - Service Response: Core-2007-01-Session:setObjectPropertyPolicy
+DEBUG (   48.142): Entering SOAAttributeHelper.loadAttriteMappingsIntoSession
+DEBUG (   49.015): Incrementing PERF SUM SOA count
+DEBUG (   49.015): ISWin7x64Tc91.67464.01.infodba.00010 - Service Request: Cad-2007-01-DataManagement:getAllAttrMappings
+DEBUG (   49.156): ISWin7x64Tc91.67464.01.infodba.00010 - Service Response: Cad-2007-01-DataManagement:getAllAttrMappings
+DEBUG (   49.187): Incrementing PERF SUM SOA count
+DEBUG (   49.187): ISWin7x64Tc91.67464.01.infodba.00010.01.infodba.00011 - Service Request: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   49.218): ISWin7x64Tc91.67464.01.infodba.00010.01.infodba.00011 - Service Response: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   49.249): Mapping: "DB_PART_NO"
+DEBUG (   49.249):    item type:      
+DEBUG (   49.249):    dataset type:   
+DEBUG (   49.249):    property name:  item_id
+DEBUG (   49.249):    property type:  string
+DEBUG (   49.249): Mapping: "DB_PART_REV"
+DEBUG (   49.249):    item type:      
+DEBUG (   49.249):    dataset type:   
+DEBUG (   49.249):    property name:  item_revision_id
+DEBUG (   49.249):    property type:  string
+DEBUG (   49.249): Mapping: "DB_PART_TYPE"
+DEBUG (   49.249):    item type:      
+DEBUG (   49.249):    dataset type:   
+DEBUG (   49.249):    property name:  object_type
+DEBUG (   49.249):    property type:  string
+DEBUG (   49.249): Mapping: "DB_UNITS"
+DEBUG (   49.249):    item type:      
+DEBUG (   49.249):    dataset type:   
+DEBUG (   49.249):    property name:  symbol
+DEBUG (   49.249):    property type:  string
+DEBUG (   49.249): Mapping: "DB_PART_NAME"
+DEBUG (   49.249):    item type:      
+DEBUG (   49.249):    dataset type:   UGMASTER
+DEBUG (   49.249):    property name:  object_name
+DEBUG (   49.249):    property type:  string
+DEBUG (   49.249): Mapping: "DB_PART_DESC"
+DEBUG (   49.249):    item type:      
+DEBUG (   49.249):    dataset type:   UGMASTER
+DEBUG (   49.249):    property name:  object_desc
+DEBUG (   49.249):    property type:  string
+DEBUG (   49.249): Mapping: "DB_PART_NAME"
+DEBUG (   49.249):    item type:      
+DEBUG (   49.249):    dataset type:   CAESolution
+DEBUG (   49.249):    property name:  object_name
+DEBUG (   49.249):    property type:  string
+DEBUG (   49.249): Mapping: "DB_PART_DESC"
+DEBUG (   49.249):    item type:      
+DEBUG (   49.249):    dataset type:   CAESolution
+DEBUG (   49.249):    property name:  object_desc
+DEBUG (   49.249):    property type:  string
+DEBUG (   49.249): Mapping: "DB_PART_NAME"
+DEBUG (   49.249):    item type:      
+DEBUG (   49.249):    dataset type:   CAEMesh
+DEBUG (   49.249):    property name:  object_name
+DEBUG (   49.249):    property type:  string
+DEBUG (   49.249): Mapping: "DB_PART_DESC"
+DEBUG (   49.249):    item type:      
+DEBUG (   49.249):    dataset type:   CAEMesh
+DEBUG (   49.249):    property name:  object_desc
+DEBUG (   49.249):    property type:  string
+DEBUG (   49.249): Mapping: "DB_PART_NAME"
+DEBUG (   49.249):    item type:      
+DEBUG (   49.249):    dataset type:   CAEGeom
+DEBUG (   49.249):    property name:  object_name
+DEBUG (   49.249):    property type:  string
+DEBUG (   49.249): Mapping: "DB_PART_DESC"
+DEBUG (   49.249):    item type:      
+DEBUG (   49.249):    dataset type:   CAEGeom
+DEBUG (   49.249):    property name:  object_desc
+DEBUG (   49.249):    property type:  string
+DEBUG (   49.249): Mapping: "DB_PART_NAME"
+DEBUG (   49.249):    item type:      
+DEBUG (   49.265):    dataset type:   
+DEBUG (   49.265):    property name:  object_name
+DEBUG (   49.265):    property type:  string
+DEBUG (   49.265): Mapping: "DB_PART_DESC"
+DEBUG (   49.265):    item type:      
+DEBUG (   49.265):    dataset type:   
+DEBUG (   49.265):    property name:  object_desc
+DEBUG (   49.265):    property type:  string
+DEBUG (   49.265): Mapping: "DB_DATASET_ID"
+DEBUG (   49.265):    item type:      
+DEBUG (   49.265):    dataset type:   UGPART
+DEBUG (   49.265):    property name:  pubr_object_id
+DEBUG (   49.265):    property type:  string
+DEBUG (   49.265): Mapping: "DB_DATASET_REV"
+DEBUG (   49.265):    item type:      
+DEBUG (   49.265):    dataset type:   UGPART
+DEBUG (   49.265):    property name:  rev
+DEBUG (   49.265):    property type:  string
+DEBUG (   49.265): Mapping: "Description"
+DEBUG (   49.265):    item type:      
+DEBUG (   49.265):    dataset type:   ProAsm
+DEBUG (   49.265):    property name:  object_desc
+DEBUG (   49.265):    property type:  string
+DEBUG (   49.265): Mapping: "Description"
+DEBUG (   49.265):    item type:      
+DEBUG (   49.265):    dataset type:   ProDrw
+DEBUG (   49.265):    property name:  object_desc
+DEBUG (   49.265):    property type:  string
+DEBUG (   49.265): Mapping: "Description"
+DEBUG (   49.265):    item type:      
+DEBUG (   49.265):    dataset type:   ProPrt
+DEBUG (   49.265):    property name:  object_desc
+DEBUG (   49.265):    property type:  string
+DEBUG (   49.265): Exiting SOAAttributeHelper.loadAttriteMappingsIntoSession
+DEBUG (   49.265): Entering SOAPropertyDescriptorManager.loadCreateDescriptors
+DEBUG (   49.265): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (   49.281): Incrementing PERF SUM SOA count
+DEBUG (   49.281): ISWin7x64Tc91.67464.01.infodba.00012 - Service Request: Core-2007-01-Session:setObjectPropertyPolicy
+DEBUG (   49.281): ISWin7x64Tc91.67464.01.infodba.00012 - Service Response: Core-2007-01-Session:setObjectPropertyPolicy
+DEBUG (   49.281): Contents of map file C:\ipem\ipem.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data_def SYSTEM "ipem.dtd">
+<data_def>
+    <!--
+   Default mapping file for the Teamcenter Integration for Pro/ENGINEER.  
+   For a description of the contents of this file and how it may be customized 
+   for your site, please see the section titled "The Map File" in the Teamcenter 
+   Integration for Pro/ENGINEER User Guide.
+-->
+    <type_map>
+        <entity cad_type="ASM" pdm_type="ProAsm"/>
+        <entity cad_type="PRT" pdm_type="ProPrt"/>
+        <entity cad_type="DRW" pdm_type="ProDrw"/>
+        <entity cad_type="FRM" pdm_type="ProFrm"/>
+        <entity cad_type="SEC" pdm_type="ProSec"/>
+        <entity cad_type="LAY" pdm_type="ProLay"/>
+        <entity cad_type="DGM" pdm_type="ProDgm"/>
+        <entity cad_type="MFG" pdm_type="ProMfg"/>
+        <entity cad_type="MRK" pdm_type="ProMrk"/>
+        <entity cad_type="REP" pdm_type="ProRep"/>
+        <entity cad_type="GPH" pdm_type="ProGph"/>
+        <entity cad_type="JT" pdm_type="DirectModel"/>
+    </type_map>
+    <dataset_map>
+        <dataset allowed_item_types="Item" named_ref="AsmFile" pdm_type="ProAsm"/>
+        <dataset allowed_item_types="Item" named_ref="PrtFile" pdm_type="ProPrt"/>
+        <dataset allowed_item_types="Item" named_ref="DrwFile" pdm_type="ProDrw"/>
+        <dataset allowed_item_types="Item" named_ref="FrmFile" pdm_type="ProFrm"/>
+        <dataset allowed_item_types="Item" named_ref="SecFile" pdm_type="ProSec"/>
+        <dataset allowed_item_types="Item" named_ref="LayFile" pdm_type="ProLay"/>
+        <dataset allowed_item_types="Item" named_ref="DgmFile" pdm_type="ProDgm"/>
+        <dataset allowed_item_types="Item" named_ref="MfgFile" pdm_type="ProMfg"/>
+        <dataset allowed_item_types="Item" named_ref="MrkFile" pdm_type="ProMrk"/>
+        <dataset allowed_item_types="Item" named_ref="RepFile" pdm_type="ProRep"/>
+        <dataset allowed_item_types="Item" named_ref="GphFile" pdm_type="ProGph"/>
+        <dataset allowed_item_types="Item" named_ref="JTPART" pdm_type="DirectModel"/>
+    </dataset_map>
+    <template_map>
+        <template cad_type="PRT" path="{proe_dir}/templates/mmns_part_solid.prt"/>
+        <template cad_type="ASM" path="{proe_dir}/templates/mmns_asm_design.asm"/>
+        <template cad_type="DRW" path="{proe_dir}/templates/a1_drawing.drw"/>
+    </template_map>
+    <attribute_map cad_type="ASM:PRT:DRW">
+        <attribute>
+            <cad_name value="Description"/>
+            <pdm_name value="item_desc"/>
+            <default type="String">No Description in CAD</default>
+            <direction value="cadtopdm"/>
+        </attribute>
+    </attribute_map>
+    <auxiliary_file_map>
+        <auxiliary_file cad_type="PRT" direction="cadtopdm">
+            <!-- Uncomment the below if you want to give the user choice of saving the preview files -->
+            <!-- cadtopdm_control label="Save Preview Files"/ -->
+            <pdm_location named_ref="JPEG" pdm_type="ProPrt"/>
+            <file_name pattern="{cad_directory}/{cad_name,lower}prt.JPG"/>
+            <preview_command cmd="built_in {cad_directory}/{cad_name,lower}prt.JPG" ignore_status="true" phase="in_directory"/>
+        </auxiliary_file>
+        <auxiliary_file cad_type="ASM" direction="cadtopdm">
+            <pdm_location named_ref="JPEG" pdm_type="ProAsm"/>
+            <file_name pattern="{cad_directory}/{cad_name,lower}asm.JPG"/>
+            <preview_command cmd="built_in {cad_directory}/{cad_name,lower}asm.JPG" ignore_status="true" phase="in_directory"/>
+        </auxiliary_file>
+        <auxiliary_file cad_type="DRW" direction="cadtopdm">
+            <pdm_location named_ref="JPEG" pdm_type="ProDrw"/>
+            <file_name pattern="{cad_directory}/{cad_name,lower}d.jpg"/>
+            <preview_command cmd="built_in {cad_directory}/{cad_name,lower}d.jpg" ignore_status="true" phase="in_directory"/>
+        </auxiliary_file>
+        <auxiliary_file cad_type="ASM" direction="both">
+            <pdm_location named_ref="AccelFile"/>
+            <file_name pattern="{cad_name,lower}.xas"/>
+        </auxiliary_file>
+        <auxiliary_file cad_type="PRT" direction="both">
+            <pdm_location named_ref="AccelFile"/>
+            <file_name pattern="{cad_name,lower}.xpr"/>
+        </auxiliary_file>
+        <jt_file action="translate" cad_type="PRT"/>
+    </auxiliary_file_map>
+    <bom_map>
+        <bom_line child_type="ASM" parent_type="ASM" view_types="view"/>
+        <bom_line child_type="PRT" parent_type="ASM" view_types="view"/>
+        <bom_line child_type="JT" parent_type="ASM" view_types="view"/>
+    </bom_map>
+    <pe_commands>
+        <pe_menu adjacent_menu="txd_iManCOBtnName" menu="txd_iManInsertMenu" parent_menu="txd_iManMenu">
+            <open_command cad_type="ASM" dialog_title="Insert Assembly Component" menu_icon="txd_InsertComp.png" menu_item="txd_iManInsertBtn"/>
+            <open_command cad_type="ASM:PRT" dialog_title="Insert User Defined Feature" menu_icon="txd_InsertUDF.png" menu_item="txd_iManInsertUdfBtn"/>
+        </pe_menu>
+    </pe_commands>
+</data_def>
+DEBUG (   49.327): Entering walkTypeMap
+DEBUG (   49.327): Read cadValue ASM pdmValue ProAsm
+DEBUG (   49.327): Read cadValue PRT pdmValue ProPrt
+DEBUG (   49.327): Read cadValue DRW pdmValue ProDrw
+DEBUG (   49.327): Read cadValue FRM pdmValue ProFrm
+DEBUG (   49.327): Read cadValue SEC pdmValue ProSec
+DEBUG (   49.327): Read cadValue LAY pdmValue ProLay
+DEBUG (   49.327): Read cadValue DGM pdmValue ProDgm
+DEBUG (   49.327): Read cadValue MFG pdmValue ProMfg
+DEBUG (   49.327): Read cadValue MRK pdmValue ProMrk
+DEBUG (   49.327): Read cadValue REP pdmValue ProRep
+DEBUG (   49.327): Read cadValue GPH pdmValue ProGph
+DEBUG (   49.327): Read cadValue JT pdmValue DirectModel
+DEBUG (   49.327): Exiting walkTypeMap
+DEBUG (   49.343): Entering walkIManTypeMap
+DEBUG (   49.343): Exiting walkIManTypeMap
+DEBUG (   49.437): Entering walkBOMMap
+DEBUG (   49.437): Exiting walkBOMMap
+DEBUG (   49.468): Attributes for "ASM:PRT:DRW"...
+DEBUG (   49.468): Attribute CAD name: "Description"
+DEBUG (   49.468): Attribute PDM name: "item_desc"
+DEBUG (   49.530): Entering AbstractAttributeMapReader.createCADAttrInfoSOAAttrInfoMap
+DEBUG (   49.530): Entering SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.530): Entering SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.530): Sorting Attribute Definitions from Teamcenter based on CADTYPE
+DEBUG (   49.530): ASM :Description
+DEBUG (   49.530): DRW :Description
+DEBUG (   49.530): PRT :Description
+DEBUG (   49.530): Exiting SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.530): Exiting SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.530): 0 Mappings defined in XML file for CADType:MFG
+
+DEBUG (   49.530): 0 Mappings defined in Teamcenter Database for CADType:MFG
+
+DEBUG (   49.530): Entering SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.530): Entering SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.530): Exiting SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.530): Exiting SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.530): 0 Mappings defined in XML file for CADType:JT
+
+DEBUG (   49.530): 0 Mappings defined in Teamcenter Database for CADType:JT
+
+DEBUG (   49.530): Entering SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.530): Entering SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.530): Exiting SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.530): Exiting SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.530): 0 Mappings defined in XML file for CADType:LAY
+
+DEBUG (   49.530): 0 Mappings defined in Teamcenter Database for CADType:LAY
+
+DEBUG (   49.530): Entering SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.530): Entering SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.530): Exiting SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.530): Exiting SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.530): 0 Mappings defined in XML file for CADType:FRM
+
+DEBUG (   49.530): 0 Mappings defined in Teamcenter Database for CADType:FRM
+
+DEBUG (   49.530): Entering SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.530): Entering SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.530): Exiting SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.530): Exiting SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.530): 0 Mappings defined in XML file for CADType:GPH
+
+DEBUG (   49.530): 0 Mappings defined in Teamcenter Database for CADType:GPH
+
+DEBUG (   49.530): Entering SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.530): Entering SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.530): Exiting SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.530): Entering SOAOperationHandlerImpl.getPDMPropName
+DEBUG (   49.530): Exiting SOAOperationHandlerImpl.getPDMPropName
+DEBUG (   49.530): Exiting SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.561): 1 Mappings defined in XML file for CADType:PRT
+    XML MAPPING: CADName:PDMName=Description:Item.object_desc
+
+DEBUG (   49.561): 1 Mappings defined in Teamcenter Database for CADType:PRT
+    SOA CADName:PDMName=Description:Item.object_desc
+
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.561): 0 Mappings defined in XML file for CADType:DGM
+
+DEBUG (   49.561): 0 Mappings defined in Teamcenter Database for CADType:DGM
+
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.561): 0 Mappings defined in XML file for CADType:SEC
+
+DEBUG (   49.561): 0 Mappings defined in Teamcenter Database for CADType:SEC
+
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.561): 0 Mappings defined in XML file for CADType:REP
+
+DEBUG (   49.561): 0 Mappings defined in Teamcenter Database for CADType:REP
+
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.561): 0 Mappings defined in XML file for CADType:MRK
+
+DEBUG (   49.561): 0 Mappings defined in Teamcenter Database for CADType:MRK
+
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getPDMPropName
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getPDMPropName
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.561): 1 Mappings defined in XML file for CADType:ASM
+    XML MAPPING: CADName:PDMName=Description:Item.object_desc
+
+DEBUG (   49.561): 1 Mappings defined in Teamcenter Database for CADType:ASM
+    SOA CADName:PDMName=Description:Item.object_desc
+
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getCadAttrMappingDefinitions
+DEBUG (   49.561): Entering SOAOperationHandlerImpl.getPDMPropName
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getPDMPropName
+DEBUG (   49.561): Exiting SOAOperationHandlerImpl.getAttributeNames
+DEBUG (   49.561): 1 Mappings defined in XML file for CADType:DRW
+    XML MAPPING: CADName:PDMName=Description:Item.object_desc
+
+DEBUG (   49.561): 1 Mappings defined in Teamcenter Database for CADType:DRW
+    SOA CADName:PDMName=Description:Item.object_desc
+
+DEBUG (   49.561): Exiting AbstractAttributeMapReader.createCADAttrInfoSOAAttrInfoMap
+DEBUG (   49.561): Entering SOAAttributeHelper.getPropertyTypes
+DEBUG (   49.764): Incrementing PERF SUM SOA count
+DEBUG (   49.764): ISWin7x64Tc91.67464.01.infodba.00013 - Service Request: Core-2007-06-PropDescriptor:getAttachedPropDescs
+DEBUG (   49.764): ISWin7x64Tc91.67464.01.infodba.00013 - Service Response: Core-2007-06-PropDescriptor:getAttachedPropDescs
+DEBUG (   49.764): Property Name : Property Value Type=object_desc:8
+DEBUG (   49.764): Exiting SOAAttributeHelper.getPropertyTypes
+DEBUG (   51.652): Incrementing PERF SUM SOA count
+DEBUG (   51.652): ISWin7x64Tc91.67464.01.infodba.00014 - Service Request: Core-2010-04-DataManagement:getAvailableTypesWithDisplayNames
+DEBUG (   51.683): ISWin7x64Tc91.67464.01.infodba.00014 - Service Response: Core-2010-04-DataManagement:getAvailableTypesWithDisplayNames
+DEBUG (   51.699): Number of Item types obtained from Teamcenter: 13
+DEBUG (   51.699): Incrementing PERF SUM SOA count
+DEBUG (   51.699): ISWin7x64Tc91.67464.01.infodba.00015 - Service Request: Core-2008-06-PropDescriptor:getCreateDesc
+DEBUG (   51.870): ISWin7x64Tc91.67464.01.infodba.00015 - Service Response: Core-2008-06-PropDescriptor:getCreateDesc
+DEBUG (   51.995): Exiting SOAPropertyDescriptorManager.loadCreateDescriptors
+DEBUG (   51.995): Incrementing PERF SUM SOA count
+DEBUG (   51.995): ISWin7x64Tc91.67464.01.infodba.00016 - Service Request: Core-2007-06-Session:refreshPOMCachePerRequest
+DEBUG (   51.995): ISWin7x64Tc91.67464.01.infodba.00016 - Service Response: Core-2007-06-Session:refreshPOMCachePerRequest
+DEBUG (   52.011): Incrementing PERF SUM SOA count
+DEBUG (   52.011): ISWin7x64Tc91.67464.01.infodba.00017 - Service Request: Core-2006-03-Session:getAvailableServices
+DEBUG (   52.057): ISWin7x64Tc91.67464.01.infodba.00017 - Service Response: Core-2006-03-Session:getAvailableServices
+DEBUG (   52.205): Incrementing PERF SUM SOA count
+DEBUG (   52.205): ISWin7x64Tc91.67464.01.infodba.00018 - Service Request: Core-2008-03-Session:connect
+DEBUG (   52.608): ISWin7x64Tc91.67464.01.infodba.00018 - Service Response: Core-2008-03-Session:connect
+DEBUG (   52.611): Licenses: 24
+DEBUG (   52.611): Exiting SOAConnectionImpl.processLoginResponse
+DEBUG (   52.613): Incrementing PERF SUM SOA count
+DEBUG (   52.613): ISWin7x64Tc91.67464.01.infodba.00019 - Service Request: Core-2006-03-Session:getPreferences
+DEBUG (   52.618): ISWin7x64Tc91.67464.01.infodba.00019 - Service Response: Core-2006-03-Session:getPreferences
+DEBUG (   53.658): Incrementing PERF SUM SOA count
+DEBUG (   53.658): ISWin7x64Tc91.67464.01.infodba.00020 - Service Request: Cad-2007-01-StructureManagement:getRevisionRules
+DEBUG (   53.693): ISWin7x64Tc91.67464.01.infodba.00020 - Service Response: Cad-2007-01-StructureManagement:getRevisionRules
+DEBUG (   53.704): Incrementing PERF SUM SOA count
+DEBUG (   53.704): ISWin7x64Tc91.67464.01.infodba.00020.01.infodba.00021 - Service Request: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   53.777): ISWin7x64Tc91.67464.01.infodba.00020.01.infodba.00021 - Service Response: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   53.831): Connected to Teamcenter
+DEBUG (   53.832): Entering SOABracketHelper.openOuterBracket
+DEBUG (   53.832): Entering SOABracketHelper.init
+DEBUG (   53.832): Exiting SOABracketHelper.init
+DEBUG (   53.834): Incrementing PERF SUM SOA count
+DEBUG (   53.834): ISWin7x64Tc91.67464.01.infodba.00022 - Service Request: Core-2009-04-Session:startOperation
+DEBUG (   53.836): ISWin7x64Tc91.67464.01.infodba.00022 - Service Response: Core-2009-04-Session:startOperation
+DEBUG (   53.837): SOABracket Open (UID: null)
+DEBUG (   53.838): Exiting SOABracketHelper.openOuterBracket
+DEBUG (   53.838): Entering SOABracketHelper.openBracket
+DEBUG (   53.839): Incrementing PERF SUM SOA count
+DEBUG (   53.839): ISWin7x64Tc91.67464.01.infodba.00023 - Service Request: Core-2009-04-Session:startOperation
+DEBUG (   53.841): ISWin7x64Tc91.67464.01.infodba.00023 - Service Response: Core-2009-04-Session:startOperation
+DEBUG (   53.842): SOABracket Open (UID: 2)
+DEBUG (   53.842): Exiting SOABracketHelper.openBracket
+DEBUG (   53.847): Setting refresh flags for registry.
+DEBUG (   53.931): Filter named required is Required
+DEBUG (   53.931): Filter named include drawings is Include Drawings
+DEBUG (   53.931): Filter Required enabled
+DEBUG (   53.936): Entering SOABracketHelper.closeBracket
+DEBUG (   53.937): Incrementing PERF SUM SOA count
+DEBUG (   53.937): ISWin7x64Tc91.67464.01.infodba.00024 - Service Request: Core-2009-04-Session:stopOperation
+DEBUG (   53.941): ISWin7x64Tc91.67464.01.infodba.00024 - Service Response: Core-2009-04-Session:stopOperation
+DEBUG (   53.943): SOABracket Closed (UID: 2)
+DEBUG (   53.943): Resetting UID
+DEBUG (   53.943): Exiting SOABracketHelper.closeBracket
+DEBUG (   53.943): Displaying check-out GUI
+DEBUG (   53.943): OperationMonitor disabled
+INFO (   53.945): PERF: Getting Information for Dialog Title Bar - Begins
+DEBUG (   53.946): Incrementing PERF SUM SOA count
+DEBUG (   53.946): ISWin7x64Tc91.67464.01.infodba.00025 - Service Request: Core-2007-01-Session:getTCSessionInfo
+DEBUG (   53.974): ISWin7x64Tc91.67464.01.infodba.00025 - Service Response: Core-2007-01-Session:getTCSessionInfo
+INFO (   53.979): PERF: Getting Information for Dialog Title Bar - Ends
+DEBUG (   54.148): Entering SOABracketHelper.openBracket
+DEBUG (   54.149): Incrementing PERF SUM SOA count
+DEBUG (   54.149): ISWin7x64Tc91.67464.01.infodba.00026 - Service Request: Core-2009-04-Session:startOperation
+DEBUG (   54.151): ISWin7x64Tc91.67464.01.infodba.00026 - Service Response: Core-2009-04-Session:startOperation
+DEBUG (   54.153): SOABracket Open (UID: 3)
+DEBUG (   54.153): Exiting SOABracketHelper.openBracket
+INFO (   54.172): PERF: SOA Call starts - refreshObjects(full) - 1
+DEBUG (   54.174): Incrementing PERF SUM SOA count
+DEBUG (   54.174): ISWin7x64Tc91.67464.01.infodba.00027 - Service Request: Core-2007-01-DataManagement:refreshObjects
+DEBUG (   54.213): ISWin7x64Tc91.67464.01.infodba.00027 - Service Response: Core-2007-01-DataManagement:refreshObjects
+DEBUG (   54.224): Incrementing PERF SUM SOA count
+DEBUG (   54.225): ISWin7x64Tc91.67464.01.infodba.00027.01.infodba.00028 - Service Request: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   54.257): ISWin7x64Tc91.67464.01.infodba.00027.01.infodba.00028 - Service Response: Core-2011-06-Session:getTypeDescriptions
+INFO (   54.268): PERF: SOA Call ends - refreshObjects(full)
+DEBUG (   54.268): Setting property policy "empty" on the SOA Connection.
+DEBUG (   54.270): Incrementing PERF SUM SOA count
+DEBUG (   54.271): ISWin7x64Tc91.67464.01.infodba.00029 - Service Request: Cad-2007-01-DataManagement:expandFoldersForCAD
+DEBUG (   54.275): ISWin7x64Tc91.67464.01.infodba.00029 - Service Response: Cad-2007-01-DataManagement:expandFoldersForCAD
+DEBUG (   54.281): Setting property policy "ipem_policy" on the SOA Connection.
+INFO (   54.281): PERF: SOA Call starts - refreshObjects(full) - 11
+DEBUG (   54.283): Incrementing PERF SUM SOA count
+DEBUG (   54.283): ISWin7x64Tc91.67464.01.infodba.00030 - Service Request: Core-2007-01-DataManagement:refreshObjects
+DEBUG (   54.578): ISWin7x64Tc91.67464.01.infodba.00030 - Service Response: Core-2007-01-DataManagement:refreshObjects
+DEBUG (   54.622): Incrementing PERF SUM SOA count
+DEBUG (   54.622): ISWin7x64Tc91.67464.01.infodba.00030.01.infodba.00031 - Service Request: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   54.950): ISWin7x64Tc91.67464.01.infodba.00030.01.infodba.00031 - Service Response: Core-2011-06-Session:getTypeDescriptions
+INFO (   55.152): PERF: SOA Call ends - refreshObjects(full)
+INFO (   55.158): PERF: SOA Call starts - loadItems
+INFO (   55.158): PERF: SOA Call ends - loadItems
+DEBUG (   55.188): From_portal.txt looking for path
+DEBUG (   55.188): From_portal.txt version: V9000.1.0.27_20140212.00
+DEBUG (   55.189): From_portal.txt path: c:\temp\from_portal.txt
+DEBUG (   55.189): Entering SOABracketHelper.closeBracket
+DEBUG (   55.190): Incrementing PERF SUM SOA count
+DEBUG (   55.190): ISWin7x64Tc91.67464.01.infodba.00032 - Service Request: Core-2009-04-Session:stopOperation
+DEBUG (   55.192): ISWin7x64Tc91.67464.01.infodba.00032 - Service Response: Core-2009-04-Session:stopOperation
+DEBUG (   55.194): SOABracket Closed (UID: 3)
+DEBUG (   55.194): Resetting UID
+DEBUG (   55.194): Exiting SOABracketHelper.closeBracket
+DEBUG (   55.472): Filter named required is Required
+DEBUG (   55.472): Filter named include drawings is Include Drawings
+DEBUG (   55.472): Filter Required enabled
+DEBUG (   55.472): Filter named required is Required
+DEBUG (   55.472): Filter named include drawings is Include Drawings
+DEBUG (   55.472): Filter Required enabled
+DEBUG (   55.581): Has setAlwaysOnTop
+DEBUG (   55.581): Activating dialog Teamcenter Open ( infodba (infodba) - dba/DBA [IMC--2039857974] )
+DEBUG (   55.581): Entering getColumnMappingValues
+DEBUG (   55.581): Getting values of all Column Mappings for the entire collection
+DEBUG (   55.581): Exiting getColumnMappingValues
+DEBUG (   55.581): Entering populateCreateDescPropValues
+DEBUG (   55.581): Getting CreateDescriptor property values for the entire collection
+DEBUG (   55.581): Exiting populateCreateDescPropValues
+INFO (   55.581): PERF: Teamcenter Open ( infodba (infodba) - dba/DBA [IMC--2039857974] ) Dialog Displayed
+DEBUG (   55.581): Pausing PERF SUM
+INFO (   55.581): PERFSUM: Teamcenter Open ( infodba (infodba) - dba/DBA [IMC--2039857974] ), time=20.761, SOA count=32
+DEBUG (   60.323): Entering OperationCollectionDialog.cancelAction for Teamcenter Open ( infodba (infodba) - dba/DBA [IMC--2039857974] )
+DEBUG (   60.323): Exiting OperationCollectionDialog.cancelAction for Teamcenter Open ( infodba (infodba) - dba/DBA [IMC--2039857974] )
+DEBUG (   60.323): Done activating dialog Teamcenter Open ( infodba (infodba) - dba/DBA [IMC--2039857974] )
+DEBUG (   60.354): OperationMonitor disabled
+DEBUG (   60.354): OperationMonitor disabled
+DEBUG (   60.354): Saving registry files.
+DEBUG (   60.354): Done saving registry files.
+DEBUG (   60.354): Setting Operation In Progress false
+DEBUG (   60.354): Entering SOABracketHelper.closeAllBrackets
+DEBUG (   60.354): Entering SOABracketHelper.closeBracket
+DEBUG (   60.354): Exiting SOABracketHelper.closeBracket
+DEBUG (   60.354): Entering SOABracketHelper.closeOuterBracket
+DEBUG (   60.354): ISWin7x64Tc91.67464.01.infodba.00033 - Service Request: Core-2009-04-Session:stopOperation
+DEBUG (   60.354): ISWin7x64Tc91.67464.01.infodba.00033 - Service Response: Core-2009-04-Session:stopOperation
+DEBUG (   60.354): SOABracket Closed (UID: 1)
+DEBUG (   60.354): Resetting UID
+DEBUG (   60.354): Exiting SOABracketHelper.closeOuterBracket
+DEBUG (   60.354): Exiting SOABracketHelper.closeAllBrackets
+DEBUG (   60.354): Exiting Operations.checkOut
+DEBUG (   62.679): Entering Operations.startManager
+DEBUG (   62.679): Auto-refresh set to true
+DEBUG (   62.679): Entering SOARelationCache.clear
+DEBUG (   62.679): Exiting SOARelationCache.clear
+INFO (   62.679): PERF: SOA Call starts - refresh
+DEBUG (   62.679): ISWin7x64Tc91.67464.01.infodba.00034 - Service Request: Cad-2007-01-StructureManagement:getRevisionRules
+DEBUG (   62.694): ISWin7x64Tc91.67464.01.infodba.00034 - Service Response: Cad-2007-01-StructureManagement:getRevisionRules
+INFO (   62.694): PERF: SOA Call ends - refresh
+DEBUG (   62.694): Auto-refresh cache cleared, size 12
+DEBUG (   62.694): Entering Operations.updateManager
+DEBUG (   62.694): Beginning PERF SUM
+INFO (   62.694): PERF: Manager begins
+DEBUG (   62.694): OperationMonitor enabled
+DEBUG (   62.694): OperationMonitor started: com.transcendata.ipemsoa.Operations.lblUpdateManager
+DEBUG (   62.788): Incrementing PERF SUM SOA count
+DEBUG (   62.788): ISWin7x64Tc91.67464.01.infodba.00035 - Service Request: Core-2006-03-Session:getPreferences
+DEBUG (   62.788): ISWin7x64Tc91.67464.01.infodba.00035 - Service Response: Core-2006-03-Session:getPreferences
+DEBUG (   62.788): Connected to Teamcenter
+DEBUG (   62.788): Entering SOABracketHelper.openBracket
+DEBUG (   62.788): Incrementing PERF SUM SOA count
+DEBUG (   62.788): ISWin7x64Tc91.67464.01.infodba.00036 - Service Request: Core-2009-04-Session:startOperation
+DEBUG (   62.788): ISWin7x64Tc91.67464.01.infodba.00036 - Service Response: Core-2009-04-Session:startOperation
+DEBUG (   62.788): SOABracket Open (UID: 4)
+DEBUG (   62.788): Exiting SOABracketHelper.openBracket
+DEBUG (   62.788): Setting refresh flags for registry.
+DEBUG (   62.788): Filter named required is Required
+DEBUG (   62.788): Filter named include drawings is Include Drawings
+DEBUG (   62.788): Filter Required enabled
+DEBUG (   62.882): OperationMonitor disabled
+DEBUG (   62.882): Saving registry files.
+DEBUG (   62.882): Done saving registry files.
+DEBUG (   62.882): Setting Operation In Progress false
+DEBUG (   62.882): Entering SOABracketHelper.closeAllBrackets
+DEBUG (   62.882): Entering SOABracketHelper.closeBracket
+DEBUG (   62.882): Incrementing PERF SUM SOA count
+DEBUG (   62.882): ISWin7x64Tc91.67464.01.infodba.00037 - Service Request: Core-2009-04-Session:stopOperation
+DEBUG (   62.897): ISWin7x64Tc91.67464.01.infodba.00037 - Service Response: Core-2009-04-Session:stopOperation
+DEBUG (   62.897): SOABracket Closed (UID: 4)
+DEBUG (   62.897): Resetting UID
+DEBUG (   62.897): Exiting SOABracketHelper.closeBracket
+DEBUG (   62.897): Entering SOABracketHelper.closeOuterBracket
+DEBUG (   62.897): Exiting SOABracketHelper.closeOuterBracket
+DEBUG (   62.897): Exiting SOABracketHelper.closeAllBrackets
+DEBUG (   62.897): Exiting Operations.updateManager
+DEBUG (   62.897): Exiting Operations.startManager
+DEBUG (   62.913): Entering Operations.displayManagerDialog
+DEBUG (   62.913): Entering SOABracketHelper.closeBracket
+DEBUG (   62.913): Exiting SOABracketHelper.closeBracket
+DEBUG (   62.975): Filter named required is Required
+DEBUG (   62.975): Filter named include drawings is Include Drawings
+DEBUG (   62.975): Filter Required enabled
+DEBUG (   62.975): Entering getColumnMappingValues
+DEBUG (   62.975): Getting values of all Column Mappings for the entire collection
+DEBUG (   62.975): Exiting getColumnMappingValues
+DEBUG (   62.991): Pausing PERF SUM
+INFO (   62.991): PERFSUM: Manager dialog, time=0.297, SOA count=3
+INFO (   62.991): PERF: Manager Dialog Displayed
+DEBUG (   63.022): PEDirectoryCollector limit set to -1
+DEBUG (   63.053): OperationMonitor started: com.transcendata.cadpdm.pe.PEOperationHandlerImpl.msgAddModelsProgress
+DEBUG (   63.053): Cannot find a ModelType for "PRO"
+DEBUG (   63.053): Cannot find a ModelType for "TXR"
+DEBUG (   63.053): Cannot find a ModelType for "LOG"
+DEBUG (   63.053): Cannot find a ModelType for "LOG"
+DEBUG (   63.053): Cannot find a ModelType for "LOG"
+DEBUG (   63.053): Cannot find a ModelType for "LOG"
+DEBUG (   63.053): Cannot find a ModelType for "IDX"
+DEBUG (   63.053): Cannot find a ModelType for "LOG"
+DEBUG (   63.053): Cannot find a ModelType for "TXT"
+DEBUG (   63.053): Cannot find a ModelType for "TXT"
+DEBUG (   63.053): Cannot find a ModelType for "DAT"
+DEBUG (   63.053): Cannot find a ModelType for "DAT"
+LEVEL 4 (   63.053): NotRequiredRelationFilterCondition: unknown
+LEVEL 4 (   63.053): LogicalNotFilterCondition: unknown
+LEVEL 4 (   63.053): RequiredRelationFilterCondition: unknown
+LEVEL 4 (   63.053): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.053): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.053): LogicalAndFilterCondition: unknown
+LEVEL 4 (   63.053): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.053): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.053): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.053): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.053): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.053): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.053): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.053): LogicalOrFilterCondition: unknown
+LEVEL 4 (   63.053): LogicalAndFilterCondition: unknown
+LEVEL 4 (   63.053): NotRequiredRelationFilterCondition: unknown
+LEVEL 4 (   63.053): LogicalNotFilterCondition: unknown
+LEVEL 4 (   63.053): RequiredRelationFilterCondition: unknown
+LEVEL 4 (   63.053): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.053): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.053): LogicalAndFilterCondition: unknown
+LEVEL 4 (   63.053): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): LogicalOrFilterCondition: unknown
+LEVEL 4 (   63.069): LogicalAndFilterCondition: unknown
+LEVEL 4 (   63.069): NotRequiredRelationFilterCondition: unknown
+LEVEL 4 (   63.069): LogicalNotFilterCondition: unknown
+LEVEL 4 (   63.069): RequiredRelationFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): LogicalAndFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): CADTypePairFilterCondition: unknown
+LEVEL 4 (   63.069): LogicalOrFilterCondition: unknown
+LEVEL 4 (   63.069): LogicalAndFilterCondition: unknown
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.069): Cannot find a ModelType for "ERR"
+DEBUG (   63.069): Cannot find a ModelType for "OUT"
+DEBUG (   63.069): Cannot find a ModelType for "LOG"
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.069): Cannot find a ModelType for "TXT"
+DEBUG (   63.084): Cannot find a ModelType for "TXT"
+DEBUG (   63.084): Cannot find a ModelType for "TXT"
+DEBUG (   63.084): Cannot find a ModelType for "TXT"
+DEBUG (   63.084): Cannot find a ModelType for "TXT"
+DEBUG (   63.084): Cannot find a ModelType for "TXT"
+DEBUG (   63.084): Cannot find a ModelType for "TXT"
+DEBUG (   63.084): Entering AbstractSynchronizationHandler.findPDMIdentifiers
+DEBUG (   63.084): Registry C:\ipem_work\ipem.txr now open, mode r
+DEBUG (   63.084): Waiting for lock on registry C:\ipem_work\ipem.txr, mode r
+DEBUG (   63.084): Registry C:\ipem_work\ipem.txr now locked
+DEBUG (   63.084): Loading registry from C:\ipem_work\ipem.txr
+DEBUG (   63.552): Registry C:\ipem_work\ipem.txr now closed
+DEBUG (   63.552): loadPDMPermanentIdentifierObjects: found permId in registry: IManPermanentIdentifier wDVNUB1ioZ6wsC * wHVNUB1ioZ6wsC * wfZNUB1ioZ6wsC
+LEVEL 6 (   63.552): Registry is trivially up to date for C:\ipem_work
+DEBUG (   63.552): loadPDMPermanentIdentifierObjects: found permId in registry: IManPermanentIdentifier wDUNUB0IoZ6wsC * wHUNUB0IoZ6wsC * wfYNUB0IoZ6wsC
+LEVEL 6 (   63.552): Registry is trivially up to date for C:\ipem_work
+DEBUG (   63.552): loadPDMPermanentIdentifierObjects: found permId in registry: IManPermanentIdentifier wDTNEJ0roZ6wsC * wHTNEJ0roZ6wsC * wfXNEJ0roZ6wsC
+DEBUG (   63.615): ISWin7x64Tc91.90561.01.infodba.00038 - Service Request: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   63.662): ISWin7x64Tc91.90561.01.infodba.00038 - Service Response: Core-2011-06-Session:getTypeDescriptions
+INFO (   63.677): PERF: SOA Call starts - refreshObjects(full) - 9
+DEBUG (   63.677): ISWin7x64Tc91.90561.01.infodba.00039 - Service Request: Core-2007-01-DataManagement:refreshObjects
+DEBUG (   63.802): ISWin7x64Tc91.90561.01.infodba.00039 - Service Response: Core-2007-01-DataManagement:refreshObjects
+DEBUG (   63.818): ISWin7x64Tc91.90561.01.infodba.00039.01.infodba.00040 - Service Request: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   63.958): ISWin7x64Tc91.90561.01.infodba.00039.01.infodba.00040 - Service Response: Core-2011-06-Session:getTypeDescriptions
+INFO (   64.020): PERF: SOA Call ends - refreshObjects(full)
+DEBUG (   64.020): Entering SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (   64.020): Entering SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (   64.020): View types when parent is ASM: [view]
+DEBUG (   64.020): Setting property policy "empty" on the SOA Connection.
+DEBUG (   64.020): ISWin7x64Tc91.90561.01.infodba.00041 - Service Request: Core-2008-06-DataManagement:getItemAndRelatedObjects
+DEBUG (   64.176): ISWin7x64Tc91.90561.01.infodba.00041 - Service Response: Core-2008-06-DataManagement:getItemAndRelatedObjects
+DEBUG (   64.192): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (   64.192): Entering SOARelationCache.cacheDatasetRelations
+DEBUG (   64.192): Entering SOARelationCache.expandRelations
+DEBUG (   64.192): Setting property policy "empty" on the SOA Connection.
+DEBUG (   64.192): ISWin7x64Tc91.90561.01.infodba.00042 - Service Request: Core-2007-09-DataManagement:expandGRMRelationsForPrimary
+DEBUG (   64.192): ISWin7x64Tc91.90561.01.infodba.00042 - Service Response: Core-2007-09-DataManagement:expandGRMRelationsForPrimary
+DEBUG (   64.192): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (   64.208): Exiting SOARelationCache.expandRelations
+DEBUG (   64.208): Exiting SOARelationCache.cacheDatasetRelations
+DEBUG (   64.208): Exiting SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (   64.208): Exiting SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (   64.208): Finding PDM identity for Pro/ENGINEER model SAVETEST3.PRT  initial item/rev is null/null
+LEVEL 6 (   64.208): Registry is trivially up to date for C:\ipem_work
+DEBUG (   64.208): Pro/ENGINEER model SAVETEST3.PRT cached PDM identity is SAVETEST3/A (Dataset SAVETEST3 is a ProPrt)
+DEBUG (   64.223): Pro/ENGINEER model SAVETEST3.PRT cached permanent identity is SAVETEST3/A (Dataset SAVETEST3 is a ProPrt)
+DEBUG (   64.223): Finding PDM identity for Pro/ENGINEER model SAVETEST2.PRT  initial item/rev is null/null
+LEVEL 6 (   64.223): Registry is trivially up to date for C:\ipem_work
+DEBUG (   64.223): Pro/ENGINEER model SAVETEST2.PRT cached PDM identity is SAVETEST2/A (Dataset SAVETEST2 is a ProPrt)
+DEBUG (   64.239): Pro/ENGINEER model SAVETEST2.PRT cached permanent identity is SAVETEST2/A (Dataset SAVETEST2 is a ProPrt)
+DEBUG (   64.239): Finding PDM identity for Pro/ENGINEER model SAVETEST.PRT  initial item/rev is null/null
+LEVEL 6 (   64.239): Registry is trivially up to date for C:\ipem_work
+DEBUG (   64.239): Pro/ENGINEER model SAVETEST.PRT cached PDM identity is SAVETEST/A (Dataset SAVETEST is a ProPrt)
+DEBUG (   64.239): Pro/ENGINEER model SAVETEST.PRT cached permanent identity is SAVETEST/A (Dataset SAVETEST is a ProPrt)
+DEBUG (   64.239): Pro/ENGINEER model SAVETEST3.PRT PDM identity reconciled to SAVETEST3/A
+DEBUG (   64.239): Pro/ENGINEER model SAVETEST2.PRT PDM identity reconciled to SAVETEST2/A
+DEBUG (   64.239): Pro/ENGINEER model SAVETEST.PRT PDM identity reconciled to SAVETEST/A
+INFO (   64.239): PERF: SOA Call starts - loadAdditionalObjects
+DEBUG (   64.239): Entering SOARelationCache.cacheRelations(ModelObject[])
+DEBUG (   64.239): Entering SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (   64.239): Entering SOARelationCache.cacheDatasetRelations
+DEBUG (   64.239): Exiting SOARelationCache.cacheDatasetRelations
+DEBUG (   64.239): Exiting SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (   64.239): Exiting SOARelationCache.cacheRelations(ModelObject[])
+INFO (   64.239): PERF: SOA Call starts - getNamedRefObjects
+INFO (   64.239): PERF: SOA Call ends - getNamedRefObjects
+INFO (   64.239): PERF: SOA Call End - loadAdditionalObjects
+INFO (   64.239): PERF: SOA Call starts - loadLatestExistingItemRev
+INFO (   64.239): PERF: SOA Call ends - loadLatestExistingItemRev
+DEBUG (   64.254): Entering SOARelationCache.cacheRelations(OperationElement[])
+DEBUG (   64.254): Entering SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (   64.254): Entering SOARelationCache.cacheDatasetRelations
+DEBUG (   64.254): Exiting SOARelationCache.cacheDatasetRelations
+DEBUG (   64.254): Exiting SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (   64.254): Exiting SOARelationCache.cacheRelations(OperationElement[])
+DEBUG (   64.254): Exiting AbstractSynchronizationHandler.findPDMIdentifiers
+DEBUG (   64.254): OperationCollection class: class com.transcendata.ipemsoa.SyncCollectionImpl
+DEBUG (   64.254):   Dependency action: default
+DEBUG (   64.254):   Show dependencies? false
+DEBUG (   64.254):   Destination directory: C:\ipem_work
+DEBUG (   64.254):   Checkout reason: null
+DEBUG (   64.254):   Checkout change ID: null
+DEBUG (   64.254):   Revision rule name: null
+DEBUG (   64.254):   Treat precise general relationships as imprecise? true
+DEBUG (   64.254):   Treat precise master relationships as imprecise? true
+DEBUG (   64.254):   Follow dataset general relationships? false
+DEBUG (   64.254):   Follow dataset master relationships? false
+DEBUG (   64.254):   Open all? false
+DEBUG (   64.254):   Display in window? true
+DEBUG (   64.254):   Simprep type: 0
+DEBUG (   64.254):   Simprep name: null
+DEBUG (   64.254):   Collection name: C:\ipem_work
+DEBUG (   64.254):   Root source: 0
+DEBUG (   64.254):   Number of roots: 3
+DEBUG (   64.254):     Root: Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (   64.254):     Root: Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (   64.254):     Root: Pro/ENGINEER model SAVETEST.PRT
+DEBUG (   64.254):   Number of elements: 3
+DEBUG (   64.254):     OperationElement: Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (   64.254):       Class: class com.transcendata.ipemsoa.pe.CheckOutElementImpl
+DEBUG (   64.254):       Operand flag: false
+DEBUG (   64.254):       Master flag: true
+DEBUG (   64.254):       Is in CAD: false
+DEBUG (   64.254):       CADFile: C:\ipem_work\savetest3.prt.2
+DEBUG (   64.254):       CADUnits: null
+DEBUG (   64.254):       Reserved flag: false
+DEBUG (   64.254):       Display flag: false
+DEBUG (   64.254):       Select flag: false
+DEBUG (   64.254):       Obsolete relations flag: false
+DEBUG (   64.254):       Assembly component flag: false
+DEBUG (   64.254):       Simprep names: null
+DEBUG (   64.254):       Subtype: 0
+DEBUG (   64.254):       Is generic? false
+DEBUG (   64.254):       Is instance? false
+DEBUG (   64.254):       Short file: null
+DEBUG (   64.254):       PDMInfo: SAVETEST3/A
+DEBUG (   64.254):         Class: class com.transcendata.cadpdm.soa.SOAInfoImpl
+DEBUG (   64.254):         Dataset Description null
+DEBUG (   64.254):         Dataset Type ProPrt
+DEBUG (   64.254):         Dataset Name SAVETEST3
+DEBUG (   64.254):         Checkout Reason null
+DEBUG (   64.254):         Checkout Change ID null
+DEBUG (   64.254):         PermanentIdentifier IManPermanentIdentifier wDVNUB1ioZ6wsC * wHVNUB1ioZ6wsC * wfZNUB1ioZ6wsC
+DEBUG (   64.254):         Permanent CADIdentifier Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (   64.254):         Permanent PDMIdentifier SAVETEST3/A (Dataset SAVETEST3 is a ProPrt)
+DEBUG (   64.254):         Dataset ModelObject com.teamcenter.soa.client.model.strong.Dataset@10178f2b (version null)
+DEBUG (   64.254):         Item ModelObject com.teamcenter.soa.client.model.strong.Item@3d5bf0c5
+DEBUG (   64.254):         ItemRevision ModelObject com.teamcenter.soa.client.model.strong.ItemRevision@7c0f023c
+DEBUG (   64.254):         Item Description null
+DEBUG (   64.254):         Item ID SAVETEST3
+DEBUG (   64.254):         Item Name null
+DEBUG (   64.254):         Item Revision A
+DEBUG (   64.254):         Item Revision (Old) null
+DEBUG (   64.254):         Item Revision Description null
+DEBUG (   64.254):         Item Revision Reason null
+DEBUG (   64.254):         Item Type null
+DEBUG (   64.254):         Named Reference null
+DEBUG (   64.254):         PDM Type ProPrt
+DEBUG (   64.254):         Is Dataset in PDM true
+DEBUG (   64.254):         Is in PDM true
+DEBUG (   64.270):         Is Item in PDM true
+DEBUG (   64.270):         Is Item Revision in PDM true
+DEBUG (   64.270):       Has all relations: false
+DEBUG (   64.270):       Dependency relations: 0
+DEBUG (   64.270):     OperationElement: Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (   64.270):       Class: class com.transcendata.ipemsoa.pe.CheckOutElementImpl
+DEBUG (   64.270):       Operand flag: false
+DEBUG (   64.270):       Master flag: true
+DEBUG (   64.270):       Is in CAD: false
+DEBUG (   64.270):       CADFile: C:\ipem_work\savetest2.prt.2
+DEBUG (   64.270):       CADUnits: null
+DEBUG (   64.270):       Reserved flag: false
+DEBUG (   64.270):       Display flag: false
+DEBUG (   64.270):       Select flag: false
+DEBUG (   64.270):       Obsolete relations flag: false
+DEBUG (   64.270):       Assembly component flag: false
+DEBUG (   64.270):       Simprep names: null
+DEBUG (   64.270):       Subtype: 0
+DEBUG (   64.270):       Is generic? false
+DEBUG (   64.270):       Is instance? false
+DEBUG (   64.270):       Short file: null
+DEBUG (   64.270):       PDMInfo: SAVETEST2/A
+DEBUG (   64.270):         Class: class com.transcendata.cadpdm.soa.SOAInfoImpl
+DEBUG (   64.270):         Dataset Description null
+DEBUG (   64.270):         Dataset Type ProPrt
+DEBUG (   64.270):         Dataset Name SAVETEST2
+DEBUG (   64.270):         Checkout Reason null
+DEBUG (   64.270):         Checkout Change ID null
+DEBUG (   64.270):         PermanentIdentifier IManPermanentIdentifier wDUNUB0IoZ6wsC * wHUNUB0IoZ6wsC * wfYNUB0IoZ6wsC
+DEBUG (   64.270):         Permanent CADIdentifier Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (   64.270):         Permanent PDMIdentifier SAVETEST2/A (Dataset SAVETEST2 is a ProPrt)
+DEBUG (   64.270):         Dataset ModelObject com.teamcenter.soa.client.model.strong.Dataset@4460cf12 (version null)
+DEBUG (   64.286):         Item ModelObject com.teamcenter.soa.client.model.strong.Item@34da7b85
+DEBUG (   64.286):         ItemRevision ModelObject com.teamcenter.soa.client.model.strong.ItemRevision@5cad662c
+DEBUG (   64.286):         Item Description null
+DEBUG (   64.286):         Item ID SAVETEST2
+DEBUG (   64.286):         Item Name null
+DEBUG (   64.286):         Item Revision A
+DEBUG (   64.286):         Item Revision (Old) null
+DEBUG (   64.286):         Item Revision Description null
+DEBUG (   64.286):         Item Revision Reason null
+DEBUG (   64.286):         Item Type null
+DEBUG (   64.286):         Named Reference null
+DEBUG (   64.286):         PDM Type ProPrt
+DEBUG (   64.286):         Is Dataset in PDM true
+DEBUG (   64.286):         Is in PDM true
+DEBUG (   64.286):         Is Item in PDM true
+DEBUG (   64.286):         Is Item Revision in PDM true
+DEBUG (   64.286):       Has all relations: false
+DEBUG (   64.286):       Dependency relations: 0
+DEBUG (   64.286):     OperationElement: Pro/ENGINEER model SAVETEST.PRT
+DEBUG (   64.286):       Class: class com.transcendata.ipemsoa.pe.CheckOutElementImpl
+DEBUG (   64.286):       Operand flag: false
+DEBUG (   64.286):       Master flag: true
+DEBUG (   64.286):       Is in CAD: false
+DEBUG (   64.286):       CADFile: C:\ipem_work\savetest.prt.1
+DEBUG (   64.286):       CADUnits: null
+DEBUG (   64.286):       Reserved flag: false
+DEBUG (   64.286):       Display flag: false
+DEBUG (   64.286):       Select flag: false
+DEBUG (   64.286):       Obsolete relations flag: false
+DEBUG (   64.286):       Assembly component flag: false
+DEBUG (   64.286):       Simprep names: null
+DEBUG (   64.286):       Subtype: 0
+DEBUG (   64.286):       Is generic? false
+DEBUG (   64.286):       Is instance? false
+DEBUG (   64.286):       Short file: null
+DEBUG (   64.286):       PDMInfo: SAVETEST/A
+DEBUG (   64.286):         Class: class com.transcendata.cadpdm.soa.SOAInfoImpl
+DEBUG (   64.286):         Dataset Description null
+DEBUG (   64.286):         Dataset Type ProPrt
+DEBUG (   64.286):         Dataset Name SAVETEST
+DEBUG (   64.286):         Checkout Reason null
+DEBUG (   64.286):         Checkout Change ID null
+DEBUG (   64.286):         PermanentIdentifier IManPermanentIdentifier wDTNEJ0roZ6wsC * wHTNEJ0roZ6wsC * wfXNEJ0roZ6wsC
+DEBUG (   64.286):         Permanent CADIdentifier Pro/ENGINEER model SAVETEST.PRT
+DEBUG (   64.286):         Permanent PDMIdentifier SAVETEST/A (Dataset SAVETEST is a ProPrt)
+DEBUG (   64.286):         Dataset ModelObject com.teamcenter.soa.client.model.strong.Dataset@2fbac9d0 (version null)
+DEBUG (   64.286):         Item ModelObject com.teamcenter.soa.client.model.strong.Item@5f1c34fb
+DEBUG (   64.286):         ItemRevision ModelObject com.teamcenter.soa.client.model.strong.ItemRevision@7ab8584d
+DEBUG (   64.286):         Item Description null
+DEBUG (   64.286):         Item ID SAVETEST
+DEBUG (   64.286):         Item Name null
+DEBUG (   64.286):         Item Revision A
+DEBUG (   64.286):         Item Revision (Old) null
+DEBUG (   64.286):         Item Revision Description null
+DEBUG (   64.286):         Item Revision Reason null
+DEBUG (   64.286):         Item Type null
+DEBUG (   64.286):         Named Reference null
+DEBUG (   64.286):         PDM Type ProPrt
+DEBUG (   64.286):         Is Dataset in PDM true
+DEBUG (   64.286):         Is in PDM true
+DEBUG (   64.286):         Is Item in PDM true
+DEBUG (   64.286):         Is Item Revision in PDM true
+DEBUG (   64.286):       Has all relations: false
+DEBUG (   64.286):       Dependency relations: 0
+DEBUG (   64.286):   Missing elements: 0
+DEBUG (   64.286): End of OperationCollection
+LEVEL 6 (   64.286): Registry is trivially up to date for C:\ipem_work
+DEBUG (   64.301): Pro/ENGINEER model SAVETEST.PRT not in CAD session, get CAD stamp from registry
+LEVEL 6 (   64.301): Registry is trivially up to date for C:\ipem_work
+LEVEL 6 (   64.301): Registry is trivially up to date for C:\ipem_work
+DEBUG (   64.301): Pro/ENGINEER model SAVETEST2.PRT not in CAD session, get CAD stamp from registry
+LEVEL 6 (   64.301): Registry is trivially up to date for C:\ipem_work
+LEVEL 6 (   64.301): Registry is trivially up to date for C:\ipem_work
+DEBUG (   64.301): Pro/ENGINEER model SAVETEST3.PRT not in CAD session, get CAD stamp from registry
+LEVEL 6 (   64.301): Registry is trivially up to date for C:\ipem_work
+INFO (   64.301): PERF: SOA Call starts - loadLatestExistingItemRev
+INFO (   64.301): PERF: SOA Call ends - loadLatestExistingItemRev
+DEBUG (   64.301): Create PDM stamp for SAVETEST/A
+DEBUG (   64.301): Got metadata version stamp for com.teamcenter.soa.client.model.strong.Dataset@2fbac9d0: 111
+DEBUG (   64.301): Got PDM version stamp 111 for Pro/ENGINEER model SAVETEST.PRT
+DEBUG (   64.301): Create PDM stamp for SAVETEST2/A
+DEBUG (   64.301): Got metadata version stamp for com.teamcenter.soa.client.model.strong.Dataset@4460cf12: 111
+DEBUG (   64.301): Got PDM version stamp 111 for Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (   64.301): Create PDM stamp for SAVETEST3/A
+DEBUG (   64.301): Got metadata version stamp for com.teamcenter.soa.client.model.strong.Dataset@10178f2b: 111
+DEBUG (   64.301): Got PDM version stamp 111 for Pro/ENGINEER model SAVETEST3.PRT
+LEVEL 6 (   64.301): Registry is trivially up to date for C:\ipem_work
+LEVEL 6 (   64.301): Registry is trivially up to date for C:\ipem_work
+DEBUG (   64.301): isNewVersionInCAD: CAD stamp com.transcendata.ipemsoa.StampImpl@39b0a038
+DEBUG (   64.301): Stamp:
+DEBUG (   64.301):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.301):   Modified in Pro/E:   null
+DEBUG (   64.301):   Pro/E version stamp: 111
+DEBUG (   64.301):   Pro/E file version:  1
+DEBUG (   64.301):   Pro/E file mod date: Tue Apr 08 16:34:30 EDT 2014
+DEBUG (   64.317):   Dataset version:     null
+DEBUG (   64.317):   Dataset mod date:    null
+DEBUG (   64.317):   Revision UID:        null
+DEBUG (   64.317):   Revision ID:         null
+DEBUG (   64.317):   Latest revision ID:  null
+DEBUG (   64.317): isNewVersionInCAD: CAD reference stamp com.transcendata.ipemsoa.StampImpl@39b0a038
+DEBUG (   64.317): Stamp:
+DEBUG (   64.317):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.317):   Modified in Pro/E:   null
+DEBUG (   64.317):   Pro/E version stamp: 111
+DEBUG (   64.317):   Pro/E file version:  1
+DEBUG (   64.317):   Pro/E file mod date: Tue Apr 08 16:34:30 EDT 2014
+DEBUG (   64.317):   Dataset version:     null
+DEBUG (   64.317):   Dataset mod date:    null
+DEBUG (   64.317):   Revision UID:        null
+DEBUG (   64.317):   Revision ID:         null
+DEBUG (   64.317):   Latest revision ID:  null
+DEBUG (   64.317): isNewVersionInCAD: CAD reference stamp com.transcendata.ipemsoa.StampImpl@3c22d5b5
+DEBUG (   64.317): Stamp:
+DEBUG (   64.317):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.317):   Modified in Pro/E:   null
+DEBUG (   64.317):   Pro/E version stamp: 111
+DEBUG (   64.317):   Pro/E file version:  1
+DEBUG (   64.317):   Pro/E file mod date: Tue Apr 08 16:34:30 EDT 2014
+DEBUG (   64.317):   Dataset version:     1
+DEBUG (   64.317):   Dataset mod date:    Tue Apr 08 16:34:32 EDT 2014
+DEBUG (   64.317):   Revision UID:        wHTNEJ0roZ6wsC
+DEBUG (   64.317):   Revision ID:         A
+DEBUG (   64.317):   Latest revision ID:  A
+DEBUG (   64.317): Is 111 newer than 111? same
+DEBUG (   64.317): isNewVersionInCAD: same because of CAD to PDM reference stamp comparison for Pro/ENGINEER model SAVETEST.PRT
+LEVEL 6 (   64.317): Registry is trivially up to date for C:\ipem_work
+DEBUG (   64.317): isNewVersionInPDM: PDM stamp com.transcendata.ipemsoa.StampImpl@12fc7ceb
+DEBUG (   64.317): Stamp:
+DEBUG (   64.317):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.317):   Modified in Pro/E:   null
+DEBUG (   64.317):   Pro/E version stamp: 111
+DEBUG (   64.317):   Pro/E file version:  1
+DEBUG (   64.317):   Pro/E file mod date: null
+DEBUG (   64.317):   Dataset version:     1
+DEBUG (   64.317):   Dataset mod date:    Tue Apr 08 16:34:32 EDT 2014
+DEBUG (   64.317):   Revision UID:        wHTNEJ0roZ6wsC
+DEBUG (   64.317):   Revision ID:         A
+DEBUG (   64.317):   Latest revision ID:  A
+DEBUG (   64.317): isNewVersionInPDM: PDM reference stamp com.transcendata.ipemsoa.StampImpl@3c22d5b5
+DEBUG (   64.317): Stamp:
+DEBUG (   64.317):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.317):   Modified in Pro/E:   null
+DEBUG (   64.317):   Pro/E version stamp: 111
+DEBUG (   64.317):   Pro/E file version:  1
+DEBUG (   64.317):   Pro/E file mod date: Tue Apr 08 16:34:30 EDT 2014
+DEBUG (   64.317):   Dataset version:     1
+DEBUG (   64.317):   Dataset mod date:    Tue Apr 08 16:34:32 EDT 2014
+DEBUG (   64.317):   Revision UID:        wHTNEJ0roZ6wsC
+DEBUG (   64.317):   Revision ID:         A
+DEBUG (   64.317):   Latest revision ID:  A
+DEBUG (   64.317): Is 111 newer than 111? same
+DEBUG (   64.317): isNewVersionInPDM: same because of PDM to PDM reference stamp comparison for Pro/ENGINEER model SAVETEST.PRT
+LEVEL 6 (   64.317): Registry is trivially up to date for C:\ipem_work
+LEVEL 6 (   64.317): Registry is trivially up to date for C:\ipem_work
+DEBUG (   64.317): isNewVersionInCAD: CAD stamp com.transcendata.ipemsoa.StampImpl@7e6d3209
+DEBUG (   64.317): Stamp:
+DEBUG (   64.317):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.317):   Modified in Pro/E:   null
+DEBUG (   64.317):   Pro/E version stamp: 111
+DEBUG (   64.317):   Pro/E file version:  2
+DEBUG (   64.317):   Pro/E file mod date: Wed Apr 09 08:28:40 EDT 2014
+DEBUG (   64.317):   Dataset version:     null
+DEBUG (   64.317):   Dataset mod date:    null
+DEBUG (   64.317):   Revision UID:        null
+DEBUG (   64.317):   Revision ID:         null
+DEBUG (   64.317):   Latest revision ID:  null
+DEBUG (   64.317): isNewVersionInCAD: CAD reference stamp com.transcendata.ipemsoa.StampImpl@7e6d3209
+DEBUG (   64.317): Stamp:
+DEBUG (   64.317):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.332):   Modified in Pro/E:   null
+DEBUG (   64.332):   Pro/E version stamp: 111
+DEBUG (   64.332):   Pro/E file version:  2
+DEBUG (   64.332):   Pro/E file mod date: Wed Apr 09 08:28:40 EDT 2014
+DEBUG (   64.332):   Dataset version:     null
+DEBUG (   64.332):   Dataset mod date:    null
+DEBUG (   64.332):   Revision UID:        null
+DEBUG (   64.332):   Revision ID:         null
+DEBUG (   64.332):   Latest revision ID:  null
+DEBUG (   64.332): isNewVersionInCAD: CAD reference stamp com.transcendata.ipemsoa.StampImpl@32f02db7
+DEBUG (   64.332): Stamp:
+DEBUG (   64.332):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.332):   Modified in Pro/E:   null
+DEBUG (   64.332):   Pro/E version stamp: 111
+DEBUG (   64.332):   Pro/E file version:  2
+DEBUG (   64.332):   Pro/E file mod date: Wed Apr 09 08:28:40 EDT 2014
+DEBUG (   64.332):   Dataset version:     1
+DEBUG (   64.332):   Dataset mod date:    Wed Apr 09 08:28:43 EDT 2014
+DEBUG (   64.332):   Revision UID:        wHUNUB0IoZ6wsC
+DEBUG (   64.332):   Revision ID:         A
+DEBUG (   64.332):   Latest revision ID:  A
+DEBUG (   64.332): Is 111 newer than 111? same
+DEBUG (   64.332): isNewVersionInCAD: same because of CAD to PDM reference stamp comparison for Pro/ENGINEER model SAVETEST2.PRT
+LEVEL 6 (   64.332): Registry is trivially up to date for C:\ipem_work
+DEBUG (   64.332): isNewVersionInPDM: PDM stamp com.transcendata.ipemsoa.StampImpl@36496381
+DEBUG (   64.332): Stamp:
+DEBUG (   64.332):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.332):   Modified in Pro/E:   null
+DEBUG (   64.332):   Pro/E version stamp: 111
+DEBUG (   64.332):   Pro/E file version:  2
+DEBUG (   64.332):   Pro/E file mod date: null
+DEBUG (   64.332):   Dataset version:     1
+DEBUG (   64.332):   Dataset mod date:    Wed Apr 09 08:28:43 EDT 2014
+DEBUG (   64.332):   Revision UID:        wHUNUB0IoZ6wsC
+DEBUG (   64.332):   Revision ID:         A
+DEBUG (   64.332):   Latest revision ID:  A
+DEBUG (   64.332): isNewVersionInPDM: PDM reference stamp com.transcendata.ipemsoa.StampImpl@32f02db7
+DEBUG (   64.332): Stamp:
+DEBUG (   64.332):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.332):   Modified in Pro/E:   null
+DEBUG (   64.332):   Pro/E version stamp: 111
+DEBUG (   64.332):   Pro/E file version:  2
+DEBUG (   64.332):   Pro/E file mod date: Wed Apr 09 08:28:40 EDT 2014
+DEBUG (   64.332):   Dataset version:     1
+DEBUG (   64.332):   Dataset mod date:    Wed Apr 09 08:28:43 EDT 2014
+DEBUG (   64.332):   Revision UID:        wHUNUB0IoZ6wsC
+DEBUG (   64.332):   Revision ID:         A
+DEBUG (   64.332):   Latest revision ID:  A
+DEBUG (   64.332): Is 111 newer than 111? same
+DEBUG (   64.332): isNewVersionInPDM: same because of PDM to PDM reference stamp comparison for Pro/ENGINEER model SAVETEST2.PRT
+LEVEL 6 (   64.332): Registry is trivially up to date for C:\ipem_work
+LEVEL 6 (   64.332): Registry is trivially up to date for C:\ipem_work
+DEBUG (   64.332): isNewVersionInCAD: CAD stamp com.transcendata.ipemsoa.StampImpl@c23c5ff
+DEBUG (   64.332): Stamp:
+DEBUG (   64.332):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.332):   Modified in Pro/E:   null
+DEBUG (   64.332):   Pro/E version stamp: 111
+DEBUG (   64.332):   Pro/E file version:  2
+DEBUG (   64.332):   Pro/E file mod date: Wed Apr 09 08:38:49 EDT 2014
+DEBUG (   64.332):   Dataset version:     null
+DEBUG (   64.332):   Dataset mod date:    null
+DEBUG (   64.332):   Revision UID:        null
+DEBUG (   64.332):   Revision ID:         null
+DEBUG (   64.332):   Latest revision ID:  null
+DEBUG (   64.332): isNewVersionInCAD: CAD reference stamp com.transcendata.ipemsoa.StampImpl@c23c5ff
+DEBUG (   64.332): Stamp:
+DEBUG (   64.332):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.332):   Modified in Pro/E:   null
+DEBUG (   64.332):   Pro/E version stamp: 111
+DEBUG (   64.332):   Pro/E file version:  2
+DEBUG (   64.332):   Pro/E file mod date: Wed Apr 09 08:38:49 EDT 2014
+DEBUG (   64.332):   Dataset version:     null
+DEBUG (   64.332):   Dataset mod date:    null
+DEBUG (   64.332):   Revision UID:        null
+DEBUG (   64.332):   Revision ID:         null
+DEBUG (   64.332):   Latest revision ID:  null
+DEBUG (   64.332): isNewVersionInCAD: CAD reference stamp com.transcendata.ipemsoa.StampImpl@9bee93
+DEBUG (   64.332): Stamp:
+DEBUG (   64.332):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.332):   Modified in Pro/E:   null
+DEBUG (   64.332):   Pro/E version stamp: 111
+DEBUG (   64.332):   Pro/E file version:  2
+DEBUG (   64.332):   Pro/E file mod date: Wed Apr 09 08:38:49 EDT 2014
+DEBUG (   64.332):   Dataset version:     1
+DEBUG (   64.332):   Dataset mod date:    Wed Apr 09 08:38:51 EDT 2014
+DEBUG (   64.332):   Revision UID:        wHVNUB1ioZ6wsC
+DEBUG (   64.332):   Revision ID:         A
+DEBUG (   64.332):   Latest revision ID:  A
+DEBUG (   64.332): Is 111 newer than 111? same
+DEBUG (   64.332): isNewVersionInCAD: same because of CAD to PDM reference stamp comparison for Pro/ENGINEER model SAVETEST3.PRT
+LEVEL 6 (   64.332): Registry is trivially up to date for C:\ipem_work
+DEBUG (   64.332): isNewVersionInPDM: PDM stamp com.transcendata.ipemsoa.StampImpl@7d4bf534
+DEBUG (   64.332): Stamp:
+DEBUG (   64.426):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.426):   Modified in Pro/E:   null
+DEBUG (   64.426):   Pro/E version stamp: 111
+DEBUG (   64.426):   Pro/E file version:  2
+DEBUG (   64.426):   Pro/E file mod date: null
+DEBUG (   64.426):   Dataset version:     1
+DEBUG (   64.426):   Dataset mod date:    Wed Apr 09 08:38:51 EDT 2014
+DEBUG (   64.426):   Revision UID:        wHVNUB1ioZ6wsC
+DEBUG (   64.426):   Revision ID:         A
+DEBUG (   64.426):   Latest revision ID:  A
+DEBUG (   64.426): isNewVersionInPDM: PDM reference stamp com.transcendata.ipemsoa.StampImpl@9bee93
+DEBUG (   64.426): Stamp:
+DEBUG (   64.426):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (   64.426):   Modified in Pro/E:   null
+DEBUG (   64.426):   Pro/E version stamp: 111
+DEBUG (   64.426):   Pro/E file version:  2
+DEBUG (   64.426):   Pro/E file mod date: Wed Apr 09 08:38:49 EDT 2014
+DEBUG (   64.426):   Dataset version:     1
+DEBUG (   64.426):   Dataset mod date:    Wed Apr 09 08:38:51 EDT 2014
+DEBUG (   64.426):   Revision UID:        wHVNUB1ioZ6wsC
+DEBUG (   64.426):   Revision ID:         A
+DEBUG (   64.426):   Latest revision ID:  A
+DEBUG (   64.426): Is 111 newer than 111? same
+DEBUG (   64.426): isNewVersionInPDM: same because of PDM to PDM reference stamp comparison for Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (   64.442): OperationMonitor disabled
+DEBUG (   64.457): isNewItemRevisionInPDM: same for Pro/ENGINEER model SAVETEST.PRT because of revision ID comparison
+DEBUG (   64.473): View types when parent is PRT: []
+DEBUG (   64.473): Entering SOAOperationHandlerImpl.hasMasterParents(OperationElement[])
+DEBUG (   64.488): Entering SOARelationHelper.hasMasterParents
+DEBUG (   64.488): Entering SOARelationHelper.findParents
+DEBUG (   64.488): Setting property policy "empty" on the SOA Connection.
+DEBUG (   64.488): ISWin7x64Tc91.26258.01.infodba.00043 - Service Request: Core-2007-06-DataManagement:expandGRMRelationsForSecondary
+DEBUG (   64.488): ISWin7x64Tc91.26258.01.infodba.00043 - Service Response: Core-2007-06-DataManagement:expandGRMRelationsForSecondary
+DEBUG (   64.504): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (   64.504): Exiting SOARelationHelper.findParents
+DEBUG (   64.504): Exiting SOARelationHelper.hasMasterParents
+DEBUG (   64.504): Exiting SOAOperationHandlerImpl.hasMasterParents(OperationElement[])
+DEBUG (   64.504): Entering SOAOperationHandlerImpl.getMasterPDMIdentifiers(PDMIdentifier[])
+DEBUG (   64.504): Setting property policy "empty" on the SOA Connection.
+DEBUG (   64.504): ISWin7x64Tc91.26258.01.infodba.00044 - Service Request: Core-2008-06-DataManagement:getItemAndRelatedObjects
+DEBUG (   64.551): ISWin7x64Tc91.26258.01.infodba.00044 - Service Response: Core-2008-06-DataManagement:getItemAndRelatedObjects
+DEBUG (   64.551): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (   64.566): Exiting SOAOperationHandlerImpl.getMasterPDMIdentifiers(PDMIdentifier[])
+DEBUG (   64.566): MasterComparable has master parent: false, path: [Pro/ENGINEER model SAVETEST3.PRT]
+DEBUG (   64.566): MasterComparable has master parent: false, path: [Pro/ENGINEER model SAVETEST2.PRT]
+DEBUG (   64.566): MasterComparable has master parent: false, path: [Pro/ENGINEER model SAVETEST.PRT]
+DEBUG (   64.566): isNewItemRevisionInPDM: same for Pro/ENGINEER model SAVETEST2.PRT because of revision ID comparison
+DEBUG (   64.582): isNewItemRevisionInPDM: same for Pro/ENGINEER model SAVETEST3.PRT because of revision ID comparison
+DEBUG (   66.813): Entering SyncDialog.okAction
+DEBUG (   66.813): OperationMonitor started: com.transcendata.ipemsoa.gui.CheckInDialog.msgValidateConsistentIdentities
+DEBUG (   66.813): Consistent identities validated
+INFO (   66.813): SOA Call starts - setInstanceOrGeneric
+DEBUG (   66.813): Entering SOARelationHelper.hasMasterParents
+DEBUG (   66.813): Entering SOARelationHelper.findParents
+DEBUG (   66.813): Setting property policy "empty" on the SOA Connection.
+DEBUG (   66.813): ISWin7x64Tc91.26258.01.infodba.00045 - Service Request: Core-2007-06-DataManagement:expandGRMRelationsForSecondary
+DEBUG (   66.828): ISWin7x64Tc91.26258.01.infodba.00045 - Service Response: Core-2007-06-DataManagement:expandGRMRelationsForSecondary
+DEBUG (   66.828): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (   66.828): Exiting SOARelationHelper.findParents
+DEBUG (   66.828): Exiting SOARelationHelper.hasMasterParents
+DEBUG (   66.828): Saving registry files.
+INFO (   66.828): PERF: Update Files Button Clicked
+DEBUG (   66.828): Entering SyncDialog.update
+DEBUG (   66.828): Beginning PERF SUM
+DEBUG (   66.828): Setting Operation In Progress true
+DEBUG (   66.828): Filter named required is Required
+DEBUG (   66.828): Filter named include drawings is Include Drawings
+DEBUG (   66.828): Filter Required enabled
+DEBUG (   66.828): OperationMonitor disabled
+INFO (   66.828): No models were updated.
+DEBUG (   66.828): Done saving registry files.
+DEBUG (   66.828): Exiting SyncDialog.okAction
+DEBUG (   66.828): OperationMonitor disabled
+DEBUG (   66.875): Pausing PERF SUM
+DEBUG (   69.995): Resuming PERF SUM
+DEBUG (   69.995): Setting Operation In Progress false
+DEBUG (   77.530): Entering Operations.startManager
+DEBUG (   77.530): Auto-refresh set to true
+DEBUG (   77.530): Entering SOARelationCache.clear
+DEBUG (   77.530): Exiting SOARelationCache.clear
+INFO (   77.530): PERF: SOA Call starts - refresh
+DEBUG (   77.530): Incrementing PERF SUM SOA count
+DEBUG (   77.530): ISWin7x64Tc91.67464.01.infodba.00046 - Service Request: Cad-2007-01-StructureManagement:getRevisionRules
+DEBUG (   77.546): ISWin7x64Tc91.67464.01.infodba.00046 - Service Response: Cad-2007-01-StructureManagement:getRevisionRules
+INFO (   77.546): PERF: SOA Call ends - refresh
+DEBUG (   77.546): Auto-refresh cache cleared, size 27
+DEBUG (   77.546): Entering Operations.updateManager
+DEBUG (   77.546): Beginning PERF SUM
+INFO (   77.546): PERF: Manager begins
+DEBUG (   77.546): OperationMonitor enabled
+DEBUG (   77.546): OperationMonitor started: com.transcendata.ipemsoa.Operations.lblUpdateManager
+DEBUG (   77.577): Incrementing PERF SUM SOA count
+DEBUG (   77.577): ISWin7x64Tc91.67464.01.infodba.00047 - Service Request: Core-2006-03-Session:getPreferences
+DEBUG (   77.592): ISWin7x64Tc91.67464.01.infodba.00047 - Service Response: Core-2006-03-Session:getPreferences
+DEBUG (   77.592): Connected to Teamcenter
+DEBUG (   77.592): Entering SOABracketHelper.openBracket
+DEBUG (   77.592): Incrementing PERF SUM SOA count
+DEBUG (   77.592): ISWin7x64Tc91.67464.01.infodba.00048 - Service Request: Core-2009-04-Session:startOperation
+DEBUG (   77.592): ISWin7x64Tc91.67464.01.infodba.00048 - Service Response: Core-2009-04-Session:startOperation
+DEBUG (   77.592): SOABracket Open (UID: 5)
+DEBUG (   77.592): Exiting SOABracketHelper.openBracket
+DEBUG (   77.592): Setting refresh flags for registry.
+DEBUG (   77.592): Filter named required is Required
+DEBUG (   77.592): Filter named include drawings is Include Drawings
+DEBUG (   77.592): Filter Required enabled
+DEBUG (   77.608): OperationMonitor disabled
+DEBUG (   77.608): Saving registry files.
+DEBUG (   77.608): Done saving registry files.
+DEBUG (   77.608): Setting Operation In Progress false
+DEBUG (   77.608): Entering SOABracketHelper.closeAllBrackets
+DEBUG (   77.608): Entering SOABracketHelper.closeBracket
+DEBUG (   77.608): Incrementing PERF SUM SOA count
+DEBUG (   77.608): ISWin7x64Tc91.67464.01.infodba.00049 - Service Request: Core-2009-04-Session:stopOperation
+DEBUG (   77.624): ISWin7x64Tc91.67464.01.infodba.00049 - Service Response: Core-2009-04-Session:stopOperation
+DEBUG (   77.624): SOABracket Closed (UID: 5)
+DEBUG (   77.624): Resetting UID
+DEBUG (   77.624): Exiting SOABracketHelper.closeBracket
+DEBUG (   77.624): Entering SOABracketHelper.closeOuterBracket
+DEBUG (   77.624): Exiting SOABracketHelper.closeOuterBracket
+DEBUG (   77.624): Exiting SOABracketHelper.closeAllBrackets
+DEBUG (   77.624): Exiting Operations.updateManager
+DEBUG (   77.624): Exiting Operations.startManager
+DEBUG (   77.624): Entering Operations.displayManagerDialog
+DEBUG (   77.624): Entering SOABracketHelper.closeBracket
+DEBUG (   77.624): Exiting SOABracketHelper.closeBracket
+DEBUG (   77.686): Exiting Operations.displayManagerDialog
+DEBUG (   90.010): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   90.010): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   90.041): Exiting SOAFileExporter.exportPreviewFiles
+WARNING (   90.041): Could not get cached IPEM_master_dependency objects from Dataset with UID wfXNEJ0roZ6wsC
+WARNING (   90.041): Call to get uncached objects from Dataset with UID wfXNEJ0roZ6wsC
+DEBUG (   90.041): ...from: com.transcendata.cadpdm.soa.SOARelationCache.getRelated(SOARelationCache.java:156)
+DEBUG (   90.041): ...from: com.transcendata.cadpdm.soa.SOARelationHelper.getRelations(SOARelationHelper.java:645)
+DEBUG (   90.041): ...from: com.transcendata.cadpdm.soa.SOARelationHelper.hasMasterDependency(SOARelationHelper.java:928)
+DEBUG (   90.041): ...from: com.transcendata.cadpdm.soa.gui.SOASummaryPanel.getPreviewImage(SOASummaryPanel.java:687)
+DEBUG (   90.041): ...from: com.transcendata.cadpdm.soa.gui.SOASummaryPanel.populateSummary(SOASummaryPanel.java:493)
+DEBUG (   90.041): ...from: com.transcendata.ipemsoa.gui.SyncFrame.tableRowSelected(SyncFrame.java:500)
+WARNING (   90.041): ...calling server to expand default relations. 
+DEBUG (   90.041): Entering SOARelationCache.cacheRelations(ModelObject[])
+DEBUG (   90.041): Entering SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (   90.041): Entering SOARelationCache.cacheDatasetRelations
+DEBUG (   90.041): Entering SOARelationCache.expandRelations
+DEBUG (   90.041): Setting property policy "empty" on the SOA Connection.
+DEBUG (   90.041): Incrementing PERF SUM SOA count
+DEBUG (   90.041): ISWin7x64Tc91.26258.01.infodba.00050 - Service Request: Core-2007-09-DataManagement:expandGRMRelationsForPrimary
+DEBUG (   90.041): ISWin7x64Tc91.26258.01.infodba.00050 - Service Response: Core-2007-09-DataManagement:expandGRMRelationsForPrimary
+DEBUG (   90.041): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (   90.041): Setting property policy "ipem_res_policy" on the SOA Connection.
+DEBUG (   90.041): Incrementing PERF SUM SOA count
+DEBUG (   90.041): ISWin7x64Tc91.26258.01.infodba.00051 - Service Request: Core-2007-01-Session:setObjectPropertyPolicy
+DEBUG (   90.041): ISWin7x64Tc91.26258.01.infodba.00051 - Service Response: Core-2007-01-Session:setObjectPropertyPolicy
+INFO (   90.041): PERF: SOA Call starts - getProperties(timestamp) - 1
+DEBUG (   90.057): Incrementing PERF SUM SOA count
+DEBUG (   90.057): ISWin7x64Tc91.26258.01.infodba.00052 - Service Request: Core-2006-03-DataManagement:getProperties
+DEBUG (   90.057): ISWin7x64Tc91.26258.01.infodba.00052 - Service Response: Core-2006-03-DataManagement:getProperties
+INFO (   90.073): PERF: SOA Call ends - getProperties(timestamp)
+DEBUG (   90.073): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (   90.073): Exiting SOARelationCache.expandRelations
+DEBUG (   90.073): Exiting SOARelationCache.cacheDatasetRelations
+DEBUG (   90.073): Exiting SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (   90.073): Exiting SOARelationCache.cacheRelations(ModelObject[])
+WARNING (   90.073): ...relationship not loaded during expand of default relations -- making explicit expand call.
+DEBUG (   90.073): Incrementing PERF SUM SOA count
+DEBUG (   90.073): ISWin7x64Tc91.26258.01.infodba.00053 - Service Request: Core-2010-04-DataManagement:getAvailableTypesWithDisplayNames
+DEBUG (   90.104): ISWin7x64Tc91.26258.01.infodba.00053 - Service Response: Core-2010-04-DataManagement:getAvailableTypesWithDisplayNames
+DEBUG (   90.135): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   90.151): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   90.151): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (   90.556): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   90.556): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   90.556): Exiting SOAFileExporter.exportPreviewFiles
+WARNING (   90.572): Could not get cached IPEM_master_dependency objects from Dataset with UID wfYNUB0IoZ6wsC
+WARNING (   90.572): Call to get uncached objects from Dataset with UID wfYNUB0IoZ6wsC
+DEBUG (   90.572): ...from: com.transcendata.cadpdm.soa.SOARelationCache.getRelated(SOARelationCache.java:156)
+DEBUG (   90.572): ...from: com.transcendata.cadpdm.soa.SOARelationHelper.getRelations(SOARelationHelper.java:645)
+DEBUG (   90.572): ...from: com.transcendata.cadpdm.soa.SOARelationHelper.hasMasterDependency(SOARelationHelper.java:928)
+DEBUG (   90.572): ...from: com.transcendata.cadpdm.soa.gui.SOASummaryPanel.getPreviewImage(SOASummaryPanel.java:687)
+DEBUG (   90.572): ...from: com.transcendata.cadpdm.soa.gui.SOASummaryPanel.populateSummary(SOASummaryPanel.java:493)
+DEBUG (   90.572): ...from: com.transcendata.ipemsoa.gui.SyncFrame.tableRowSelected(SyncFrame.java:500)
+WARNING (   90.572): ...calling server to expand default relations. 
+DEBUG (   90.572): Entering SOARelationCache.cacheRelations(ModelObject[])
+DEBUG (   90.572): Entering SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (   90.572): Entering SOARelationCache.cacheDatasetRelations
+DEBUG (   90.572): Entering SOARelationCache.expandRelations
+DEBUG (   90.572): Setting property policy "empty" on the SOA Connection.
+DEBUG (   90.572): Incrementing PERF SUM SOA count
+DEBUG (   90.572): ISWin7x64Tc91.26258.01.infodba.00054 - Service Request: Core-2007-09-DataManagement:expandGRMRelationsForPrimary
+DEBUG (   90.572): ISWin7x64Tc91.26258.01.infodba.00054 - Service Response: Core-2007-09-DataManagement:expandGRMRelationsForPrimary
+DEBUG (   90.572): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (   90.572): Setting property policy "ipem_res_policy" on the SOA Connection.
+INFO (   90.572): PERF: SOA Call starts - getProperties(timestamp) - 1
+DEBUG (   90.572): Incrementing PERF SUM SOA count
+DEBUG (   90.572): ISWin7x64Tc91.26258.01.infodba.00055 - Service Request: Core-2006-03-DataManagement:getProperties
+DEBUG (   90.587): ISWin7x64Tc91.26258.01.infodba.00055 - Service Response: Core-2006-03-DataManagement:getProperties
+INFO (   90.587): PERF: SOA Call ends - getProperties(timestamp)
+DEBUG (   90.587): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (   90.587): Exiting SOARelationCache.expandRelations
+DEBUG (   90.587): Exiting SOARelationCache.cacheDatasetRelations
+DEBUG (   90.587): Exiting SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (   90.587): Exiting SOARelationCache.cacheRelations(ModelObject[])
+WARNING (   90.587): ...relationship not loaded during expand of default relations -- making explicit expand call.
+DEBUG (   90.650): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   90.650): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   90.650): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (   90.962): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   90.962): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   90.962): Exiting SOAFileExporter.exportPreviewFiles
+WARNING (   90.962): Could not get cached IPEM_master_dependency objects from Dataset with UID wfZNUB1ioZ6wsC
+WARNING (   90.962): Call to get uncached objects from Dataset with UID wfZNUB1ioZ6wsC
+DEBUG (   90.962): ...from: com.transcendata.cadpdm.soa.SOARelationCache.getRelated(SOARelationCache.java:156)
+DEBUG (   90.962): ...from: com.transcendata.cadpdm.soa.SOARelationHelper.getRelations(SOARelationHelper.java:645)
+DEBUG (   90.962): ...from: com.transcendata.cadpdm.soa.SOARelationHelper.hasMasterDependency(SOARelationHelper.java:928)
+DEBUG (   90.962): ...from: com.transcendata.cadpdm.soa.gui.SOASummaryPanel.getPreviewImage(SOASummaryPanel.java:687)
+DEBUG (   90.962): ...from: com.transcendata.cadpdm.soa.gui.SOASummaryPanel.populateSummary(SOASummaryPanel.java:493)
+DEBUG (   90.962): ...from: com.transcendata.ipemsoa.gui.SyncFrame.tableRowSelected(SyncFrame.java:500)
+WARNING (   90.962): ...calling server to expand default relations. 
+DEBUG (   90.962): Entering SOARelationCache.cacheRelations(ModelObject[])
+DEBUG (   90.962): Entering SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (   90.962): Entering SOARelationCache.cacheDatasetRelations
+DEBUG (   90.962): Entering SOARelationCache.expandRelations
+DEBUG (   90.962): Setting property policy "empty" on the SOA Connection.
+DEBUG (   90.977): Incrementing PERF SUM SOA count
+DEBUG (   90.977): ISWin7x64Tc91.26258.01.infodba.00056 - Service Request: Core-2007-09-DataManagement:expandGRMRelationsForPrimary
+DEBUG (   90.977): ISWin7x64Tc91.26258.01.infodba.00056 - Service Response: Core-2007-09-DataManagement:expandGRMRelationsForPrimary
+DEBUG (   90.977): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (   90.977): Setting property policy "ipem_res_policy" on the SOA Connection.
+INFO (   90.977): PERF: SOA Call starts - getProperties(timestamp) - 1
+DEBUG (   90.977): Incrementing PERF SUM SOA count
+DEBUG (   90.977): ISWin7x64Tc91.26258.01.infodba.00057 - Service Request: Core-2006-03-DataManagement:getProperties
+DEBUG (   90.993): ISWin7x64Tc91.26258.01.infodba.00057 - Service Response: Core-2006-03-DataManagement:getProperties
+INFO (   90.993): PERF: SOA Call ends - getProperties(timestamp)
+DEBUG (   90.993): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (   90.993): Exiting SOARelationCache.expandRelations
+DEBUG (   90.993): Exiting SOARelationCache.cacheDatasetRelations
+DEBUG (   90.993): Exiting SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (   90.993): Exiting SOARelationCache.cacheRelations(ModelObject[])
+WARNING (   90.993): ...relationship not loaded during expand of default relations -- making explicit expand call.
+DEBUG (   91.071): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   91.071): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   91.071): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (   91.695): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   91.695): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   91.695): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (   91.820): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   91.820): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   91.820): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (   93.411): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   93.411): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   93.411): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (   93.505): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   93.505): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   93.505): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (   93.817): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   93.817): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   93.817): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (   93.863): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   93.863): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   93.863): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (   94.378): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   94.378): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   94.378): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (   94.519): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (   94.519): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (   94.519): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (   97.857): Entering SyncDialog.okAction
+DEBUG (   97.857): OperationMonitor started: com.transcendata.ipemsoa.gui.CheckInDialog.msgValidateConsistentIdentities
+DEBUG (   97.857): Consistent identities validated
+INFO (   97.857): SOA Call starts - setInstanceOrGeneric
+DEBUG (   97.857): Entering SOARelationHelper.hasMasterParents
+DEBUG (   97.857): Entering SOARelationHelper.findParents
+DEBUG (   97.857): Setting property policy "empty" on the SOA Connection.
+DEBUG (   97.857): Incrementing PERF SUM SOA count
+DEBUG (   97.857): ISWin7x64Tc91.26258.01.infodba.00058 - Service Request: Core-2007-06-DataManagement:expandGRMRelationsForSecondary
+DEBUG (   97.873): ISWin7x64Tc91.26258.01.infodba.00058 - Service Response: Core-2007-06-DataManagement:expandGRMRelationsForSecondary
+DEBUG (   97.873): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (   97.873): Exiting SOARelationHelper.findParents
+DEBUG (   97.873): Exiting SOARelationHelper.hasMasterParents
+INFO (   97.904): PERF: Update Files Button Clicked
+DEBUG (   97.904): Entering SyncDialog.update
+DEBUG (   97.904): Beginning PERF SUM
+DEBUG (   97.904): Setting Operation In Progress true
+DEBUG (   97.904): Filter named required is Required
+DEBUG (   97.904): Filter named include drawings is Include Drawings
+DEBUG (   97.904): Filter Required enabled
+DEBUG (   97.904): OperationMonitor disabled
+INFO (   97.904): No models were updated.
+DEBUG (   97.904): Saving registry files.
+DEBUG (   97.904): Done saving registry files.
+DEBUG (   97.904): Exiting SyncDialog.okAction
+DEBUG (   97.904): OperationMonitor disabled
+DEBUG (   97.919): Pausing PERF SUM
+DEBUG (   99.261): Resuming PERF SUM
+DEBUG (   99.261): Setting Operation In Progress false
+DEBUG (  100.759): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (  100.759): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (  100.759): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (  100.868): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (  100.868): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (  100.868): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (  101.117): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (  101.117): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (  101.117): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (  101.305): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (  101.305): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (  101.305): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (  101.570): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (  101.570): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (  101.570): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (  101.679): Entering SOAFileExporter.exportPreviewFiles
+DEBUG (  101.679): Export JPEG files matching "*" to C:\Users\infodba\AppData\Local\Temp\preview
+DEBUG (  101.679): Exiting SOAFileExporter.exportPreviewFiles
+DEBUG (  103.598): Entering SyncDialog.okAction
+DEBUG (  103.598): OperationMonitor started: com.transcendata.ipemsoa.gui.CheckInDialog.msgValidateConsistentIdentities
+DEBUG (  103.598): Consistent identities validated
+INFO (  103.598): SOA Call starts - setInstanceOrGeneric
+DEBUG (  103.598): Entering SOARelationHelper.hasMasterParents
+DEBUG (  103.598): Entering SOARelationHelper.findParents
+DEBUG (  103.598): Setting property policy "empty" on the SOA Connection.
+DEBUG (  103.598): Incrementing PERF SUM SOA count
+DEBUG (  103.598): ISWin7x64Tc91.26258.01.infodba.00059 - Service Request: Core-2007-06-DataManagement:expandGRMRelationsForSecondary
+DEBUG (  103.598): ISWin7x64Tc91.26258.01.infodba.00059 - Service Response: Core-2007-06-DataManagement:expandGRMRelationsForSecondary
+DEBUG (  103.598): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (  103.598): Exiting SOARelationHelper.findParents
+DEBUG (  103.598): Exiting SOARelationHelper.hasMasterParents
+DEBUG (  103.598): Saving registry files.
+DEBUG (  103.598): Done saving registry files.
+DEBUG (  103.598): Exiting SyncDialog.okAction
+DEBUG (  103.598): OperationMonitor disabled
+INFO (  103.613): PERF: Update Files Button Clicked
+DEBUG (  103.613): Entering SyncDialog.update
+DEBUG (  103.613): Beginning PERF SUM
+DEBUG (  103.613): Setting Operation In Progress true
+DEBUG (  103.613): Filter named required is Required
+DEBUG (  103.613): Filter named include drawings is Include Drawings
+DEBUG (  103.613): Filter Required enabled
+DEBUG (  103.613): OperationMonitor started: com.transcendata.ipemsoa.gui.CheckInDialog.msgValidateConsistentIdentities
+DEBUG (  103.613): Setting property policy "ipem_res_policy" on the SOA Connection.
+INFO (  103.629): PERF: SOA Call starts - getProperties(timestamp) - 1
+DEBUG (  103.629): Incrementing PERF SUM SOA count
+DEBUG (  103.629): ISWin7x64Tc91.15341.01.infodba.00060 - Service Request: Core-2006-03-DataManagement:getProperties
+DEBUG (  103.629): ISWin7x64Tc91.15341.01.infodba.00060 - Service Response: Core-2006-03-DataManagement:getProperties
+INFO (  103.629): PERF: SOA Call ends - getProperties(timestamp)
+DEBUG (  103.629): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (  103.629): Setting property policy "ipem_res_policy" on the SOA Connection.
+INFO (  103.629): PERF: SOA Call starts - getProperties(timestamp) - 1
+DEBUG (  103.629): Incrementing PERF SUM SOA count
+DEBUG (  103.629): ISWin7x64Tc91.15341.01.infodba.00061 - Service Request: Core-2006-03-DataManagement:getProperties
+DEBUG (  103.645): ISWin7x64Tc91.15341.01.infodba.00061 - Service Response: Core-2006-03-DataManagement:getProperties
+INFO (  103.645): PERF: SOA Call ends - getProperties(timestamp)
+DEBUG (  103.645): Setting property policy "ipem_policy" on the SOA Connection.
+WARNING (  103.645): Could not get cached IMAN_specification objects from ItemRevision with UID wHVNUB1ioZ6wsC
+WARNING (  103.645): Call to get uncached objects from ItemRevision with UID wHVNUB1ioZ6wsC
+DEBUG (  103.645): ...from: com.transcendata.cadpdm.soa.SOARelationCache.getRelated(SOARelationCache.java:156)
+DEBUG (  103.645): ...from: com.transcendata.cadpdm.soa.SOADatasetHelper.getAttachments(SOADatasetHelper.java:2175)
+DEBUG (  103.645): ...from: com.transcendata.cadpdm.soa.SOADatasetHelper.getExistingPDMIdentifier(SOADatasetHelper.java:5548)
+DEBUG (  103.645): ...from: com.transcendata.cadpdm.soa.SOAOperationHandlerImpl.getPDMIdentifier(SOAOperationHandlerImpl.java:483)
+DEBUG (  103.645): ...from: com.transcendata.cadpdm.soa.SOAOperationHandlerImpl.isRenamed(SOAOperationHandlerImpl.java:587)
+DEBUG (  103.645): ...from: com.transcendata.cadpdm.ConsistentIdentityValidator.validate(ConsistentIdentityValidator.java:236)
+WARNING (  103.645): ...calling server to expand default relations. 
+DEBUG (  103.645): Entering SOARelationCache.cacheRelations(ModelObject[])
+DEBUG (  103.645): Entering SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (  103.645): Entering SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (  103.645): Setting property policy "empty" on the SOA Connection.
+DEBUG (  103.645): Incrementing PERF SUM SOA count
+DEBUG (  103.645): ISWin7x64Tc91.15341.01.infodba.00062 - Service Request: Core-2008-06-DataManagement:getItemAndRelatedObjects
+DEBUG (  103.645): ISWin7x64Tc91.15341.01.infodba.00062 - Service Response: Core-2008-06-DataManagement:getItemAndRelatedObjects
+DEBUG (  103.645): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (  103.645): Entering SOARelationCache.cacheDatasetRelations
+DEBUG (  103.645): Exiting SOARelationCache.cacheDatasetRelations
+DEBUG (  103.645): Exiting SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (  103.645): Exiting SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (  103.645): Exiting SOARelationCache.cacheRelations(ModelObject[])
+WARNING (  103.645): ...relationship not loaded during expand of default relations -- making explicit expand call.
+DEBUG (  103.660): Setting property policy "ipem_res_policy" on the SOA Connection.
+INFO (  103.660): PERF: SOA Call starts - getProperties(timestamp) - 1
+DEBUG (  103.660): Incrementing PERF SUM SOA count
+DEBUG (  103.660): ISWin7x64Tc91.15341.01.infodba.00063 - Service Request: Core-2006-03-DataManagement:getProperties
+DEBUG (  103.660): ISWin7x64Tc91.15341.01.infodba.00063 - Service Response: Core-2006-03-DataManagement:getProperties
+INFO (  103.660): PERF: SOA Call ends - getProperties(timestamp)
+DEBUG (  103.660): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (  103.660): Setting property policy "ipem_res_policy" on the SOA Connection.
+INFO (  103.660): PERF: SOA Call starts - getProperties(timestamp) - 1
+DEBUG (  103.660): Incrementing PERF SUM SOA count
+DEBUG (  103.660): ISWin7x64Tc91.15341.01.infodba.00064 - Service Request: Core-2006-03-DataManagement:getProperties
+DEBUG (  103.676): ISWin7x64Tc91.15341.01.infodba.00064 - Service Response: Core-2006-03-DataManagement:getProperties
+INFO (  103.676): PERF: SOA Call ends - getProperties(timestamp)
+DEBUG (  103.676): Setting property policy "ipem_policy" on the SOA Connection.
+WARNING (  103.676): Could not get cached IMAN_specification objects from ItemRevision with UID wHUNUB0IoZ6wsC
+WARNING (  103.676): Call to get uncached objects from ItemRevision with UID wHUNUB0IoZ6wsC
+DEBUG (  103.676): ...from: com.transcendata.cadpdm.soa.SOARelationCache.getRelated(SOARelationCache.java:156)
+DEBUG (  103.676): ...from: com.transcendata.cadpdm.soa.SOADatasetHelper.getAttachments(SOADatasetHelper.java:2175)
+DEBUG (  103.676): ...from: com.transcendata.cadpdm.soa.SOADatasetHelper.getExistingPDMIdentifier(SOADatasetHelper.java:5548)
+DEBUG (  103.676): ...from: com.transcendata.cadpdm.soa.SOAOperationHandlerImpl.getPDMIdentifier(SOAOperationHandlerImpl.java:483)
+DEBUG (  103.676): ...from: com.transcendata.cadpdm.soa.SOAOperationHandlerImpl.isRenamed(SOAOperationHandlerImpl.java:587)
+DEBUG (  103.676): ...from: com.transcendata.cadpdm.ConsistentIdentityValidator.validate(ConsistentIdentityValidator.java:236)
+WARNING (  103.676): ...calling server to expand default relations. 
+DEBUG (  103.676): Entering SOARelationCache.cacheRelations(ModelObject[])
+DEBUG (  103.676): Entering SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (  103.676): Entering SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (  103.676): Setting property policy "empty" on the SOA Connection.
+DEBUG (  103.676): Incrementing PERF SUM SOA count
+DEBUG (  103.676): ISWin7x64Tc91.15341.01.infodba.00065 - Service Request: Core-2008-06-DataManagement:getItemAndRelatedObjects
+DEBUG (  103.691): ISWin7x64Tc91.15341.01.infodba.00065 - Service Response: Core-2008-06-DataManagement:getItemAndRelatedObjects
+DEBUG (  103.691): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (  103.691): Entering SOARelationCache.cacheDatasetRelations
+DEBUG (  103.691): Exiting SOARelationCache.cacheDatasetRelations
+DEBUG (  103.691): Exiting SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (  103.691): Exiting SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (  103.691): Exiting SOARelationCache.cacheRelations(ModelObject[])
+WARNING (  103.691): ...relationship not loaded during expand of default relations -- making explicit expand call.
+DEBUG (  103.691): Setting property policy "ipem_res_policy" on the SOA Connection.
+INFO (  103.691): PERF: SOA Call starts - getProperties(timestamp) - 1
+DEBUG (  103.691): Incrementing PERF SUM SOA count
+DEBUG (  103.691): ISWin7x64Tc91.15341.01.infodba.00066 - Service Request: Core-2006-03-DataManagement:getProperties
+DEBUG (  103.691): ISWin7x64Tc91.15341.01.infodba.00066 - Service Response: Core-2006-03-DataManagement:getProperties
+INFO (  103.691): PERF: SOA Call ends - getProperties(timestamp)
+DEBUG (  103.691): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (  103.691): Setting property policy "ipem_res_policy" on the SOA Connection.
+INFO (  103.691): PERF: SOA Call starts - getProperties(timestamp) - 1
+DEBUG (  103.723): Incrementing PERF SUM SOA count
+DEBUG (  103.723): ISWin7x64Tc91.15341.01.infodba.00067 - Service Request: Core-2006-03-DataManagement:getProperties
+DEBUG (  103.723): ISWin7x64Tc91.15341.01.infodba.00067 - Service Response: Core-2006-03-DataManagement:getProperties
+INFO (  103.723): PERF: SOA Call ends - getProperties(timestamp)
+DEBUG (  103.723): Setting property policy "ipem_policy" on the SOA Connection.
+WARNING (  103.723): Could not get cached IMAN_specification objects from ItemRevision with UID wHTNEJ0roZ6wsC
+WARNING (  103.723): Call to get uncached objects from ItemRevision with UID wHTNEJ0roZ6wsC
+DEBUG (  103.723): ...from: com.transcendata.cadpdm.soa.SOARelationCache.getRelated(SOARelationCache.java:156)
+DEBUG (  103.723): ...from: com.transcendata.cadpdm.soa.SOADatasetHelper.getAttachments(SOADatasetHelper.java:2175)
+DEBUG (  103.723): ...from: com.transcendata.cadpdm.soa.SOADatasetHelper.getExistingPDMIdentifier(SOADatasetHelper.java:5548)
+DEBUG (  103.723): ...from: com.transcendata.cadpdm.soa.SOAOperationHandlerImpl.getPDMIdentifier(SOAOperationHandlerImpl.java:483)
+DEBUG (  103.723): ...from: com.transcendata.cadpdm.soa.SOAOperationHandlerImpl.isRenamed(SOAOperationHandlerImpl.java:587)
+DEBUG (  103.723): ...from: com.transcendata.cadpdm.ConsistentIdentityValidator.validate(ConsistentIdentityValidator.java:236)
+WARNING (  103.723): ...calling server to expand default relations. 
+DEBUG (  103.723): Entering SOARelationCache.cacheRelations(ModelObject[])
+DEBUG (  103.723): Entering SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (  103.723): Entering SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (  103.723): Setting property policy "empty" on the SOA Connection.
+DEBUG (  103.723): Incrementing PERF SUM SOA count
+DEBUG (  103.723): ISWin7x64Tc91.15341.01.infodba.00068 - Service Request: Core-2008-06-DataManagement:getItemAndRelatedObjects
+DEBUG (  103.738): ISWin7x64Tc91.15341.01.infodba.00068 - Service Response: Core-2008-06-DataManagement:getItemAndRelatedObjects
+DEBUG (  103.738): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (  103.738): Entering SOARelationCache.cacheDatasetRelations
+DEBUG (  103.738): Exiting SOARelationCache.cacheDatasetRelations
+DEBUG (  103.738): Exiting SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (  103.738): Exiting SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (  103.738): Exiting SOARelationCache.cacheRelations(ModelObject[])
+WARNING (  103.738): ...relationship not loaded during expand of default relations -- making explicit expand call.
+DEBUG (  103.738): Consistent identities validated
+INFO (  103.738): PERF: SOA Call starts - loadAdditionalObjects
+DEBUG (  103.738): Entering SOARelationCache.cacheRelations(ModelObject[])
+DEBUG (  103.738): Entering SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (  103.738): Entering SOARelationCache.cacheDatasetRelations
+DEBUG (  103.738): Exiting SOARelationCache.cacheDatasetRelations
+DEBUG (  103.738): Exiting SOARelationCache.cacheRelations(Collection<ModelObject>)
+DEBUG (  103.738): Exiting SOARelationCache.cacheRelations(ModelObject[])
+INFO (  103.738): PERF: SOA Call starts - getNamedRefObjects
+INFO (  103.738): PERF: SOA Call ends - getNamedRefObjects
+DEBUG (  103.738): Setting property policy "ipem_res_policy" on the SOA Connection.
+INFO (  103.738): PERF: SOA Call starts - getProperties(timestamp) - 6
+DEBUG (  103.738): Incrementing PERF SUM SOA count
+DEBUG (  103.738): ISWin7x64Tc91.15341.01.infodba.00069 - Service Request: Core-2006-03-DataManagement:getProperties
+DEBUG (  103.754): ISWin7x64Tc91.15341.01.infodba.00069 - Service Response: Core-2006-03-DataManagement:getProperties
+INFO (  103.754): PERF: SOA Call ends - getProperties(timestamp)
+DEBUG (  103.754): Setting property policy "ipem_policy" on the SOA Connection.
+INFO (  103.754): PERF: SOA Call End - loadAdditionalObjects
+DEBUG (  103.754): Looking for dependencies of update operands
+DEBUG (  103.754): SOADependencyCollector limit set to 1
+DEBUG (  103.754): DefaultFromPDMCollector limit set to 1
+DEBUG (  103.754): Entering DefaultFromPDMCollector.execute
+DEBUG (  103.754): OperationCollection class: class com.transcendata.ipemsoa.CheckOutCollectionImpl
+DEBUG (  103.754):   Dependency action: default
+DEBUG (  103.754):   Show dependencies? false
+DEBUG (  103.754):   Destination directory: C:\ipem_work
+DEBUG (  103.754):   Checkout reason: null
+DEBUG (  103.754):   Checkout change ID: null
+DEBUG (  103.754):   Revision rule name: null
+DEBUG (  103.754):   Treat precise general relationships as imprecise? true
+DEBUG (  103.754):   Treat precise master relationships as imprecise? true
+DEBUG (  103.754):   Follow dataset general relationships? false
+DEBUG (  103.754):   Follow dataset master relationships? false
+DEBUG (  103.754):   Open all? false
+DEBUG (  103.754):   Display in window? true
+DEBUG (  103.754):   Simprep type: 0
+DEBUG (  103.754):   Simprep name: null
+DEBUG (  103.754):   Number of roots: 3
+DEBUG (  103.754):     Root: Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (  103.754):     Root: Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (  103.754):     Root: Pro/ENGINEER model SAVETEST.PRT
+DEBUG (  103.754):   Number of elements: 3
+DEBUG (  103.754):     OperationElement: Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (  103.754):       Class: class com.transcendata.ipemsoa.pe.CheckOutElementImpl
+DEBUG (  103.754):       Operand flag: true
+DEBUG (  103.754):       Master flag: true
+DEBUG (  103.754):       Is in CAD: false
+DEBUG (  103.754):       CADFile: C:\ipem_work\savetest3.prt.2
+DEBUG (  103.754):       CADUnits: null
+DEBUG (  103.754):       Reserved flag: false
+DEBUG (  103.754):       Display flag: false
+DEBUG (  103.754):       Select flag: false
+DEBUG (  103.754):       Obsolete relations flag: false
+DEBUG (  103.754):       Assembly component flag: false
+DEBUG (  103.754):       Simprep names: null
+DEBUG (  103.754):       Subtype: 0
+DEBUG (  103.754):       Is generic? false
+DEBUG (  103.754):       Is instance? false
+DEBUG (  103.754):       Short file: null
+DEBUG (  103.754):       PDMInfo: SAVETEST3/A
+DEBUG (  103.754):         Class: class com.transcendata.cadpdm.soa.SOAInfoImpl
+DEBUG (  103.754):         Dataset Description null
+DEBUG (  103.754):         Dataset Type ProPrt
+DEBUG (  103.754):         Dataset Name SAVETEST3
+DEBUG (  103.754):         Checkout Reason null
+DEBUG (  103.754):         Checkout Change ID null
+DEBUG (  103.754):         PermanentIdentifier IManPermanentIdentifier wDVNUB1ioZ6wsC * wHVNUB1ioZ6wsC * wfZNUB1ioZ6wsC
+DEBUG (  103.754):         Permanent CADIdentifier Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (  103.754):         Permanent PDMIdentifier SAVETEST3/A (Dataset SAVETEST3 is a ProPrt)
+DEBUG (  103.754):         Dataset ModelObject com.teamcenter.soa.client.model.strong.Dataset@10178f2b (version null)
+DEBUG (  103.754):         Item ModelObject com.teamcenter.soa.client.model.strong.Item@3d5bf0c5
+DEBUG (  103.754):         ItemRevision ModelObject com.teamcenter.soa.client.model.strong.ItemRevision@7c0f023c
+DEBUG (  103.754):         Item Description null
+DEBUG (  103.754):         Item ID SAVETEST3
+DEBUG (  103.754):         Item Name null
+DEBUG (  103.754):         Item Revision A
+DEBUG (  103.754):         Item Revision (Old) null
+DEBUG (  103.754):         Item Revision Description null
+DEBUG (  103.754):         Item Revision Reason null
+DEBUG (  103.754):         Item Type null
+DEBUG (  103.754):         Named Reference PrtFile
+DEBUG (  103.754):         PDM Type ProPrt
+DEBUG (  103.754):         Is Dataset in PDM true
+DEBUG (  103.754):         Is in PDM true
+DEBUG (  103.754):         Is Item in PDM true
+DEBUG (  103.754):         Is Item Revision in PDM true
+DEBUG (  103.754):       Has all relations: false
+DEBUG (  103.754):       Dependency relations: 0
+DEBUG (  103.754):     OperationElement: Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (  103.754):       Class: class com.transcendata.ipemsoa.pe.CheckOutElementImpl
+DEBUG (  103.754):       Operand flag: true
+DEBUG (  103.754):       Master flag: true
+DEBUG (  103.754):       Is in CAD: false
+DEBUG (  103.754):       CADFile: C:\ipem_work\savetest2.prt.2
+DEBUG (  103.754):       CADUnits: null
+DEBUG (  103.754):       Reserved flag: false
+DEBUG (  103.754):       Display flag: false
+DEBUG (  103.754):       Select flag: false
+DEBUG (  103.754):       Obsolete relations flag: false
+DEBUG (  103.754):       Assembly component flag: false
+DEBUG (  103.754):       Simprep names: null
+DEBUG (  103.754):       Subtype: 0
+DEBUG (  103.754):       Is generic? false
+DEBUG (  103.754):       Is instance? false
+DEBUG (  103.754):       Short file: null
+DEBUG (  103.754):       PDMInfo: SAVETEST2/A
+DEBUG (  103.754):         Class: class com.transcendata.cadpdm.soa.SOAInfoImpl
+DEBUG (  103.769):         Dataset Description null
+DEBUG (  103.769):         Dataset Type ProPrt
+DEBUG (  103.769):         Dataset Name SAVETEST2
+DEBUG (  103.769):         Checkout Reason null
+DEBUG (  103.769):         Checkout Change ID null
+DEBUG (  103.769):         PermanentIdentifier IManPermanentIdentifier wDUNUB0IoZ6wsC * wHUNUB0IoZ6wsC * wfYNUB0IoZ6wsC
+DEBUG (  103.769):         Permanent CADIdentifier Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (  103.769):         Permanent PDMIdentifier SAVETEST2/A (Dataset SAVETEST2 is a ProPrt)
+DEBUG (  103.769):         Dataset ModelObject com.teamcenter.soa.client.model.strong.Dataset@4460cf12 (version null)
+DEBUG (  103.769):         Item ModelObject com.teamcenter.soa.client.model.strong.Item@34da7b85
+DEBUG (  103.769):         ItemRevision ModelObject com.teamcenter.soa.client.model.strong.ItemRevision@5cad662c
+DEBUG (  103.769):         Item Description null
+DEBUG (  103.769):         Item ID SAVETEST2
+DEBUG (  103.769):         Item Name null
+DEBUG (  103.769):         Item Revision A
+DEBUG (  103.769):         Item Revision (Old) null
+DEBUG (  103.769):         Item Revision Description null
+DEBUG (  103.769):         Item Revision Reason null
+DEBUG (  103.769):         Item Type null
+DEBUG (  103.769):         Named Reference PrtFile
+DEBUG (  103.769):         PDM Type ProPrt
+DEBUG (  103.769):         Is Dataset in PDM true
+DEBUG (  103.769):         Is in PDM true
+DEBUG (  103.769):         Is Item in PDM true
+DEBUG (  103.769):         Is Item Revision in PDM true
+DEBUG (  103.769):       Has all relations: false
+DEBUG (  103.769):       Dependency relations: 0
+DEBUG (  103.769):     OperationElement: Pro/ENGINEER model SAVETEST.PRT
+DEBUG (  103.769):       Class: class com.transcendata.ipemsoa.pe.CheckOutElementImpl
+DEBUG (  103.769):       Operand flag: true
+DEBUG (  103.769):       Master flag: true
+DEBUG (  103.769):       Is in CAD: false
+DEBUG (  103.769):       CADFile: C:\ipem_work\savetest.prt.1
+DEBUG (  103.769):       CADUnits: null
+DEBUG (  103.769):       Reserved flag: false
+DEBUG (  103.769):       Display flag: false
+DEBUG (  103.769):       Select flag: false
+DEBUG (  103.769):       Obsolete relations flag: false
+DEBUG (  103.769):       Assembly component flag: false
+DEBUG (  103.769):       Simprep names: null
+DEBUG (  103.769):       Subtype: 0
+DEBUG (  103.769):       Is generic? false
+DEBUG (  103.769):       Is instance? false
+DEBUG (  103.769):       Short file: null
+DEBUG (  103.769):       PDMInfo: SAVETEST/A
+DEBUG (  103.769):         Class: class com.transcendata.cadpdm.soa.SOAInfoImpl
+DEBUG (  103.769):         Dataset Description null
+DEBUG (  103.769):         Dataset Type ProPrt
+DEBUG (  103.769):         Dataset Name SAVETEST
+DEBUG (  103.769):         Checkout Reason null
+DEBUG (  103.769):         Checkout Change ID null
+DEBUG (  103.769):         PermanentIdentifier IManPermanentIdentifier wDTNEJ0roZ6wsC * wHTNEJ0roZ6wsC * wfXNEJ0roZ6wsC
+DEBUG (  103.769):         Permanent CADIdentifier Pro/ENGINEER model SAVETEST.PRT
+DEBUG (  103.769):         Permanent PDMIdentifier SAVETEST/A (Dataset SAVETEST is a ProPrt)
+DEBUG (  103.769):         Dataset ModelObject com.teamcenter.soa.client.model.strong.Dataset@2fbac9d0 (version null)
+DEBUG (  103.769):         Item ModelObject com.teamcenter.soa.client.model.strong.Item@5f1c34fb
+DEBUG (  103.769):         ItemRevision ModelObject com.teamcenter.soa.client.model.strong.ItemRevision@7ab8584d
+DEBUG (  103.769):         Item Description null
+DEBUG (  103.769):         Item ID SAVETEST
+DEBUG (  103.769):         Item Name null
+DEBUG (  103.769):         Item Revision A
+DEBUG (  103.769):         Item Revision (Old) null
+DEBUG (  103.769):         Item Revision Description null
+DEBUG (  103.769):         Item Revision Reason null
+DEBUG (  103.769):         Item Type null
+DEBUG (  103.769):         Named Reference PrtFile
+DEBUG (  103.769):         PDM Type ProPrt
+DEBUG (  103.769):         Is Dataset in PDM true
+DEBUG (  103.769):         Is in PDM true
+DEBUG (  103.769):         Is Item in PDM true
+DEBUG (  103.769):         Is Item Revision in PDM true
+DEBUG (  103.769):       Has all relations: false
+DEBUG (  103.769):       Dependency relations: 0
+DEBUG (  103.769):   Missing elements: 0
+DEBUG (  103.769): End of OperationCollection
+DEBUG (  103.769): Registry is verified up to date for C:\ipem_work
+DEBUG (  103.769): Pro/ENGINEER model SAVETEST3.PRT not in CAD session, get CAD stamp from registry
+LEVEL 6 (  103.769): Registry is trivially up to date for C:\ipem_work
+LEVEL 6 (  103.769): Registry is trivially up to date for C:\ipem_work
+DEBUG (  103.769): Pro/ENGINEER model SAVETEST2.PRT not in CAD session, get CAD stamp from registry
+LEVEL 6 (  103.769): Registry is trivially up to date for C:\ipem_work
+LEVEL 6 (  103.769): Registry is trivially up to date for C:\ipem_work
+DEBUG (  103.769): Pro/ENGINEER model SAVETEST.PRT not in CAD session, get CAD stamp from registry
+LEVEL 6 (  103.769): Registry is trivially up to date for C:\ipem_work
+INFO (  103.769): PERF: SOA Call starts - loadLatestExistingItemRev
+INFO (  103.769): PERF: SOA Call ends - loadLatestExistingItemRev
+DEBUG (  103.816): Create PDM stamp for SAVETEST3/A
+DEBUG (  103.816): Got metadata version stamp for com.teamcenter.soa.client.model.strong.Dataset@10178f2b: 111
+DEBUG (  103.816): Got PDM version stamp 111 for Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (  103.816): Create PDM stamp for SAVETEST2/A
+DEBUG (  103.816): Got metadata version stamp for com.teamcenter.soa.client.model.strong.Dataset@4460cf12: 111
+DEBUG (  103.816): Got PDM version stamp 111 for Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (  103.816): Create PDM stamp for SAVETEST/A
+DEBUG (  103.816): Got metadata version stamp for com.teamcenter.soa.client.model.strong.Dataset@2fbac9d0: 111
+DEBUG (  103.816): Got PDM version stamp 111 for Pro/ENGINEER model SAVETEST.PRT
+DEBUG (  103.816): OperationMonitor started: Finding models in Teamcenter...
+DEBUG (  103.816): Entering SOADependencyCollector.execute
+DEBUG (  103.816): CAD types used in BOM: [JT, PRT, ASM]
+DEBUG (  103.816): Looking for dependencies at level 0
+DEBUG (  103.816): Entering SOARelationCache.cacheRelations(OperationElement[])
+DEBUG (  103.816): Entering SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (  103.816): Entering SOARelationCache.cacheDatasetRelations
+DEBUG (  103.816): Exiting SOARelationCache.cacheDatasetRelations
+DEBUG (  103.832): Exiting SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (  103.832): Exiting SOARelationCache.cacheRelations(OperationElement[])
+INFO (  103.832): PERF: SOA Call start - SOABOMLoader->load
+DEBUG (  103.832): Entering SOARelationCache.cacheRelations(OperationElement[])
+DEBUG (  103.832): Entering SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (  103.832): Entering SOARelationCache.cacheDatasetRelations
+DEBUG (  103.832): Exiting SOARelationCache.cacheDatasetRelations
+DEBUG (  103.832): Exiting SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (  103.832): Exiting SOARelationCache.cacheRelations(OperationElement[])
+DEBUG (  103.832): Entering SOARelationCache.cacheRelations(OperationElement[])
+DEBUG (  103.832): Entering SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (  103.832): Entering SOARelationCache.cacheDatasetRelations
+DEBUG (  103.832): Exiting SOARelationCache.cacheDatasetRelations
+DEBUG (  103.832): Exiting SOARelationCache.cacheItemRevAndDatasetRelations
+DEBUG (  103.832): Exiting SOARelationCache.cacheRelations(OperationElement[])
+DEBUG (  103.832): START:Filtering the suppressed components from the collection
+DEBUG (  103.832): END:Filtering the suppressed components from the collection
+DEBUG (  103.832): Removing unreachable elements
+DEBUG (  103.847): Exiting SOADependencyCollector.execute
+DEBUG (  103.847): Exiting DefaultFromPDMCollector.execute
+DEBUG (  103.847): No new dependencies for models being updated
+DEBUG (  103.847): No new dependencies needed for update
+DEBUG (  103.847): Dependencies GUI will not be used
+DEBUG (  103.847): Entering AbstractSynchronizationHandler.resolveCompleteFamilyTable
+DEBUG (  103.847): Exiting AbstractSynchronizationHandler.resolveCompleteFamilyTable
+DEBUG (  103.847): Registry C:\ipem_work\ipem.txr now open, mode rw
+DEBUG (  103.847): Waiting for lock on registry C:\ipem_work\ipem.txr, mode rw
+DEBUG (  103.847): Registry C:\ipem_work\ipem.txr now locked
+DEBUG (  103.847): Registry is verified up to date for C:\ipem_work\ipem.txr
+LEVEL 6 (  103.847): Registry file already open for C:\ipem_work, no need to refresh
+LEVEL 6 (  103.847): Registry file already open for C:\ipem_work, no need to refresh
+DEBUG (  103.847): Entering AbstractSynchronizationHandler.resolveCheckOutConflicts
+DEBUG (  103.847): No session conflicts
+DEBUG (  103.847): OperationMonitor disabled
+WARNING (  103.847): Some models already exist in the destination directory.
+WARNING (  103.847): The following models exist in the destination directory:
+
+C:\ipem_work\savetest.prt.1
+C:\ipem_work\savetest2.prt.1
+C:\ipem_work\savetest2.prt.2
+C:\ipem_work\savetest3.prt.1
+C:\ipem_work\savetest3.prt.2
+
+DEBUG (  103.847): Pausing PERF SUM
+DEBUG (  106.031): Resuming PERF SUM
+INFO (  106.031): Replace All selected
+DEBUG (  106.031): Exiting AbstractSynchronizationHandler.resolveCheckOutConflicts
+DEBUG (  106.031): OperationMonitor enabled
+DEBUG (  106.031): OperationMonitor started: com.transcendata.cadpdm.AbstractSynchronizationHandler.msgUpdateProgress
+DEBUG (  106.047): Entering SOAOperationHandlerImpl.checkOut
+DEBUG (  106.047): OperationCollection class: class com.transcendata.ipemsoa.CheckOutCollectionImpl
+DEBUG (  106.047):   Dependency action: default
+DEBUG (  106.047):   Show dependencies? false
+DEBUG (  106.047):   Destination directory: C:\ipem_work
+DEBUG (  106.047):   Checkout reason: null
+DEBUG (  106.047):   Checkout change ID: null
+DEBUG (  106.047):   Revision rule name: null
+DEBUG (  106.047):   Treat precise general relationships as imprecise? true
+DEBUG (  106.047):   Treat precise master relationships as imprecise? true
+DEBUG (  106.047):   Follow dataset general relationships? false
+DEBUG (  106.047):   Follow dataset master relationships? false
+DEBUG (  106.047):   Open all? false
+DEBUG (  106.047):   Display in window? true
+DEBUG (  106.047):   Simprep type: 0
+DEBUG (  106.047):   Simprep name: null
+DEBUG (  106.047):   Number of roots: 3
+DEBUG (  106.047):     Root: Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (  106.047):     Root: Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (  106.047):     Root: Pro/ENGINEER model SAVETEST.PRT
+DEBUG (  106.047):   Number of elements: 3
+DEBUG (  106.047):     OperationElement: Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (  106.047):       Class: class com.transcendata.ipemsoa.pe.CheckOutElementImpl
+DEBUG (  106.047):       Operand flag: true
+DEBUG (  106.047):       Master flag: true
+DEBUG (  106.047):       Is in CAD: false
+DEBUG (  106.047):       CADFile: C:\ipem_work\savetest3.prt.2
+DEBUG (  106.047):       CADUnits: null
+DEBUG (  106.047):       Reserved flag: false
+DEBUG (  106.047):       Display flag: false
+DEBUG (  106.047):       Select flag: false
+DEBUG (  106.047):       Obsolete relations flag: false
+DEBUG (  106.047):       Assembly component flag: false
+DEBUG (  106.047):       Simprep names: null
+DEBUG (  106.047):       Subtype: 0
+DEBUG (  106.047):       Is generic? false
+DEBUG (  106.047):       Is instance? false
+DEBUG (  106.047):       Short file: null
+DEBUG (  106.047):       PDMInfo: SAVETEST3/A
+DEBUG (  106.047):         Class: class com.transcendata.cadpdm.soa.SOAInfoImpl
+DEBUG (  106.047):         Dataset Description null
+DEBUG (  106.047):         Dataset Type ProPrt
+DEBUG (  106.047):         Dataset Name SAVETEST3
+DEBUG (  106.047):         Checkout Reason null
+DEBUG (  106.047):         Checkout Change ID null
+DEBUG (  106.047):         PermanentIdentifier IManPermanentIdentifier wDVNUB1ioZ6wsC * wHVNUB1ioZ6wsC * wfZNUB1ioZ6wsC
+DEBUG (  106.047):         Permanent CADIdentifier Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (  106.047):         Permanent PDMIdentifier SAVETEST3/A (Dataset SAVETEST3 is a ProPrt)
+DEBUG (  106.047):         Dataset ModelObject com.teamcenter.soa.client.model.strong.Dataset@10178f2b (version null)
+DEBUG (  106.047):         Item ModelObject com.teamcenter.soa.client.model.strong.Item@3d5bf0c5
+DEBUG (  106.047):         ItemRevision ModelObject com.teamcenter.soa.client.model.strong.ItemRevision@7c0f023c
+DEBUG (  106.047):         Item Description null
+DEBUG (  106.047):         Item ID SAVETEST3
+DEBUG (  106.047):         Item Name null
+DEBUG (  106.047):         Item Revision A
+DEBUG (  106.047):         Item Revision (Old) null
+DEBUG (  106.047):         Item Revision Description null
+DEBUG (  106.047):         Item Revision Reason null
+DEBUG (  106.047):         Item Type null
+DEBUG (  106.047):         Named Reference PrtFile
+DEBUG (  106.047):         PDM Type ProPrt
+DEBUG (  106.047):         Is Dataset in PDM true
+DEBUG (  106.047):         Is in PDM true
+DEBUG (  106.047):         Is Item in PDM true
+DEBUG (  106.047):         Is Item Revision in PDM true
+DEBUG (  106.047):       Has all relations: true
+DEBUG (  106.047):       Dependency relations: 0
+DEBUG (  106.047):     OperationElement: Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (  106.047):       Class: class com.transcendata.ipemsoa.pe.CheckOutElementImpl
+DEBUG (  106.047):       Operand flag: true
+DEBUG (  106.047):       Master flag: true
+DEBUG (  106.047):       Is in CAD: false
+DEBUG (  106.047):       CADFile: C:\ipem_work\savetest2.prt.2
+DEBUG (  106.047):       CADUnits: null
+DEBUG (  106.047):       Reserved flag: false
+DEBUG (  106.047):       Display flag: false
+DEBUG (  106.047):       Select flag: false
+DEBUG (  106.047):       Obsolete relations flag: false
+DEBUG (  106.047):       Assembly component flag: false
+DEBUG (  106.047):       Simprep names: null
+DEBUG (  106.047):       Subtype: 0
+DEBUG (  106.047):       Is generic? false
+DEBUG (  106.047):       Is instance? false
+DEBUG (  106.047):       Short file: null
+DEBUG (  106.047):       PDMInfo: SAVETEST2/A
+DEBUG (  106.047):         Class: class com.transcendata.cadpdm.soa.SOAInfoImpl
+DEBUG (  106.047):         Dataset Description null
+DEBUG (  106.047):         Dataset Type ProPrt
+DEBUG (  106.047):         Dataset Name SAVETEST2
+DEBUG (  106.047):         Checkout Reason null
+DEBUG (  106.047):         Checkout Change ID null
+DEBUG (  106.047):         PermanentIdentifier IManPermanentIdentifier wDUNUB0IoZ6wsC * wHUNUB0IoZ6wsC * wfYNUB0IoZ6wsC
+DEBUG (  106.047):         Permanent CADIdentifier Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (  106.047):         Permanent PDMIdentifier SAVETEST2/A (Dataset SAVETEST2 is a ProPrt)
+DEBUG (  106.047):         Dataset ModelObject com.teamcenter.soa.client.model.strong.Dataset@4460cf12 (version null)
+DEBUG (  106.047):         Item ModelObject com.teamcenter.soa.client.model.strong.Item@34da7b85
+DEBUG (  106.047):         ItemRevision ModelObject com.teamcenter.soa.client.model.strong.ItemRevision@5cad662c
+DEBUG (  106.047):         Item Description null
+DEBUG (  106.047):         Item ID SAVETEST2
+DEBUG (  106.047):         Item Name null
+DEBUG (  106.047):         Item Revision A
+DEBUG (  106.047):         Item Revision (Old) null
+DEBUG (  106.047):         Item Revision Description null
+DEBUG (  106.047):         Item Revision Reason null
+DEBUG (  106.047):         Item Type null
+DEBUG (  106.047):         Named Reference PrtFile
+DEBUG (  106.047):         PDM Type ProPrt
+DEBUG (  106.047):         Is Dataset in PDM true
+DEBUG (  106.047):         Is in PDM true
+DEBUG (  106.047):         Is Item in PDM true
+DEBUG (  106.047):         Is Item Revision in PDM true
+DEBUG (  106.047):       Has all relations: true
+DEBUG (  106.047):       Dependency relations: 0
+DEBUG (  106.047):     OperationElement: Pro/ENGINEER model SAVETEST.PRT
+DEBUG (  106.047):       Class: class com.transcendata.ipemsoa.pe.CheckOutElementImpl
+DEBUG (  106.047):       Operand flag: true
+DEBUG (  106.047):       Master flag: true
+DEBUG (  106.047):       Is in CAD: false
+DEBUG (  106.047):       CADFile: C:\ipem_work\savetest.prt.1
+DEBUG (  106.047):       CADUnits: null
+DEBUG (  106.047):       Reserved flag: false
+DEBUG (  106.047):       Display flag: false
+DEBUG (  106.047):       Select flag: false
+DEBUG (  106.047):       Obsolete relations flag: false
+DEBUG (  106.047):       Assembly component flag: false
+DEBUG (  106.047):       Simprep names: null
+DEBUG (  106.047):       Subtype: 0
+DEBUG (  106.047):       Is generic? false
+DEBUG (  106.047):       Is instance? false
+DEBUG (  106.047):       Short file: null
+DEBUG (  106.047):       PDMInfo: SAVETEST/A
+DEBUG (  106.047):         Class: class com.transcendata.cadpdm.soa.SOAInfoImpl
+DEBUG (  106.047):         Dataset Description null
+DEBUG (  106.047):         Dataset Type ProPrt
+DEBUG (  106.047):         Dataset Name SAVETEST
+DEBUG (  106.047):         Checkout Reason null
+DEBUG (  106.047):         Checkout Change ID null
+DEBUG (  106.047):         PermanentIdentifier IManPermanentIdentifier wDTNEJ0roZ6wsC * wHTNEJ0roZ6wsC * wfXNEJ0roZ6wsC
+DEBUG (  106.047):         Permanent CADIdentifier Pro/ENGINEER model SAVETEST.PRT
+DEBUG (  106.047):         Permanent PDMIdentifier SAVETEST/A (Dataset SAVETEST is a ProPrt)
+DEBUG (  106.047):         Dataset ModelObject com.teamcenter.soa.client.model.strong.Dataset@2fbac9d0 (version null)
+DEBUG (  106.047):         Item ModelObject com.teamcenter.soa.client.model.strong.Item@5f1c34fb
+DEBUG (  106.047):         ItemRevision ModelObject com.teamcenter.soa.client.model.strong.ItemRevision@7ab8584d
+DEBUG (  106.047):         Item Description null
+DEBUG (  106.047):         Item ID SAVETEST
+DEBUG (  106.047):         Item Name null
+DEBUG (  106.047):         Item Revision A
+DEBUG (  106.047):         Item Revision (Old) null
+DEBUG (  106.047):         Item Revision Description null
+DEBUG (  106.047):         Item Revision Reason null
+DEBUG (  106.047):         Item Type null
+DEBUG (  106.047):         Named Reference PrtFile
+DEBUG (  106.047):         PDM Type ProPrt
+DEBUG (  106.047):         Is Dataset in PDM true
+DEBUG (  106.047):         Is in PDM true
+DEBUG (  106.047):         Is Item in PDM true
+DEBUG (  106.047):         Is Item Revision in PDM true
+DEBUG (  106.047):       Has all relations: true
+DEBUG (  106.047):       Dependency relations: 0
+DEBUG (  106.047):   Missing elements: 0
+DEBUG (  106.047): End of OperationCollection
+DEBUG (  106.063): Entering SOAReserver.reserve
+INFO (  106.063): PERF: SOA Call starts - reserve(Collection completed)
+DEBUG (  106.078): Setting property policy "ipem_res_policy" on the SOA Connection.
+DEBUG (  106.078): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (  106.078): Exiting SOAReserver.reserve
+INFO (  106.078): PERF: SOA Call ends - reserve(Collection completed)
+DEBUG (  106.078): Entering SOAFileExporter.initialize
+DEBUG (  106.078): Pro/ENGINEER model SAVETEST3.PRT will be set to read-only after export
+DEBUG (  106.078): Exporting PrtFile for Pro/ENGINEER model SAVETEST3.PRT to C:\ipem_work\savetest3.prt.2
+DEBUG (  106.078): Looking up auxiliary files to export for Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (  106.078): Auxiliary file pattern before substitutions for Pro/ENGINEER model SAVETEST3.PRT: "{cad_name,lower}.xpr"
+DEBUG (  106.078): Auxiliary file pattern after substitutions: "savetest3.xpr"
+DEBUG (  106.078): Export AccelFile files matching "savetest3.xpr" to C:\ipem_work
+DEBUG (  106.078): Pro/ENGINEER model SAVETEST2.PRT will be set to read-only after export
+DEBUG (  106.078): Exporting PrtFile for Pro/ENGINEER model SAVETEST2.PRT to C:\ipem_work\savetest2.prt.2
+DEBUG (  106.078): Looking up auxiliary files to export for Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (  106.078): Auxiliary file pattern before substitutions for Pro/ENGINEER model SAVETEST2.PRT: "{cad_name,lower}.xpr"
+DEBUG (  106.078): Auxiliary file pattern after substitutions: "savetest2.xpr"
+DEBUG (  106.078): Export AccelFile files matching "savetest2.xpr" to C:\ipem_work
+DEBUG (  106.078): Pro/ENGINEER model SAVETEST.PRT will be set to read-only after export
+DEBUG (  106.078): Exporting PrtFile for Pro/ENGINEER model SAVETEST.PRT to C:\ipem_work\savetest.prt.1
+DEBUG (  106.078): Looking up auxiliary files to export for Pro/ENGINEER model SAVETEST.PRT
+DEBUG (  106.078): Auxiliary file pattern before substitutions for Pro/ENGINEER model SAVETEST.PRT: "{cad_name,lower}.xpr"
+DEBUG (  106.078): Auxiliary file pattern after substitutions: "savetest.xpr"
+DEBUG (  106.078): Export AccelFile files matching "savetest.xpr" to C:\ipem_work
+DEBUG (  106.359): Incrementing PERF SUM SOA count
+DEBUG (  106.359): ISWin7x64Tc91.15341.01.infodba.00070 - Service Request: Core-2006-03-FileManagement:getFileReadTickets
+DEBUG (  106.390): ISWin7x64Tc91.15341.01.infodba.00070 - Service Response: Core-2006-03-FileManagement:getFileReadTickets
+DEBUG (  106.390): Exiting SOAFileExporter.initialize
+DEBUG (  106.390): Entering SOAFileExporter.export
+INFO (  106.390): PERF: FCC Call starts - DownloadFilesToLocation
+INFO (  106.437): PERF: FCC Call ends - DownloadFilesToLocation
+DEBUG (  106.453): Set to read-only C:\ipem_work\savetest3.prt.2
+DEBUG (  106.468): Set to read-only C:\ipem_work\savetest2.prt.2
+DEBUG (  106.468): Set to read-only C:\ipem_work\savetest.prt.1
+DEBUG (  106.468): Exiting SOAFileExporter.export
+DEBUG (  106.468): SOAParentCollector limit set to -1
+DEBUG (  106.468): OperationMonitor started: Getting parent references...
+DEBUG (  106.484): Setting property policy "empty" on the SOA Connection.
+DEBUG (  106.484): Incrementing PERF SUM SOA count
+DEBUG (  106.484): ISWin7x64Tc91.15341.01.infodba.00071 - Service Request: Core-2007-06-DataManagement:expandGRMRelationsForSecondary
+DEBUG (  106.531): ISWin7x64Tc91.15341.01.infodba.00071 - Service Response: Core-2007-06-DataManagement:expandGRMRelationsForSecondary
+DEBUG (  106.531): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (  106.531): Entering SOARelationHelper.findParents
+DEBUG (  106.531): Setting property policy "empty" on the SOA Connection.
+DEBUG (  106.531): Incrementing PERF SUM SOA count
+DEBUG (  106.531): ISWin7x64Tc91.15341.01.infodba.00072 - Service Request: Core-2007-06-DataManagement:expandGRMRelationsForSecondary
+DEBUG (  106.546): ISWin7x64Tc91.15341.01.infodba.00072 - Service Response: Core-2007-06-DataManagement:expandGRMRelationsForSecondary
+DEBUG (  106.546): Setting property policy "ipem_policy" on the SOA Connection.
+DEBUG (  106.546): Exiting SOARelationHelper.findParents
+INFO (  106.546): Completed sorting of datasets found in Teamcenter
+DEBUG (  106.546): Exiting SOAOperationHandlerImpl.checkOut
+DEBUG (  106.546): Create PDM stamp for SAVETEST3/A
+DEBUG (  106.546): Got metadata version stamp for com.teamcenter.soa.client.model.strong.Dataset@10178f2b: 111
+DEBUG (  106.546): Got PDM version stamp 111 for Pro/ENGINEER model SAVETEST3.PRT
+LEVEL 6 (  106.546): Registry file already open for C:\ipem_work, no need to refresh
+DEBUG (  106.546): Create PDM stamp for SAVETEST2/A
+DEBUG (  106.546): Got metadata version stamp for com.teamcenter.soa.client.model.strong.Dataset@4460cf12: 111
+DEBUG (  106.546): Got PDM version stamp 111 for Pro/ENGINEER model SAVETEST2.PRT
+LEVEL 6 (  106.546): Registry file already open for C:\ipem_work, no need to refresh
+DEBUG (  106.546): Create PDM stamp for SAVETEST/A
+DEBUG (  106.546): Got metadata version stamp for com.teamcenter.soa.client.model.strong.Dataset@2fbac9d0: 111
+DEBUG (  106.546): Got PDM version stamp 111 for Pro/ENGINEER model SAVETEST.PRT
+LEVEL 6 (  106.546): Registry file already open for C:\ipem_work, no need to refresh
+DEBUG (  106.546):  * CADIdentifier = Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (  106.546):  * CADIdentifier = Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (  106.546):  * CADIdentifier = Pro/ENGINEER model SAVETEST.PRT
+LEVEL 6 (  106.546): Registry file already open for C:\ipem_work, no need to refresh
+DEBUG (  106.546): Pro/ENGINEER model SAVETEST3.PRT not in CAD session, get CAD stamp from registry
+LEVEL 6 (  106.546): Registry file already open for C:\ipem_work, no need to refresh
+LEVEL 6 (  106.546): Registry file already open for C:\ipem_work, no need to refresh
+DEBUG (  106.546): Pro/ENGINEER model SAVETEST2.PRT not in CAD session, get CAD stamp from registry
+LEVEL 6 (  106.546): Registry file already open for C:\ipem_work, no need to refresh
+LEVEL 6 (  106.546): Registry file already open for C:\ipem_work, no need to refresh
+DEBUG (  106.546): Pro/ENGINEER model SAVETEST.PRT not in CAD session, get CAD stamp from registry
+LEVEL 6 (  106.546): Registry file already open for C:\ipem_work, no need to refresh
+INFO (  106.546): PERF: SOA Call starts - loadLatestExistingItemRev
+INFO (  106.546): PERF: SOA Call ends - loadLatestExistingItemRev
+DEBUG (  106.546): Create PDM stamp for SAVETEST3/A
+DEBUG (  106.546): Got metadata version stamp for com.teamcenter.soa.client.model.strong.Dataset@10178f2b: 111
+DEBUG (  106.546): Got PDM version stamp 111 for Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (  106.546): Create PDM stamp for SAVETEST2/A
+DEBUG (  106.546): Got metadata version stamp for com.teamcenter.soa.client.model.strong.Dataset@4460cf12: 111
+DEBUG (  106.546): Got PDM version stamp 111 for Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (  106.546): Create PDM stamp for SAVETEST/A
+DEBUG (  106.546): Got metadata version stamp for com.teamcenter.soa.client.model.strong.Dataset@2fbac9d0: 111
+DEBUG (  106.546): Got PDM version stamp 111 for Pro/ENGINEER model SAVETEST.PRT
+DEBUG (  106.546): No models opened while updating C:\ipem_work
+DEBUG (  106.562): OperationMonitor disabled
+DEBUG (  106.562): Setting Operation In Progress false
+DEBUG (  106.562): Exiting SyncDialog.update
+INFO (  106.562): PERF: Update Directory Dialog is refreshed
+DEBUG (  106.562): Pausing PERF SUM
+INFO (  106.562): PERFSUM: Manager complete, time=0.765, SOA count=13
+LEVEL 6 (  106.577): Registry file already open for C:\ipem_work, no need to refresh
+DEBUG (  106.577): isNewVersionInPDM: PDM stamp com.transcendata.ipemsoa.StampImpl@1b9523c8
+DEBUG (  106.577): Stamp:
+DEBUG (  106.577):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (  106.577):   Modified in Pro/E:   null
+DEBUG (  106.577):   Pro/E version stamp: 111
+DEBUG (  106.577):   Pro/E file version:  1
+DEBUG (  106.577):   Pro/E file mod date: null
+DEBUG (  106.577):   Dataset version:     1
+DEBUG (  106.577):   Dataset mod date:    Tue Apr 08 16:34:32 EDT 2014
+DEBUG (  106.577):   Revision UID:        wHTNEJ0roZ6wsC
+DEBUG (  106.577):   Revision ID:         A
+DEBUG (  106.577):   Latest revision ID:  A
+DEBUG (  106.577): isNewVersionInPDM: PDM reference stamp com.transcendata.ipemsoa.StampImpl@5c602d9d
+DEBUG (  106.577): Stamp:
+DEBUG (  106.577):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (  106.577):   Modified in Pro/E:   null
+DEBUG (  106.577):   Pro/E version stamp: 111
+DEBUG (  106.577):   Pro/E file version:  1
+DEBUG (  106.577):   Pro/E file mod date: null
+DEBUG (  106.577):   Dataset version:     1
+DEBUG (  106.577):   Dataset mod date:    Tue Apr 08 16:34:32 EDT 2014
+DEBUG (  106.577):   Revision UID:        wHTNEJ0roZ6wsC
+DEBUG (  106.577):   Revision ID:         A
+DEBUG (  106.577):   Latest revision ID:  A
+DEBUG (  106.577): Is 111 newer than 111? same
+DEBUG (  106.577): isNewVersionInPDM: same because of PDM to PDM reference stamp comparison for Pro/ENGINEER model SAVETEST.PRT
+DEBUG (  106.577): isNewItemRevisionInPDM: same for Pro/ENGINEER model SAVETEST.PRT because of revision ID comparison
+LEVEL 6 (  106.577): Registry file already open for C:\ipem_work, no need to refresh
+DEBUG (  106.577): isNewVersionInPDM: PDM stamp com.transcendata.ipemsoa.StampImpl@3e4523d6
+DEBUG (  106.577): Stamp:
+DEBUG (  106.577):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (  106.577):   Modified in Pro/E:   null
+DEBUG (  106.577):   Pro/E version stamp: 111
+DEBUG (  106.577):   Pro/E file version:  2
+DEBUG (  106.577):   Pro/E file mod date: null
+DEBUG (  106.577):   Dataset version:     1
+DEBUG (  106.577):   Dataset mod date:    Wed Apr 09 08:28:43 EDT 2014
+DEBUG (  106.577):   Revision UID:        wHUNUB0IoZ6wsC
+DEBUG (  106.577):   Revision ID:         A
+DEBUG (  106.577):   Latest revision ID:  A
+DEBUG (  106.577): isNewVersionInPDM: PDM reference stamp com.transcendata.ipemsoa.StampImpl@2d33d68a
+DEBUG (  106.577): Stamp:
+DEBUG (  106.577):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (  106.577):   Modified in Pro/E:   null
+DEBUG (  106.577):   Pro/E version stamp: 111
+DEBUG (  106.577):   Pro/E file version:  2
+DEBUG (  106.577):   Pro/E file mod date: null
+DEBUG (  106.577):   Dataset version:     1
+DEBUG (  106.577):   Dataset mod date:    Wed Apr 09 08:28:43 EDT 2014
+DEBUG (  106.577):   Revision UID:        wHUNUB0IoZ6wsC
+DEBUG (  106.577):   Revision ID:         A
+DEBUG (  106.577):   Latest revision ID:  A
+DEBUG (  106.577): Is 111 newer than 111? same
+DEBUG (  106.577): isNewVersionInPDM: same because of PDM to PDM reference stamp comparison for Pro/ENGINEER model SAVETEST2.PRT
+DEBUG (  106.577): isNewItemRevisionInPDM: same for Pro/ENGINEER model SAVETEST2.PRT because of revision ID comparison
+LEVEL 6 (  106.577): Registry file already open for C:\ipem_work, no need to refresh
+DEBUG (  106.593): isNewVersionInPDM: PDM stamp com.transcendata.ipemsoa.StampImpl@49b65e36
+DEBUG (  106.593): Stamp:
+DEBUG (  106.593):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (  106.593):   Modified in Pro/E:   null
+DEBUG (  106.593):   Pro/E version stamp: 111
+DEBUG (  106.593):   Pro/E file version:  2
+DEBUG (  106.593):   Pro/E file mod date: null
+DEBUG (  106.593):   Dataset version:     1
+DEBUG (  106.593):   Dataset mod date:    Wed Apr 09 08:38:51 EDT 2014
+DEBUG (  106.593):   Revision UID:        wHVNUB1ioZ6wsC
+DEBUG (  106.593):   Revision ID:         A
+DEBUG (  106.593):   Latest revision ID:  A
+DEBUG (  106.593): isNewVersionInPDM: PDM reference stamp com.transcendata.ipemsoa.StampImpl@63e35108
+DEBUG (  106.593): Stamp:
+DEBUG (  106.593):   Class: class com.transcendata.ipemsoa.StampImpl
+DEBUG (  106.593):   Modified in Pro/E:   null
+DEBUG (  106.593):   Pro/E version stamp: 111
+DEBUG (  106.593):   Pro/E file version:  2
+DEBUG (  106.593):   Pro/E file mod date: null
+DEBUG (  106.593):   Dataset version:     1
+DEBUG (  106.593):   Dataset mod date:    Wed Apr 09 08:38:51 EDT 2014
+DEBUG (  106.593):   Revision UID:        wHVNUB1ioZ6wsC
+DEBUG (  106.593):   Revision ID:         A
+DEBUG (  106.593):   Latest revision ID:  A
+DEBUG (  106.593): Is 111 newer than 111? same
+DEBUG (  106.593): isNewVersionInPDM: same because of PDM to PDM reference stamp comparison for Pro/ENGINEER model SAVETEST3.PRT
+DEBUG (  106.593): isNewItemRevisionInPDM: same for Pro/ENGINEER model SAVETEST3.PRT because of revision ID comparison
+DEBUG (  116.764): Entering MainSync.stop
+DEBUG (  117.794): ISWin7x64Tc91.67464.01.infodba.00073 - Service Request: Core-2006-03-Session:getAvailableServices
+DEBUG (  117.841): ISWin7x64Tc91.67464.01.infodba.00073 - Service Response: Core-2006-03-Session:getAvailableServices
+DEBUG (  117.841): ISWin7x64Tc91.67464.01.infodba.00074 - Service Request: Core-2008-03-Session:connect
+DEBUG (  117.856): ISWin7x64Tc91.67464.01.infodba.00074 - Service Response: Core-2008-03-Session:connect
+DEBUG (  117.856): ISWin7x64Tc91.67464.01.infodba.00075 - Service Request: Core-2006-03-Session:logout
+DEBUG (  117.934): ISWin7x64Tc91.67464.01.infodba.00075 - Service Response: Core-2006-03-Session:logout
+DEBUG (  117.934): Total SOA Server Call Count: 75
+DEBUG (  117.934): Saving registry files.
+DEBUG (  117.934): Saving registry for C:\ipem_work
+DEBUG (  117.950): Registry for C:\ipem_work now closed
+DEBUG (  117.950): Done saving registry files.
+DEBUG (  117.950): Exiting MainSync.stop
