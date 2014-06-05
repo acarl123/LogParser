@@ -327,14 +327,14 @@
                                             <property name="validator_type">wxDefaultValidator</property>
                                             <property name="validator_variable"></property>
                                             <property name="value"></property>
-                                            <property name="wildcard">*.*</property>
+                                            <property name="wildcard">log files (*.txt, *.log)|*.txt; *.log)</property>
                                             <property name="window_extra_style"></property>
                                             <property name="window_name"></property>
                                             <property name="window_style"></property>
                                             <event name="OnChar"></event>
                                             <event name="OnEnterWindow"></event>
                                             <event name="OnEraseBackground"></event>
-                                            <event name="OnFileChanged">logFilePickerOnFileChanged</event>
+                                            <event name="OnFileChanged"></event>
                                             <event name="OnKeyDown"></event>
                                             <event name="OnKeyUp"></event>
                                             <event name="OnKillFocus"></event>
@@ -455,9 +455,9 @@
                                             <event name="OnListItemDeselected"></event>
                                             <event name="OnListItemFocused"></event>
                                             <event name="OnListItemMiddleClick"></event>
-                                            <event name="OnListItemRightClick">LogFileListCtrlOnListItemRightClick</event>
+                                            <event name="OnListItemRightClick"></event>
                                             <event name="OnListItemSelected"></event>
-                                            <event name="OnListKeyDown">LogFileListCtrlOnListKeyDown</event>
+                                            <event name="OnListKeyDown"></event>
                                             <event name="OnMiddleDClick"></event>
                                             <event name="OnMiddleDown"></event>
                                             <event name="OnMiddleUp"></event>
@@ -689,7 +689,7 @@
                                                             <property name="window_extra_style"></property>
                                                             <property name="window_name"></property>
                                                             <property name="window_style"></property>
-                                                            <event name="OnButtonClick">calcButtonOnButtonClick</event>
+                                                            <event name="OnButtonClick"></event>
                                                             <event name="OnChar"></event>
                                                             <event name="OnEnterWindow"></event>
                                                             <event name="OnEraseBackground"></event>
@@ -779,7 +779,7 @@
                                                     <property name="window_extra_style"></property>
                                                     <property name="window_name"></property>
                                                     <property name="window_style"></property>
-                                                    <event name="OnButtonClick">clearButtonOnButtonClick</event>
+                                                    <event name="OnButtonClick"></event>
                                                     <event name="OnChar"></event>
                                                     <event name="OnEnterWindow"></event>
                                                     <event name="OnEraseBackground"></event>
