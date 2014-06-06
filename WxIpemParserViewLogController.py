@@ -28,7 +28,7 @@ class WxIpemParserViewLogController():
    def __init__( self, parent ):
       self.MainWindow = WxIpemParserView.LogView(None)
       self.MainWindow.LogFileListCtrl.Bind( wx.EVT_LIST_KEY_DOWN, self.LogFileListCtrlOnListKeyDown )
-      self.MainWindow.logFilePicker.Bind( wx.EVT_FILEPICKER_CHANGED, self.logFilePickerOnFileChanged )
+      self.MainWindow.btnAddFiles.Bind( wx.EVT_BUTTON, self.logFilePickerOnFileChanged )
       self.MainWindow.calcButton.Bind( wx.EVT_BUTTON, self.calcButtonOnButtonClick)
       self.MainWindow.clearButton.Bind( wx.EVT_BUTTON, self.clearButtonOnButtonClick)
 
@@ -48,18 +48,35 @@ class WxIpemParserViewLogController():
 
 
    def logFilePickerOnFileChanged( self, event ):
-      # TODO: Implement saveFolderPickerOnDirChanged
-      fullPath = self.MainWindow.logFilePicker.GetPath()
-      with open(fullPath, 'r') as f:
-         first_line = f.readline()
-      parts = first_line.split(':')
-      self.MainWindow.SetTitle(parts[-1])
-      basePath = os.path.basename(fullPath)
-      self.inputTextFileList.append(fullPath)
-      self.MainWindow.LogFileListCtrl.InsertStringItem(self.IndexCounter, basePath)
+      dialog = wx.FileDialog(self.MainWindow, 'Choose a File', "", "", u"log files (*.txt, *.log)|*.txt; *.log|All Files (*.*)|*.*", wx.MULTIPLE)
+      if dialog.ShowModal() == wx.ID_OK:
+         filelist = dialog.GetPaths()
+      else:return
 
-      self.MainWindow.logFilePicker.SetPath("")
-      self.IndexCounter += 1
+      for file in filelist:
+         with open(file, 'r') as f:
+            first_line = f.readline()
+         parts = first_line.split(':')
+         self.MainWindow.SetTitle(parts[-1])
+         basePath = os.path.basename(file)
+         self.inputTextFileList.append(file)
+         self.MainWindow.LogFileListCtrl.InsertStringItem(self.IndexCounter, basePath)
+
+         self.IndexCounter += 1
+
+
+      # # TODO: Implement saveFolderPickerOnDirChanged
+      # fullPath = self.MainWindow.logFilePicker.GetPath()
+      # with open(fullPath, 'r') as f:
+      #    first_line = f.readline()
+      # parts = first_line.split(':')
+      # self.MainWindow.SetTitle(parts[-1])
+      # basePath = os.path.basename(fullPath)
+      # self.inputTextFileList.append(fullPath)
+      # self.MainWindow.LogFileListCtrl.InsertStringItem(self.IndexCounter, basePath)
+      #
+      # self.MainWindow.logFilePicker.SetPath("")
+      # self.IndexCounter += 1
 
    def LogFileListCtrlOnListKeyDown(self, event): # wxGlade: MyFrame1.<event_handler>
      keycode = event.GetKeyCode()

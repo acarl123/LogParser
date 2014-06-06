@@ -26,22 +26,17 @@ class LogView ( wx.Frame ):
 		self.mainPanel = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		mainPanelSizer = wx.BoxSizer( wx.VERTICAL )
 		
-		bSizer51 = wx.BoxSizer( wx.VERTICAL )
+		optionsSizer = wx.BoxSizer( wx.VERTICAL )
 		
-		self.m_staticText2 = wx.StaticText( self.mainPanel, wx.ID_ANY, u"Choose Log Files", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText2 = wx.StaticText( self.mainPanel, wx.ID_ANY, u"Log Files to Calculate:", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_CENTRE )
 		self.m_staticText2.Wrap( -1 )
-		bSizer51.Add( self.m_staticText2, 0, wx.ALL, 5 )
-		
-		self.logFilePicker = wx.FilePickerCtrl( self.mainPanel, wx.ID_ANY, wx.EmptyString, u"Select a file", u"*.*", wx.DefaultPosition, wx.DefaultSize, wx.FLP_CHANGE_DIR|wx.FLP_DEFAULT_STYLE )
-		bSizer51.Add( self.logFilePicker, 0, wx.ALL|wx.EXPAND, 5 )
-		
-		
-		mainPanelSizer.Add( bSizer51, 0, wx.ALL|wx.EXPAND, 5 )
-		
-		optionsSizer = wx.BoxSizer( wx.HORIZONTAL )
+		optionsSizer.Add( self.m_staticText2, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
 		self.LogFileListCtrl = wx.ListCtrl( self.mainPanel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LC_LIST )
 		optionsSizer.Add( self.LogFileListCtrl, 1, wx.ALL|wx.EXPAND, 5 )
+		
+		self.btnAddFiles = wx.Button( self.mainPanel, wx.ID_ANY, u"Add Files...", wx.DefaultPosition, wx.DefaultSize, 0 )
+		optionsSizer.Add( self.btnAddFiles, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
 		
 		mainPanelSizer.Add( optionsSizer, 0, wx.ALL|wx.EXPAND, 5 )
@@ -89,32 +84,8 @@ class LogView ( wx.Frame ):
 		self.Layout()
 		
 		self.Centre( wx.BOTH )
-		
-		# Connect Events
-		#self.logFilePicker.Bind( wx.EVT_FILEPICKER_CHANGED, self.logFilePickerOnFileChanged )
-		#self.LogFileListCtrl.Bind( wx.EVT_LIST_ITEM_RIGHT_CLICK, self.LogFileListCtrlOnListItemRightClick )
-		#self.LogFileListCtrl.Bind( wx.EVT_LIST_KEY_DOWN, self.LogFileListCtrlOnListKeyDown )
-		#self.calcButton.Bind( wx.EVT_BUTTON, self.calcButtonOnButtonClick )
-		#self.clearButton.Bind( wx.EVT_BUTTON, self.clearButtonOnButtonClick )
 	
 	def __del__( self ):
 		pass
-	
-
-	# Virtual event handlers, overide them in your derived class
-	#def logFilePickerOnFileChanged( self, event ):
-		#event.Skip()
-
-	#def LogFileListCtrlOnListItemRightClick( self, event ):
-		#event.Skip()
-
-	#def LogFileListCtrlOnListKeyDown( self, event ):
-		#event.Skip()
-
-	#def calcButtonOnButtonClick( self, event ):
-		#event.Skip()
-
-	#def clearButtonOnButtonClick( self, event ):
-		#event.Skip()
 	
 
