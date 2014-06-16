@@ -32,7 +32,7 @@ class MainController:
       self.totalOpenTime = 0
 
       # Bind events
-      self.mainWindow.logFilePicker.Bind(wx.EVT_FILEPICKER_CHANGED, self.onFile)
+      self.mainWindow.btnAddFiles.Bind(wx.EVT_BUTTON, self.onFile)
       self.mainWindow.calcButton.Bind(wx.EVT_BUTTON, self.onCalc)
       self.dirPaths = []
 
@@ -42,6 +42,13 @@ class MainController:
       self.mainWindow.Show()
 
    def onFile(self, event):
+      dialog = wx.FileDialog(self.mainWindow, 'Choose a File', "", "",
+                             u"log files (*.txt, *.log)|*.txt; *.log|All Files (*.*)|*.*", wx.MULTIPLE)
+      if dialog.ShowModal() == wx.ID_OK:
+         filelist = dialog.GetPaths()
+      else:
+         return
+
       logFilePath = self.mainWindow.logFilePicker.GetPath()
       self.dirPaths.append(os.path.dirname(logFilePath))
 
@@ -77,8 +84,10 @@ class MainController:
          # User Time
          elif userTimeStartKeyword in line.lower():
             pass
+            # print line
          elif any(key in line.lower() for key in userTimeEndKeyword):
             pass
+            # print 'end %s' % line
 
       if openStartTimeList and openEndTimeList:
          if len(openEndTimeList) == len(openStartTimeList):

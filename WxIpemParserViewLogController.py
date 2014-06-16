@@ -148,6 +148,9 @@ class WxIpemParserViewLogController():
       downloadStartKeywords = "perf: fcc call starts - downloadfilestolocation"
       downloadEndKeywords = "perf: fcc call ends - downloadfilestolocation"
 
+      CADStartKeyword = 'open command <?xml version'
+      CADEndKeyword = 'number of bytes reported by cadscript:'
+
       # Added the option to account for ProE times if the logs ever support it. You will notice this is only for the manager operation.
       # You would need to do the same for open and save operations. Same format would be followed for adding in integration calculation times
 
@@ -245,6 +248,9 @@ class WxIpemParserViewLogController():
          #######################MAN Variables#######################
          for line in open(file_path, 'r'):
             line = line.lower()
+
+            if CADStartKeyword.lower() in line or CADEndKeyword in line:
+               print line
 
          ############################MAN####################################
             if manStartKeyword in line:
