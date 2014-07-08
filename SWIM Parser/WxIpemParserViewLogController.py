@@ -245,17 +245,17 @@ class WxIpemParserViewLogController():
          manuserTimeBeginsInitiallyFound = False
          manDict = {}
          # if type of integration is SWIM:
-         # swimTime = 0
+         swimTime = 0
 
          #######################MAN Variables#######################
          for line in open(file_path, 'r'):
             line = line.lower()
 
 
-            # if CADEndKeyword in line:
-            #    lineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', line)
-            #    oldLineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', oldLine)
-            #    swimTime += (float(lineTime[0]) - float(oldLineTime[0]))
+            if CADEndKeyword in line:
+               lineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', line)
+               oldLineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', oldLine)
+               swimTime += (float(lineTime[0]) - float(oldLineTime[0]))
 
             oldLine = line
          ############################MAN####################################
@@ -819,7 +819,7 @@ class WxIpemParserViewLogController():
                   manuserEndTimeList.append(str(endTime))
                   manuserDescList.append(str(startDesc))
 
-         # if 'swimTime' in locals(): print "Total SWIM time: %ss" % swimTime
+         if 'swimTime' in locals(): print "Total SWIM time: %ss" % swimTime
 
 
          for number in opentcElapsedTimeList:
