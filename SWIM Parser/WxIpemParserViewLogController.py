@@ -130,7 +130,6 @@ class WxIpemParserViewLogController():
          pass
 
    def calculateSummaryTimes(self, listOfFiles):
-      openStartKeyword = "perf: teamcenter -> open begins"
       openEndKeyWordList = ["perf: open from teamcenter complete","exiting operationcollectiondialog.cancelaction for teamcenter open", "Exiting Operations.cancelCheckOut".lower()]
 
       saveStartKeyword = "perf: teamcenter -> save as begins"
@@ -138,6 +137,9 @@ class WxIpemParserViewLogController():
 
       manStartKeyword = "perf: manager begins"
       manEndKeyWordList = ["perfsum: manager complete","exiting operationcollectiondialog.cancelaction for teamcenter manager"]
+
+
+      openStartKeyword = "perf: teamcenter -> open begins"
 
       userTimeStartKeyword = "pausing perf sum"
       userTimeEndKeyword = ["beginning perf sum","resuming perf sum"]
@@ -256,6 +258,7 @@ class WxIpemParserViewLogController():
                lineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', line)
                oldLineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', oldLine)
                swimTime += (float(lineTime[0]) - float(oldLineTime[0]))
+               print oldLine, line, '\n'
 
             oldLine = line
          ############################MAN####################################
