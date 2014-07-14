@@ -1,0 +1,73 @@
+INFO (    0.002): Teamcenter Integration for SolidWorks 9.2.3 Release Fri 06/27/2014
+INFO (    0.003): {java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=C:\Teamcenter\TC91\portal\jre\bin, java.vm.version=16.3-b01, IMAN_PORTAL_INSTRFILE=, java.vm.vendor=Sun Microsystems Inc., java.vendor.url=http://java.sun.com/, path.separator=;, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, sun.java.launcher=SUN_STANDARD, user.country=US, sun.os.patch.level=Service Pack 1, java.vm.specification.name=Java Virtual Machine Specification, user.dir=C:\swimInstalls\swim923-06-27-2014_End-Game-Kickoff, java.runtime.version=1.6.0_20-b02, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.endorsed.dirs=C:\Teamcenter\TC91\portal\jre\lib\endorsed, os.arch=amd64, java.io.tmpdir=C:\Users\cmb\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Sun Microsystems Inc., user.variant=, os.name=Windows 7, sun.jnu.encoding=Cp1252, java.library.path=C:\Teamcenter\TC91\portal\jre\bin;.;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;;C:\Teamcenter\TC91\portal;C:\CS\PROE\MKSTOO~1\BIN64;C:\CS\PROE\MKSTOO~1\BIN;C:\CS\PROE\MKSTOO~1\BIN\X11;C:\CS\PROE\MKSTOO~1\MKSNT;C:\TRANSLATORS\PROE\JT;C:\PROGRAM FILES (X86)\INTEL\ICLS CLIENT\;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\ORACLE\PRODUCT\11.2.0\DBHOME_1\BIN;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\windows\SYSTEM32;C:\windows;C:\windows\SYSTEM32\WBEM;C:\windows\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;;C:\PROGRAM FILES (X86)\COMMON FILES\ROXIO SHARED\DLLSHARED\;C:\PROGRAM FILES (X86)\COMMON FILES\ROXIO SHARED\OEM\DLLSHARED\;C:\PYTHON27;C:\PYTHON27\DLLS;C:\PYTHON27;C:\PYTHON27\LIB;C:\PYTHON27\LIB\LIB-TK;C:\PYTHON27\SCRIPTS;C:\PROGRAM FILES\SIEMENS\TRANSLATORS\SOLIDWORKS_V12;C:\TRANSLATORS\PROE\JT;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\TEAMCENTER\TC91\TCCS\BIN;C:\TEAMCENTER\TC91\TCCS\LIB;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Microsoft Windows Performance Toolkit\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\TortoiseHg\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\apache-ant-1.9.4\bin\, TXD_USE_SOA=1, java.specification.name=Java Platform API Specification, java.class.version=50.0, sun.management.compiler=HotSpot 64-Bit Server Compiler, os.version=6.1, user.home=C:\Users\cmb, user.timezone=, java.awt.printerjob=sun.awt.windows.WPrinterJob, IMAN_PORTAL_ROOT=C:\Teamcenter\TC91\portal, file.encoding=Cp1252, java.specification.version=1.6, java.class.path=;C:\swimInstalls\swim923-06-27-2014_End-Game-Kickoff;C:\Teamcenter\TC91\portal\plugins;C:\Teamcenter\TC91\portal\plugins\configuration_8000.3.0;C:\Teamcenter\TC91\portal\plugins\configuration_9000.0.0;C:\Teamcenter\TC91\portal\plugins\configuration_9000.1.0;C:\Teamcenter\TC91\portal\plugins\configuration_10000.1.0;;C:\swimInstalls\swim923-06-27-2014_End-Game-Kickoff\swim.jar;C:\Teamcenter\TC91\tccs\jar\fccjavaclientproxy.jar;C:\Teamcenter\TC91\tccs\jar\fmsutil.jar;C:\Teamcenter\TC91\tccs\jar\tcserverjavabinding.jar;C:\swimInstalls\swim923-06-27-2014_End-Game-Kickoff\swim_manifest.jar;, user.name=cmb, java.vm.specification.version=1.0, java.home=C:\Teamcenter\TC91\portal\jre, sun.arch.data.model=64, user.language=en, java.specification.vendor=Sun Microsystems Inc., awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.6.0_20, java.ext.dirs=C:\Teamcenter\TC91\portal\jre\lib\ext;C:\windows\Sun\Java\lib\ext, sun.boot.class.path=C:\Teamcenter\TC91\portal\jre\lib\resources.jar;C:\Teamcenter\TC91\portal\jre\lib\rt.jar;C:\Teamcenter\TC91\portal\jre\lib\sunrsasign.jar;C:\Teamcenter\TC91\portal\jre\lib\jsse.jar;C:\Teamcenter\TC91\portal\jre\lib\jce.jar;C:\Teamcenter\TC91\portal\jre\lib\charsets.jar;C:\Teamcenter\TC91\portal\jre\classes, java.vendor=Sun Microsystems Inc., file.separator=\, java.vendor.url.bug=http://java.sun.com/cgi-bin/bugreport.cgi, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=windows, sun.cpu.isalist=amd64}
+DEBUG (    0.221): Entering CSHelper.connect
+DEBUG (    0.465): Created a socket connection.
+DEBUG (    0.466): Obtained input stream.
+DEBUG (    0.466): Obtained output stream.
+DEBUG (    0.466): Connected to CADscript. Calling CSHelper.processEvents.
+DEBUG (    0.466): Sanity Check
+DEBUG (    0.467): Entering CSHelper#processEvents
+DEBUG (    0.481): Number of bytes reported by cadscript: 94
+DEBUG (    0.481): Number of bytes read by swim: 94
+DEBUG (    0.482): <?xml version="1.0" encoding="utf-8"?>
+<MenuCallbackCmd callbackId="POST_INITIALIZE_EVENT" />
+DEBUG (    0.482): java.io.StringReader@5de9ac4
+DEBUG (    0.482): Calling CSOperations.processCIC.
+DEBUG (    0.594): Entering CicCsXmlReader#walkCicNode
+DEBUG (    0.595): Exiting CicCsXmlReader#walkCicNode
+DEBUG (    0.604): Entering Operations.postInitializeEvent
+DEBUG (    0.630): Number of bytes reported by cadscript: 113
+DEBUG (    0.630): Number of bytes read by swim: 113
+DEBUG (    0.631): <?xml version="1.0" encoding="utf-8"?>
+<BridgeInfoResponse>
+  <StatusData success="1" />
+</BridgeInfoResponse>
+DEBUG (    0.634): Entering ExitBICModeReader.walkBicNode
+DEBUG (    0.635): Exiting ExitBICModeReader.walkBicNode
+DEBUG (    0.637): Number of bytes reported by cadscript: 115
+DEBUG (    0.637): Number of bytes read by swim: 115
+DEBUG (    0.637): <?xml version="1.0" encoding="utf-8"?>
+<ExitBICModeResponse>
+  <StatusData success="1" />
+</ExitBICModeResponse>
+DEBUG (    0.639): Entering ExitBICModeReader.walkBicNode
+DEBUG (    0.639): Exiting ExitBICModeReader.walkBicNode
+DEBUG (    0.639): Exiting Operations.postInitializeEvent
+DEBUG (    0.640): Entering CSHelper#close
+DEBUG (    0.640): Exiting CSHelper#close
+DEBUG (    0.640): Exiting CSHelper#processEvents
+DEBUG (    0.640): Entering CSHelper.connect
+DEBUG (   11.942): Created a socket connection.
+DEBUG (   11.942): Obtained input stream.
+DEBUG (   11.942): Obtained output stream.
+DEBUG (   11.942): Connected to CADscript. Calling CSHelper.processEvents.
+DEBUG (   11.943): Sanity Check
+DEBUG (   11.943): Entering CSHelper#processEvents
+DEBUG (   11.943): Number of bytes reported by cadscript: 87
+DEBUG (   11.943): Number of bytes read by swim: 87
+DEBUG (   11.943): <?xml version="1.0" encoding="utf-8"?>
+<MenuCallbackCmd callbackId="PRE_EXIT_EVENT" />
+DEBUG (   11.943): java.io.StringReader@7c0b6548
+DEBUG (   11.943): Calling CSOperations.processCIC.
+DEBUG (   11.945): Entering CicCsXmlReader#walkCicNode
+DEBUG (   11.945): Exiting CicCsXmlReader#walkCicNode
+DEBUG (   11.945): Entering Operations.preExitEvent
+DEBUG (   11.945): Entering CSHelper#setTerminationFlag
+DEBUG (   11.945): Exiting CSHelper#setTerminationFlag
+DEBUG (   11.945): Operations.preExitEvent() entering try
+DEBUG (   11.946): Number of bytes reported by cadscript: 115
+DEBUG (   11.946): Number of bytes read by swim: 115
+DEBUG (   11.946): <?xml version="1.0" encoding="utf-8"?>
+<ExitBICModeResponse>
+  <StatusData success="1" />
+</ExitBICModeResponse>
+DEBUG (   11.947): Entering ExitBICModeReader.walkBicNode
+DEBUG (   11.948): Exiting ExitBICModeReader.walkBicNode
+DEBUG (   11.948): Exiting Operations.preExitEvent
+DEBUG (   11.948): Entering CSHelper#close
+DEBUG (   11.949): Exiting CSHelper#close
+DEBUG (   11.949): Exiting CSHelper#processEvents
+DEBUG (   11.949): Exiting MainSwim - no more events to process.
+DEBUG (   12.028): Not connected to Teamcenter, no need to disconnect
+DEBUG (   12.028): Exiting CSHelper#close

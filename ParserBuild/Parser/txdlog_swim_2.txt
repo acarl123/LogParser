@@ -1,0 +1,703 @@
+INFO (    0.001): Teamcenter Integration for SolidWorks 9.2.3 Release Fri 06/20/2014
+INFO (    0.003): {java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=C:\Teamcenter\TC91\portal\jre\bin, java.vm.version=16.3-b01, IMAN_PORTAL_INSTRFILE=, java.vm.vendor=Sun Microsystems Inc., java.vendor.url=http://java.sun.com/, path.separator=;, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, sun.java.launcher=SUN_STANDARD, user.country=US, sun.os.patch.level=Service Pack 1, java.vm.specification.name=Java Virtual Machine Specification, user.dir=C:\swimInstalls\swim923-06-20-2014_sprint3, java.runtime.version=1.6.0_20-b02, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.endorsed.dirs=C:\Teamcenter\TC91\portal\jre\lib\endorsed, os.arch=amd64, java.io.tmpdir=C:\Users\cmb\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Sun Microsystems Inc., user.variant=, os.name=Windows 7, sun.jnu.encoding=Cp1252, java.library.path=C:\Teamcenter\TC91\portal\jre\bin;.;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;;C:\Teamcenter\TC91\portal;C:\CS\PROE\MKSTOO~1\BIN64;C:\CS\PROE\MKSTOO~1\BIN;C:\CS\PROE\MKSTOO~1\BIN\X11;C:\CS\PROE\MKSTOO~1\MKSNT;C:\TRANSLATORS\PROE\JT;C:\PROGRAM FILES (X86)\INTEL\ICLS CLIENT\;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\ORACLE\PRODUCT\11.2.0\DBHOME_1\BIN;C:\PROGRAM FILES (X86)\NVIDIA CORPORATION\PHYSX\COMMON;C:\windows\SYSTEM32;C:\windows;C:\windows\SYSTEM32\WBEM;C:\windows\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;;C:\PROGRAM FILES (X86)\COMMON FILES\ROXIO SHARED\DLLSHARED\;C:\PROGRAM FILES (X86)\COMMON FILES\ROXIO SHARED\OEM\DLLSHARED\;C:\PYTHON27;C:\PYTHON27\DLLS;C:\PYTHON27;C:\PYTHON27\LIB;C:\PYTHON27\LIB\LIB-TK;C:\PYTHON27\SCRIPTS;C:\PROGRAM FILES\SIEMENS\TRANSLATORS\SOLIDWORKS_V12;C:\TRANSLATORS\PROE\JT;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\TEAMCENTER\TC91\TCCS\BIN;C:\TEAMCENTER\TC91\TCCS\LIB;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Microsoft Windows Performance Toolkit\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\TortoiseHg\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\apache-ant-1.9.4\bin\, TXD_USE_SOA=1, java.specification.name=Java Platform API Specification, java.class.version=50.0, sun.management.compiler=HotSpot 64-Bit Server Compiler, os.version=6.1, user.home=C:\Users\cmb, user.timezone=, java.awt.printerjob=sun.awt.windows.WPrinterJob, IMAN_PORTAL_ROOT=C:\Teamcenter\TC91\portal, file.encoding=Cp1252, java.specification.version=1.6, java.class.path=;C:\swimInstalls\swim923-06-20-2014_sprint3;C:\Teamcenter\TC91\portal\plugins;C:\Teamcenter\TC91\portal\plugins\configuration_8000.3.0;C:\Teamcenter\TC91\portal\plugins\configuration_9000.0.0;C:\Teamcenter\TC91\portal\plugins\configuration_9000.1.0;C:\Teamcenter\TC91\portal\plugins\configuration_10000.1.0;;C:\swimInstalls\swim923-06-20-2014_sprint3\swim.jar;C:\Teamcenter\TC91\tccs\jar\fccjavaclientproxy.jar;C:\Teamcenter\TC91\tccs\jar\fmsutil.jar;C:\Teamcenter\TC91\tccs\jar\tcserverjavabinding.jar;C:\swimInstalls\swim923-06-20-2014_sprint3\swim_manifest.jar;, user.name=cmb, java.vm.specification.version=1.0, java.home=C:\Teamcenter\TC91\portal\jre, sun.arch.data.model=64, user.language=en, java.specification.vendor=Sun Microsystems Inc., awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.6.0_20, java.ext.dirs=C:\Teamcenter\TC91\portal\jre\lib\ext;C:\windows\Sun\Java\lib\ext, sun.boot.class.path=C:\Teamcenter\TC91\portal\jre\lib\resources.jar;C:\Teamcenter\TC91\portal\jre\lib\rt.jar;C:\Teamcenter\TC91\portal\jre\lib\sunrsasign.jar;C:\Teamcenter\TC91\portal\jre\lib\jsse.jar;C:\Teamcenter\TC91\portal\jre\lib\jce.jar;C:\Teamcenter\TC91\portal\jre\lib\charsets.jar;C:\Teamcenter\TC91\portal\jre\classes, java.vendor=Sun Microsystems Inc., file.separator=\, java.vendor.url.bug=http://java.sun.com/cgi-bin/bugreport.cgi, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=windows, sun.cpu.isalist=amd64}
+DEBUG (    0.004): sw.configurations.masters = Default:testConf
+DEBUG (    0.210): Entering CSHelper.connect
+DEBUG (    0.574): Created a socket connection.
+DEBUG (    0.576): Obtained input stream.
+DEBUG (    0.576): Obtained output stream.
+DEBUG (    0.577): Connected to CADscript. Calling CSHelper.processEvents.
+DEBUG (    0.577): Sanity Check
+DEBUG (    0.578): Entering CSHelper#processEvents
+DEBUG (    0.604): Number of bytes reported by cadscript: 94
+DEBUG (    0.604): Number of bytes read by swim: 94
+DEBUG (    0.605): <?xml version="1.0" encoding="utf-8"?>
+<MenuCallbackCmd callbackId="POST_INITIALIZE_EVENT" />
+DEBUG (    0.605): java.io.StringReader@7d742700
+DEBUG (    0.605): Calling CSOperations.processCIC.
+DEBUG (    0.722): Entering CicCsXmlReader#walkCicNode
+DEBUG (    0.722): Exiting CicCsXmlReader#walkCicNode
+DEBUG (    0.731): Entering Operations.postInitializeEvent
+DEBUG (    0.755): Number of bytes reported by cadscript: 113
+DEBUG (    0.756): Number of bytes read by swim: 113
+DEBUG (    0.756): <?xml version="1.0" encoding="utf-8"?>
+<BridgeInfoResponse>
+  <StatusData success="1" />
+</BridgeInfoResponse>
+DEBUG (    0.759): Entering ExitBICModeReader.walkBicNode
+DEBUG (    0.760): Exiting ExitBICModeReader.walkBicNode
+DEBUG (    0.762): Number of bytes reported by cadscript: 115
+DEBUG (    0.762): Number of bytes read by swim: 115
+DEBUG (    0.763): <?xml version="1.0" encoding="utf-8"?>
+<ExitBICModeResponse>
+  <StatusData success="1" />
+</ExitBICModeResponse>
+DEBUG (    0.764): Entering ExitBICModeReader.walkBicNode
+DEBUG (    0.764): Exiting ExitBICModeReader.walkBicNode
+DEBUG (    0.764): Exiting Operations.postInitializeEvent
+DEBUG (    0.764): Entering CSHelper#close
+DEBUG (    0.765): Exiting CSHelper#close
+DEBUG (    0.765): Exiting CSHelper#processEvents
+DEBUG (    0.765): Entering CSHelper.connect
+DEBUG (    3.907): Created a socket connection.
+DEBUG (    3.907): Obtained input stream.
+DEBUG (    3.907): Obtained output stream.
+DEBUG (    3.908): Connected to CADscript. Calling CSHelper.processEvents.
+DEBUG (    3.908): Sanity Check
+DEBUG (    3.908): Entering CSHelper#processEvents
+DEBUG (    3.909): Number of bytes reported by cadscript: 79
+DEBUG (    3.909): Number of bytes read by swim: 79
+DEBUG (    3.909): <?xml version="1.0" encoding="utf-8"?>
+<MenuCallbackCmd callbackId="OpenCB" />
+DEBUG (    3.910): java.io.StringReader@42b02928
+DEBUG (    3.910): Calling CSOperations.processCIC.
+DEBUG (    3.913): Entering CicCsXmlReader#walkCicNode
+DEBUG (    3.914): Exiting CicCsXmlReader#walkCicNode
+INFO (    3.914): PERF: Teamcenter -> Open begins
+DEBUG (    3.914): Beginning PERF SUM
+DEBUG (    3.923): Entering Operations.checkOut
+DEBUG (    3.936): Number of bytes reported by cadscript: 190
+DEBUG (    3.936): Number of bytes read by swim: 190
+DEBUG (    3.936): <?xml version="1.0" encoding="utf-8"?>
+<GetCadSystemInfoResponse cadSysVersion="2012 SP4.0" cadSysIf="sw" cadSysName="SolidWorks">
+  <StatusData success="1" />
+</GetCadSystemInfoResponse>
+DEBUG (    3.940): Entering GetCadSystemInfoReader.walkBicNode
+DEBUG (    3.941): Exiting GetCadSystemInfoReader#walkBicNode
+INFO (    3.941): SolidWorks
+INFO (    3.942): 2012 SP4.0
+DEBUG (    3.957): Auto-refresh set to true
+DEBUG (    3.957): Auto-refresh cache cleared, size 0
+DEBUG (    4.040): Entering SOARelationCache.clear
+DEBUG (    4.040): Exiting SOARelationCache.clear
+DEBUG (    4.041): Contents of map file C:\swimInstalls\swim923-06-20-2014_sprint3\swim.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data_def SYSTEM "swim.dtd">
+<data_def>
+    <type_map>
+        <entity cad_type="sldasm" pdm_type="SWAsm"/>
+        <entity cad_type="sldprt" pdm_type="SWPrt"/>
+        <entity cad_type="slddrw" pdm_type="SWDrw"/>
+        <entity cad_type="sldtbx" pdm_type="SW2Tbx"/>
+    </type_map>
+    <dataset_map>
+        <dataset allowed_item_types="Item" named_ref="AsmFile" pdm_type="SWAsm"/>
+        <dataset allowed_item_types="Item" named_ref="PrtFile" pdm_type="SWPrt"/>
+        <dataset allowed_item_types="Item" named_ref="DrwFile" pdm_type="SWDrw"/>
+        <dataset allowed_item_types="Item" named_ref="TbxFile" pdm_type="SW2Tbx"/>
+    </dataset_map>
+    <attribute_map cad_type="slddrw:sldasm:sldprt:sldtbx">
+        <attribute>
+            <cad_name value="Description"/>
+            <pdm_name value="item_name"/>
+            <direction value="cadtopdm"/>
+        </attribute>
+        <attribute>
+            <cad_name value="Description"/>
+            <pdm_name value="ItemRevision.object_name"/>
+            <direction value="both"/>
+        </attribute>
+        <attribute>
+            <cad_name value="Revision"/>
+            <pdm_name value="item_revision_id"/>
+            <direction value="pdmtocad"/>
+        </attribute>
+    </attribute_map>
+    <auxiliary_file_map>
+        <auxiliary_file cad_type="sldprt" direction="cadtopdm">
+            <!-- Uncomment the below if you want to give the user choice of saving the preview files of parts -->
+            <!-- cadtopdm_control label="Save Part Preview Files"/ -->
+            <pdm_location named_ref="PNG" pdm_type="SWPrt"/>
+            <file_name pattern="{temp_dir}\{cad_name}p.PNG"/>
+            <preview_command cmd="built_in {temp_dir}\{cad_name}p.PNG" ignore_status="true" phase="in_directory"/>
+        </auxiliary_file>
+        <auxiliary_file cad_type="sldtbx" direction="cadtopdm">
+            <pdm_location named_ref="PNG" pdm_type="SW2Tbx"/>
+            <file_name pattern="{temp_dir}\{cad_name}t.PNG"/>
+            <preview_command cmd="built_in {temp_dir}\{cad_name}t.PNG" ignore_status="true" phase="in_directory"/>
+        </auxiliary_file>
+        <auxiliary_file cad_type="sldasm" direction="cadtopdm">
+            <pdm_location named_ref="PNG" pdm_type="SWAsm"/>
+            <file_name pattern="{temp_dir}\{cad_name}a.PNG"/>
+            <preview_command cmd="built_in {temp_dir}\{cad_name}a.PNG" ignore_status="true" phase="in_directory"/>
+        </auxiliary_file>
+        <auxiliary_file cad_type="slddrw" direction="cadtopdm">
+            <pdm_location named_ref="PNG" pdm_type="SWDrw"/>
+            <file_name pattern="{temp_dir}\{cad_name}d.PNG"/>
+            <preview_command cmd="built_in {temp_dir}\{cad_name}d.PNG" ignore_status="true" phase="in_directory"/>
+        </auxiliary_file>
+    </auxiliary_file_map>
+    <bom_map>
+        <bom_line child_type="sldasm" parent_type="sldasm" view_types="view">
+            <!-- Uncomment the line below to set the componentReference -->
+            <bom_prop cadName="componentReference" pdmName="bl_sequence_no" direction="pdmtocad"/>
+        </bom_line>
+        <bom_line child_type="sldprt" parent_type="sldasm" view_types="view">
+            <!-- Uncomment the line below to set the componentReference -->
+            <bom_prop cadName="componentReference" pdmName="bl_sequence_no" direction="pdmtocad"/>
+        </bom_line>
+        <bom_line child_type="sldtbx" parent_type="sldasm" view_types="view">
+            <!-- Uncomment the line below to set the componentReference -->
+            <bom_prop cadName="componentReference" pdmName="bl_sequence_no" direction="pdmtocad"/>
+        </bom_line>
+    </bom_map>
+</data_def>
+DEBUG (    4.067): Entering walkTypeMap
+DEBUG (    4.068): Read cadValue sldasm pdmValue SWAsm
+DEBUG (    4.068): Read cadValue sldprt pdmValue SWPrt
+DEBUG (    4.069): Read cadValue slddrw pdmValue SWDrw
+DEBUG (    4.069): Read cadValue sldtbx pdmValue SW2Tbx
+DEBUG (    4.069): Exiting walkTypeMap
+DEBUG (    4.082): Entering walkIManTypeMap
+DEBUG (    4.083): Exiting walkIManTypeMap
+DEBUG (    4.094): Entering walkBOMMap
+DEBUG (    4.096): Exiting walkBOMMap
+DEBUG (    4.106): Attributes for "slddrw:sldasm:sldprt:sldtbx"...
+DEBUG (    4.107): Attribute CAD name: "Description"
+DEBUG (    4.107): Attribute PDM name: "item_name"
+DEBUG (    4.110): Attribute CAD name: "Description"
+DEBUG (    4.110): Attribute PDM name: "ItemRevision.object_name"
+DEBUG (    4.110): Attribute CAD name: "Revision"
+DEBUG (    4.110): Attribute PDM name: "item_revision_id"
+INFO (    4.150): PERF: SOA Call starts - refresh
+INFO (    4.150): PERF: SOA Call ends - refresh
+DEBUG (    4.150): OperationMonitor enabled
+DEBUG (    4.150): Entering CSOperationHandlerImpl.setStatusBarData(String)
+DEBUG (    4.155): Number of bytes reported by cadscript: 117
+DEBUG (    4.155): Number of bytes read by swim: 117
+DEBUG (    4.155): <?xml version="1.0" encoding="utf-8"?>
+<SetStatusBarResponse>
+  <StatusData success="1" />
+</SetStatusBarResponse>
+DEBUG (    4.156): Entering SetStatusBarReader.walkBicNode
+DEBUG (    4.157): Exiting SetStatusBarReader.walkBicNode
+DEBUG (    4.157): Exiting CSOperationHandlerImpl.SetStatusBar(String)
+DEBUG (    4.169): Entering CSOperationHandlerImpl.setStatusBarData(String)
+DEBUG (    4.171): Number of bytes reported by cadscript: 117
+DEBUG (    4.171): Number of bytes read by swim: 117
+DEBUG (    4.171): <?xml version="1.0" encoding="utf-8"?>
+<SetStatusBarResponse>
+  <StatusData success="1" />
+</SetStatusBarResponse>
+DEBUG (    4.173): Entering SetStatusBarReader.walkBicNode
+DEBUG (    4.173): Exiting SetStatusBarReader.walkBicNode
+DEBUG (    4.173): Exiting CSOperationHandlerImpl.SetStatusBar(String)
+DEBUG (    4.173): Pausing PERF SUM
+DEBUG (    4.173): OperationMonitor disabled
+DEBUG (    8.246): Resuming PERF SUM
+DEBUG (    8.246): OperationMonitor enabled
+DEBUG (    8.247): OperationMonitor started: com.transcendata.cadpdm.soa.SOAConnectionImpl.msgLogin
+DEBUG (    8.247): Entering CSOperationHandlerImpl.setStatusBarData(String)
+DEBUG (    8.251): Number of bytes reported by cadscript: 117
+DEBUG (    8.252): Number of bytes read by swim: 117
+DEBUG (    8.252): <?xml version="1.0" encoding="utf-8"?>
+<SetStatusBarResponse>
+  <StatusData success="1" />
+</SetStatusBarResponse>
+DEBUG (    8.255): Entering SetStatusBarReader.walkBicNode
+DEBUG (    8.256): Exiting SetStatusBarReader.walkBicNode
+DEBUG (    8.256): Exiting CSOperationHandlerImpl.SetStatusBar(String)
+DEBUG (    8.259): Entering SOAConnectionImpl.newConnection
+DEBUG (    8.354): Exiting SOAConnectionImpl.newConnection
+DEBUG (    8.354): Teamcenter client Meta-cache disabled
+DEBUG (    9.123): Incrementing PERF SUM SOA count
+DEBUG (    9.123): ITI100932.35759.01.Anonymous.00001 - Service Request: Core-2008-06-Session:login
+DEBUG (   12.775): ITI100932.35759.01.Anonymous.00001 - Service Response: Core-2008-06-Session:login
+DEBUG (   12.818): Incrementing PERF SUM SOA count
+DEBUG (   12.818): ITI100932.35759.01.Anonymous.00001.01.test.00002 - Service Request: Core-2007-01-Session:getTCSessionInfo
+DEBUG (   12.826): ITI100932.35759.01.Anonymous.00001.01.test.00002 - Service Response: Core-2007-01-Session:getTCSessionInfo
+DEBUG (   13.001): Incrementing PERF SUM SOA count
+DEBUG (   13.001): ITI100932.35759.01.Anonymous.00001.01.test.00002.01.test.00003 - Service Request: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   13.308): ITI100932.35759.01.Anonymous.00001.01.test.00002.01.test.00003 - Service Response: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   13.494): Incrementing PERF SUM SOA count
+DEBUG (   13.494): ITI100932.35759.01.Anonymous.00001.01.test.00004 - Service Request: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   13.514): ITI100932.35759.01.Anonymous.00001.01.test.00004 - Service Response: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   13.525): Entering SOAConnectionImpl.processLoginResponse
+DEBUG (   13.527): Entering CSOperationHandlerImpl.setStatusBarData(String)
+DEBUG (   13.530): Number of bytes reported by cadscript: 117
+DEBUG (   13.530): Number of bytes read by swim: 117
+DEBUG (   13.530): <?xml version="1.0" encoding="utf-8"?>
+<SetStatusBarResponse>
+  <StatusData success="1" />
+</SetStatusBarResponse>
+DEBUG (   13.531): Entering SetStatusBarReader.walkBicNode
+DEBUG (   13.531): Exiting SetStatusBarReader.walkBicNode
+DEBUG (   13.531): Exiting CSOperationHandlerImpl.SetStatusBar(String)
+DEBUG (   13.532): Value of preference maxOperationBracketTime is:1200
+DEBUG (   13.532): Value of preference maxOperationBracketInactiveTime is:120
+DEBUG (   13.533): Incrementing PERF SUM SOA count
+DEBUG (   13.533): ITI100932.35759.01.test.00005 - Service Request: Core-2007-12-Session:setUserSessionState
+DEBUG (   13.535): ITI100932.35759.01.test.00005 - Service Response: Core-2007-12-Session:setUserSessionState
+DEBUG (   13.537): Incrementing PERF SUM SOA count
+DEBUG (   13.537): ITI100932.35759.01.test.00006 - Service Request: Core-2007-01-Session:getTCSessionInfo
+DEBUG (   13.543): ITI100932.35759.01.test.00006 - Service Response: Core-2007-01-Session:getTCSessionInfo
+INFO (   13.548): Teamcenter log:C:\Users\cmb\AppData\Local\Temp\tcserver.exe27744e11.syslog
+INFO (   13.548): DEBUG (   13.549): Incrementing PERF SUM SOA count
+DEBUG (   13.550): ITI100932.35759.01.test.00007 - Service Request: Core-2007-01-Session:getTCSessionInfo
+DEBUG (   13.555): ITI100932.35759.01.test.00007 - Service Response: Core-2007-01-Session:getTCSessionInfo
+Teamcenter V9000.1.0.27_20140212.00
+DEBUG (   13.559): Deferred Rename Enabled on Open: false
+DEBUG (   13.559): Deferred Rename Enabled on Save: false
+DEBUG (   13.560): Entering CSOperationHandlerImpl.setStatusBarData(String)
+DEBUG (   13.562): Number of bytes reported by cadscript: 117
+DEBUG (   13.562): Number of bytes read by swim: 117
+DEBUG (   13.562): <?xml version="1.0" encoding="utf-8"?>
+<SetStatusBarResponse>
+  <StatusData success="1" />
+</SetStatusBarResponse>
+DEBUG (   13.563): Entering SetStatusBarReader.walkBicNode
+DEBUG (   13.564): Exiting SetStatusBarReader.walkBicNode
+DEBUG (   13.564): Exiting CSOperationHandlerImpl.SetStatusBar(String)
+DEBUG (   13.564): Setting property policy "swim_attribute_policy" on the SOA Connection.
+DEBUG (   13.565): Incrementing PERF SUM SOA count
+DEBUG (   13.565): ITI100932.35759.01.test.00008 - Service Request: Core-2007-01-Session:setObjectPropertyPolicy
+DEBUG (   13.567): ITI100932.35759.01.test.00008 - Service Response: Core-2007-01-Session:setObjectPropertyPolicy
+DEBUG (   13.569): Entering SOAAttributeHelper.loadAttriteMappingsIntoSession
+DEBUG (   13.858): Incrementing PERF SUM SOA count
+DEBUG (   13.858): ITI100932.35759.01.test.00009 - Service Request: Cad-2007-01-DataManagement:getAllAttrMappings
+DEBUG (   14.319): ITI100932.35759.01.test.00009 - Service Response: Cad-2007-01-DataManagement:getAllAttrMappings
+DEBUG (   14.339): Incrementing PERF SUM SOA count
+DEBUG (   14.339): ITI100932.35759.01.test.00009.01.test.00010 - Service Request: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   14.356): ITI100932.35759.01.test.00009.01.test.00010 - Service Response: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   14.374): Mapping: "DB_PART_NO"
+DEBUG (   14.374):    item type:      
+DEBUG (   14.374):    dataset type:   
+DEBUG (   14.374):    property name:  item_id
+DEBUG (   14.374):    property type:  string
+DEBUG (   14.374): Mapping: "DB_PART_REV"
+DEBUG (   14.375):    item type:      
+DEBUG (   14.375):    dataset type:   
+DEBUG (   14.375):    property name:  item_revision_id
+DEBUG (   14.375):    property type:  string
+DEBUG (   14.375): Mapping: "DB_PART_TYPE"
+DEBUG (   14.375):    item type:      
+DEBUG (   14.375):    dataset type:   
+DEBUG (   14.375):    property name:  object_type
+DEBUG (   14.375):    property type:  string
+DEBUG (   14.375): Mapping: "DB_UNITS"
+DEBUG (   14.375):    item type:      
+DEBUG (   14.375):    dataset type:   
+DEBUG (   14.376):    property name:  symbol
+DEBUG (   14.376):    property type:  string
+DEBUG (   14.376): Mapping: "DB_PART_NAME"
+DEBUG (   14.376):    item type:      
+DEBUG (   14.376):    dataset type:   UGMASTER
+DEBUG (   14.376):    property name:  object_name
+DEBUG (   14.376):    property type:  string
+DEBUG (   14.376): Mapping: "DB_PART_DESC"
+DEBUG (   14.376):    item type:      
+DEBUG (   14.376):    dataset type:   UGMASTER
+DEBUG (   14.376):    property name:  object_desc
+DEBUG (   14.376):    property type:  string
+DEBUG (   14.377): Mapping: "DB_PART_NAME"
+DEBUG (   14.377):    item type:      
+DEBUG (   14.377):    dataset type:   CAESolution
+DEBUG (   14.377):    property name:  object_name
+DEBUG (   14.377):    property type:  string
+DEBUG (   14.377): Mapping: "DB_PART_DESC"
+DEBUG (   14.377):    item type:      
+DEBUG (   14.377):    dataset type:   CAESolution
+DEBUG (   14.377):    property name:  object_desc
+DEBUG (   14.377):    property type:  string
+DEBUG (   14.377): Mapping: "DB_PART_NAME"
+DEBUG (   14.378):    item type:      
+DEBUG (   14.378):    dataset type:   CAEMesh
+DEBUG (   14.378):    property name:  object_name
+DEBUG (   14.378):    property type:  string
+DEBUG (   14.378): Mapping: "DB_PART_DESC"
+DEBUG (   14.378):    item type:      
+DEBUG (   14.378):    dataset type:   CAEMesh
+DEBUG (   14.378):    property name:  object_desc
+DEBUG (   14.378):    property type:  string
+DEBUG (   14.378): Mapping: "DB_PART_NAME"
+DEBUG (   14.378):    item type:      
+DEBUG (   14.378):    dataset type:   CAEGeom
+DEBUG (   14.379):    property name:  object_name
+DEBUG (   14.379):    property type:  string
+DEBUG (   14.379): Mapping: "DB_PART_DESC"
+DEBUG (   14.379):    item type:      
+DEBUG (   14.379):    dataset type:   CAEGeom
+DEBUG (   14.379):    property name:  object_desc
+DEBUG (   14.379):    property type:  string
+DEBUG (   14.379): Mapping: "DB_PART_NAME"
+DEBUG (   14.379):    item type:      
+DEBUG (   14.379):    dataset type:   
+DEBUG (   14.379):    property name:  object_name
+DEBUG (   14.379):    property type:  string
+DEBUG (   14.380): Mapping: "DB_PART_DESC"
+DEBUG (   14.380):    item type:      
+DEBUG (   14.380):    dataset type:   
+DEBUG (   14.380):    property name:  object_desc
+DEBUG (   14.380):    property type:  string
+DEBUG (   14.380): Mapping: "DB_DATASET_ID"
+DEBUG (   14.380):    item type:      
+DEBUG (   14.380):    dataset type:   UGPART
+DEBUG (   14.380):    property name:  pubr_object_id
+DEBUG (   14.380):    property type:  string
+DEBUG (   14.381): Mapping: "DB_DATASET_REV"
+DEBUG (   14.381):    item type:      
+DEBUG (   14.381):    dataset type:   UGPART
+DEBUG (   14.381):    property name:  rev
+DEBUG (   14.381):    property type:  string
+DEBUG (   14.381): Mapping: "%txd1%Description"
+DEBUG (   14.381):    item type:      
+DEBUG (   14.381):    dataset type:   ProAsm
+DEBUG (   14.381):    property name:  object_name
+DEBUG (   14.381):    property type:  string
+DEBUG (   14.382): Mapping: "%txd1%Description"
+DEBUG (   14.382):    item type:      
+DEBUG (   14.382):    dataset type:   ProDrw
+DEBUG (   14.382):    property name:  object_name
+DEBUG (   14.382):    property type:  string
+DEBUG (   14.382): Mapping: "%txd1%Description"
+DEBUG (   14.382):    item type:      
+DEBUG (   14.382):    dataset type:   ProPrt
+DEBUG (   14.382):    property name:  object_name
+DEBUG (   14.382):    property type:  string
+DEBUG (   14.382): Mapping: "%txd1%Description"
+DEBUG (   14.382):    item type:      
+DEBUG (   14.383):    dataset type:   SW2Tbx
+DEBUG (   14.383):    property name:  object_name
+DEBUG (   14.383):    property type:  string
+DEBUG (   14.383): Mapping: "%txd1%Description"
+DEBUG (   14.383):    item type:      
+DEBUG (   14.383):    dataset type:   SWAsm
+DEBUG (   14.383):    property name:  object_name
+DEBUG (   14.383):    property type:  string
+DEBUG (   14.383): Mapping: "%txd1%Description"
+DEBUG (   14.383):    item type:      
+DEBUG (   14.383):    dataset type:   SWDrw
+DEBUG (   14.384):    property name:  object_name
+DEBUG (   14.384):    property type:  string
+DEBUG (   14.384): Mapping: "%txd1%Description"
+DEBUG (   14.384):    item type:      
+DEBUG (   14.384):    dataset type:   SWPrt
+DEBUG (   14.384):    property name:  object_name
+DEBUG (   14.384):    property type:  string
+DEBUG (   14.384): Mapping: "Description"
+DEBUG (   14.384):    item type:      
+DEBUG (   14.384):    dataset type:   ProAsm
+DEBUG (   14.384):    property name:  object_name
+DEBUG (   14.384):    property type:  string
+DEBUG (   14.385): Mapping: "Description"
+DEBUG (   14.385):    item type:      
+DEBUG (   14.385):    dataset type:   ProDrw
+DEBUG (   14.385):    property name:  object_name
+DEBUG (   14.385):    property type:  string
+DEBUG (   14.385): Mapping: "Description"
+DEBUG (   14.385):    item type:      
+DEBUG (   14.385):    dataset type:   ProPrt
+DEBUG (   14.385):    property name:  object_name
+DEBUG (   14.385):    property type:  string
+DEBUG (   14.385): Mapping: "Description"
+DEBUG (   14.386):    item type:      
+DEBUG (   14.386):    dataset type:   SW2Tbx
+DEBUG (   14.386):    property name:  object_name
+DEBUG (   14.386):    property type:  string
+DEBUG (   14.386): Mapping: "Description"
+DEBUG (   14.386):    item type:      
+DEBUG (   14.386):    dataset type:   SWAsm
+DEBUG (   14.386):    property name:  object_name
+DEBUG (   14.386):    property type:  string
+DEBUG (   14.386): Mapping: "Description"
+DEBUG (   14.386):    item type:      
+DEBUG (   14.386):    dataset type:   SWDrw
+DEBUG (   14.387):    property name:  object_name
+DEBUG (   14.387):    property type:  string
+DEBUG (   14.387): Mapping: "Description"
+DEBUG (   14.387):    item type:      
+DEBUG (   14.387):    dataset type:   SWPrt
+DEBUG (   14.387):    property name:  object_name
+DEBUG (   14.387):    property type:  string
+DEBUG (   14.387): Mapping: "Revision"
+DEBUG (   14.387):    item type:      
+DEBUG (   14.387):    dataset type:   ProAsm
+DEBUG (   14.387):    property name:  item_revision_id
+DEBUG (   14.388):    property type:  string
+DEBUG (   14.388): Mapping: "Revision"
+DEBUG (   14.388):    item type:      
+DEBUG (   14.388):    dataset type:   ProDrw
+DEBUG (   14.388):    property name:  item_revision_id
+DEBUG (   14.388):    property type:  string
+DEBUG (   14.388): Mapping: "Revision"
+DEBUG (   14.388):    item type:      
+DEBUG (   14.388):    dataset type:   ProPrt
+DEBUG (   14.388):    property name:  item_revision_id
+DEBUG (   14.388):    property type:  string
+DEBUG (   14.388): Mapping: "Revision"
+DEBUG (   14.389):    item type:      
+DEBUG (   14.389):    dataset type:   SW2Tbx
+DEBUG (   14.389):    property name:  item_revision_id
+DEBUG (   14.389):    property type:  string
+DEBUG (   14.389): Mapping: "Revision"
+DEBUG (   14.389):    item type:      
+DEBUG (   14.389):    dataset type:   SWAsm
+DEBUG (   14.389):    property name:  item_revision_id
+DEBUG (   14.389):    property type:  string
+DEBUG (   14.389): Mapping: "Revision"
+DEBUG (   14.389):    item type:      
+DEBUG (   14.390):    dataset type:   SWDrw
+DEBUG (   14.390):    property name:  item_revision_id
+DEBUG (   14.390):    property type:  string
+DEBUG (   14.390): Mapping: "Revision"
+DEBUG (   14.390):    item type:      
+DEBUG (   14.390):    dataset type:   SWPrt
+DEBUG (   14.390):    property name:  item_revision_id
+DEBUG (   14.390):    property type:  string
+DEBUG (   14.390): Exiting SOAAttributeHelper.loadAttriteMappingsIntoSession
+DEBUG (   14.390): Entering SOAPropertyDescriptorManager.loadCreateDescriptors
+DEBUG (   14.390): Setting property policy "swim_policy" on the SOA Connection.
+DEBUG (   14.391): Incrementing PERF SUM SOA count
+DEBUG (   14.392): ITI100932.35759.01.test.00011 - Service Request: Core-2007-01-Session:setObjectPropertyPolicy
+DEBUG (   14.395): ITI100932.35759.01.test.00011 - Service Response: Core-2007-01-Session:setObjectPropertyPolicy
+DEBUG (   15.019): Incrementing PERF SUM SOA count
+DEBUG (   15.019): ITI100932.35759.01.test.00012 - Service Request: Core-2010-04-DataManagement:getAvailableTypesWithDisplayNames
+DEBUG (   15.035): ITI100932.35759.01.test.00012 - Service Response: Core-2010-04-DataManagement:getAvailableTypesWithDisplayNames
+DEBUG (   15.040): Number of Item types obtained from Teamcenter: 5
+DEBUG (   15.108): Incrementing PERF SUM SOA count
+DEBUG (   15.108): ITI100932.35759.01.test.00013 - Service Request: Core-2008-06-PropDescriptor:getCreateDesc
+DEBUG (   15.289): ITI100932.35759.01.test.00013 - Service Response: Core-2008-06-PropDescriptor:getCreateDesc
+DEBUG (   15.294): Exiting SOAPropertyDescriptorManager.loadCreateDescriptors
+DEBUG (   15.294): Entering CSOperationHandlerImpl.setStatusBarData(String)
+DEBUG (   15.296): Number of bytes reported by cadscript: 117
+DEBUG (   15.296): Number of bytes read by swim: 117
+DEBUG (   15.296): <?xml version="1.0" encoding="utf-8"?>
+<SetStatusBarResponse>
+  <StatusData success="1" />
+</SetStatusBarResponse>
+DEBUG (   15.297): Entering SetStatusBarReader.walkBicNode
+DEBUG (   15.297): Exiting SetStatusBarReader.walkBicNode
+DEBUG (   15.297): Exiting CSOperationHandlerImpl.SetStatusBar(String)
+DEBUG (   15.297): Entering CSOperationHandlerImpl.setStatusBarData(String)
+DEBUG (   15.299): Number of bytes reported by cadscript: 117
+DEBUG (   15.299): Number of bytes read by swim: 117
+DEBUG (   15.299): <?xml version="1.0" encoding="utf-8"?>
+<SetStatusBarResponse>
+  <StatusData success="1" />
+</SetStatusBarResponse>
+DEBUG (   15.300): Entering SetStatusBarReader.walkBicNode
+DEBUG (   15.300): Exiting SetStatusBarReader.walkBicNode
+DEBUG (   15.300): Exiting CSOperationHandlerImpl.SetStatusBar(String)
+DEBUG (   15.301): Incrementing PERF SUM SOA count
+DEBUG (   15.301): ITI100932.35759.01.test.00014 - Service Request: Core-2007-06-Session:refreshPOMCachePerRequest
+DEBUG (   15.302): ITI100932.35759.01.test.00014 - Service Response: Core-2007-06-Session:refreshPOMCachePerRequest
+DEBUG (   15.307): Incrementing PERF SUM SOA count
+DEBUG (   15.307): ITI100932.35759.01.test.00015 - Service Request: Core-2006-03-Session:getAvailableServices
+DEBUG (   15.535): ITI100932.35759.01.test.00015 - Service Response: Core-2006-03-Session:getAvailableServices
+DEBUG (   15.551): Incrementing PERF SUM SOA count
+DEBUG (   15.551): ITI100932.35759.01.test.00016 - Service Request: Core-2008-03-Session:connect
+DEBUG (   15.965): ITI100932.35759.01.test.00016 - Service Response: Core-2008-03-Session:connect
+DEBUG (   15.967): License: 24
+DEBUG (   15.967): Exiting SOAConnectionImpl.processLoginResponse
+DEBUG (   15.967): Entering CSOperationHandlerImpl.setStatusBarData(String)
+DEBUG (   15.969): Number of bytes reported by cadscript: 117
+DEBUG (   15.969): Number of bytes read by swim: 117
+DEBUG (   15.969): <?xml version="1.0" encoding="utf-8"?>
+<SetStatusBarResponse>
+  <StatusData success="1" />
+</SetStatusBarResponse>
+DEBUG (   15.970): Entering SetStatusBarReader.walkBicNode
+DEBUG (   15.970): Exiting SetStatusBarReader.walkBicNode
+DEBUG (   15.970): Exiting CSOperationHandlerImpl.SetStatusBar(String)
+DEBUG (   15.971): Incrementing PERF SUM SOA count
+DEBUG (   15.971): ITI100932.35759.01.test.00017 - Service Request: Core-2006-03-Session:getPreferences
+DEBUG (   15.973): ITI100932.35759.01.test.00017 - Service Response: Core-2006-03-Session:getPreferences
+DEBUG (   16.303): Incrementing PERF SUM SOA count
+DEBUG (   16.303): ITI100932.35759.01.test.00018 - Service Request: Cad-2007-01-StructureManagement:getRevisionRules
+DEBUG (   16.320): ITI100932.35759.01.test.00018 - Service Response: Cad-2007-01-StructureManagement:getRevisionRules
+DEBUG (   16.325): Incrementing PERF SUM SOA count
+DEBUG (   16.326): ITI100932.35759.01.test.00018.01.test.00019 - Service Request: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   16.364): ITI100932.35759.01.test.00018.01.test.00019 - Service Response: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   16.377): Entering CSOperationHandlerImpl.setStatusBarData(String)
+DEBUG (   16.378): Number of bytes reported by cadscript: 117
+DEBUG (   16.378): Number of bytes read by swim: 117
+DEBUG (   16.378): <?xml version="1.0" encoding="utf-8"?>
+<SetStatusBarResponse>
+  <StatusData success="1" />
+</SetStatusBarResponse>
+DEBUG (   16.379): Entering SetStatusBarReader.walkBicNode
+DEBUG (   16.379): Exiting SetStatusBarReader.walkBicNode
+DEBUG (   16.379): Exiting CSOperationHandlerImpl.SetStatusBar(String)
+DEBUG (   16.379): Connected to Teamcenter
+DEBUG (   16.380): Entering SOABracketHelper.openBracket
+DEBUG (   16.380): Entering SOABracketHelper.init
+DEBUG (   16.380): Exiting SOABracketHelper.init
+DEBUG (   16.381): Incrementing PERF SUM SOA count
+DEBUG (   16.381): ITI100932.35759.01.test.00020 - Service Request: Core-2009-04-Session:startOperation
+DEBUG (   16.382): ITI100932.35759.01.test.00020 - Service Response: Core-2009-04-Session:startOperation
+DEBUG (   16.383): SOABracket Open (UID: 1)
+DEBUG (   16.383): Exiting SOABracketHelper.openBracket
+DEBUG (   16.386): Setting refresh flags for registry.
+DEBUG (   16.573): Entering CSOperationHandler.getCurrentDir
+DEBUG (   16.573): GetCurrentDir command: <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE GetCurrentDirCmd SYSTEM "GetCurrentDirCmd.dtd"> <GetCurrentDirCmd/>
+DEBUG (   16.577): Number of bytes reported by cadscript: 144
+DEBUG (   16.577): Number of bytes read by swim: 144
+DEBUG (   16.577): <?xml version="1.0" encoding="utf-8"?>
+<GetCurrentDirResponse workingDir="C:\SWFiles\">
+  <StatusData success="1" />
+</GetCurrentDirResponse>
+DEBUG (   16.578): Entering GetCurrentDirReader.walkBicNode
+DEBUG (   16.579): Exiting GetCurrentDirReader.walkBicNode
+DEBUG (   16.579): Exiting CSOperationHandler.getCurrentDir
+DEBUG (   16.587): Filter named required is Required
+DEBUG (   16.587): Filter named include drawings is Include Drawings
+DEBUG (   16.587): Filter Required enabled
+DEBUG (   16.587): Displaying check-out GUI
+DEBUG (   16.587): Entering SOABracketHelper.closeBracket
+DEBUG (   16.588): Incrementing PERF SUM SOA count
+DEBUG (   16.588): ITI100932.35759.01.test.00021 - Service Request: Core-2009-04-Session:stopOperation
+DEBUG (   16.589): ITI100932.35759.01.test.00021 - Service Response: Core-2009-04-Session:stopOperation
+DEBUG (   16.590): SOABracket Closed (UID: 1)
+DEBUG (   16.591): Resetting UID
+DEBUG (   16.591): Exiting SOABracketHelper.closeBracket
+INFO (   16.591): PERF: Getting Information for Dialog Title Bar - Begins
+DEBUG (   16.592): Incrementing PERF SUM SOA count
+DEBUG (   16.592): ITI100932.35759.01.test.00022 - Service Request: Core-2007-01-Session:getTCSessionInfo
+DEBUG (   16.605): ITI100932.35759.01.test.00022 - Service Response: Core-2007-01-Session:getTCSessionInfo
+INFO (   16.608): PERF: Getting Information for Dialog Title Bar - Ends
+DEBUG (   16.616): Entering SOABracketHelper.openBracket
+DEBUG (   16.616): Incrementing PERF SUM SOA count
+DEBUG (   16.616): ITI100932.35759.01.test.00023 - Service Request: Core-2009-04-Session:startOperation
+DEBUG (   16.618): ITI100932.35759.01.test.00023 - Service Response: Core-2009-04-Session:startOperation
+DEBUG (   16.619): SOABracket Open (UID: 2)
+DEBUG (   16.619): Exiting SOABracketHelper.openBracket
+INFO (   16.628): PERF: SOA Call starts - getproperties(full) - 1
+DEBUG (   16.629): Incrementing PERF SUM SOA count
+DEBUG (   16.629): ITI100932.35759.01.test.00024 - Service Request: Core-2006-03-DataManagement:getProperties
+DEBUG (   16.633): ITI100932.35759.01.test.00024 - Service Response: Core-2006-03-DataManagement:getProperties
+INFO (   16.634): PERF: SOA Call ends - getproperties(full)
+DEBUG (   16.634): Setting property policy "empty" on the SOA Connection.
+DEBUG (   16.636): Incrementing PERF SUM SOA count
+DEBUG (   16.636): ITI100932.35759.01.test.00025 - Service Request: Cad-2007-01-DataManagement:expandFoldersForCAD
+DEBUG (   16.640): ITI100932.35759.01.test.00025 - Service Response: Cad-2007-01-DataManagement:expandFoldersForCAD
+DEBUG (   16.642): Incrementing PERF SUM SOA count
+DEBUG (   16.642): ITI100932.35759.01.test.00025.01.test.00026 - Service Request: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   16.658): ITI100932.35759.01.test.00025.01.test.00026 - Service Response: Core-2011-06-Session:getTypeDescriptions
+DEBUG (   16.663): Setting property policy "swim_policy" on the SOA Connection.
+INFO (   16.664): PERF: SOA Call starts - getproperties(full) - 9
+DEBUG (   16.664): Incrementing PERF SUM SOA count
+DEBUG (   16.665): ITI100932.35759.01.test.00027 - Service Request: Core-2006-03-DataManagement:getProperties
+DEBUG (   16.674): ITI100932.35759.01.test.00027 - Service Response: Core-2006-03-DataManagement:getProperties
+INFO (   16.676): PERF: SOA Call ends - getproperties(full)
+INFO (   16.680): PERF: SOA Call starts - loadItems
+INFO (   16.680): PERF: SOA Call ends - loadItems
+DEBUG (   16.706): From_portal.txt looking for path
+DEBUG (   16.707): From_portal.txt version: V9000.1.0.27_20140212.00
+DEBUG (   16.707): Toolbox TXR file location: C:\Users\cmb\AppData\Local\swim
+DEBUG (   16.707): From_portal.txt path: C:\Users\cmb\AppData\Local\swim\from_portal.txt
+DEBUG (   16.707): Entering SOABracketHelper.closeBracket
+DEBUG (   16.708): Incrementing PERF SUM SOA count
+DEBUG (   16.708): ITI100932.35759.01.test.00028 - Service Request: Core-2009-04-Session:stopOperation
+DEBUG (   16.709): ITI100932.35759.01.test.00028 - Service Response: Core-2009-04-Session:stopOperation
+DEBUG (   16.710): SOABracket Closed (UID: 2)
+DEBUG (   16.710): Resetting UID
+DEBUG (   16.710): Exiting SOABracketHelper.closeBracket
+DEBUG (   16.712): Filter named required is Required
+DEBUG (   16.712): Filter named include drawings is Include Drawings
+DEBUG (   16.712): Filter Required enabled
+DEBUG (   16.807): Entering CSOperationHandlerImpl.setStatusBarData(String)
+DEBUG (   16.809): Number of bytes reported by cadscript: 117
+DEBUG (   16.809): Number of bytes read by swim: 117
+DEBUG (   16.809): <?xml version="1.0" encoding="utf-8"?>
+<SetStatusBarResponse>
+  <StatusData success="1" />
+</SetStatusBarResponse>
+DEBUG (   16.810): Entering SetStatusBarReader.walkBicNode
+DEBUG (   16.811): Exiting SetStatusBarReader.walkBicNode
+DEBUG (   16.811): Exiting CSOperationHandlerImpl.SetStatusBar(String)
+DEBUG (   16.811): Filter named required is Required
+DEBUG (   16.811): Filter named include drawings is Include Drawings
+DEBUG (   16.811): Filter Required enabled
+DEBUG (   16.811): Activating dialog Teamcenter Open ( test (test) - Engineering/Designer [IMC--2012505271] )
+DEBUG (   16.811): Entering getColumnMappingValues
+DEBUG (   16.812): Getting values of all Column Mappings for the entire collection
+DEBUG (   16.812): Entering CSOperationHandlerImpl.setStatusBarData(String)
+DEBUG (   16.813): Number of bytes reported by cadscript: 117
+DEBUG (   16.813): Number of bytes read by swim: 117
+DEBUG (   16.813): <?xml version="1.0" encoding="utf-8"?>
+<SetStatusBarResponse>
+  <StatusData success="1" />
+</SetStatusBarResponse>
+DEBUG (   16.814): Entering SetStatusBarReader.walkBicNode
+DEBUG (   16.814): Exiting SetStatusBarReader.walkBicNode
+DEBUG (   16.815): Exiting CSOperationHandlerImpl.SetStatusBar(String)
+DEBUG (   16.815): Exiting getColumnMappingValues
+DEBUG (   16.815): Entering populateCreateDescPropValues
+DEBUG (   16.815): Getting CreateDescriptor property values for the entire collection
+DEBUG (   16.815): Exiting populateCreateDescPropValues
+DEBUG (   16.815): Entering CSOperationHandlerImpl.setStatusBarData(String)
+DEBUG (   16.816): Number of bytes reported by cadscript: 117
+DEBUG (   16.817): Number of bytes read by swim: 117
+DEBUG (   16.817): <?xml version="1.0" encoding="utf-8"?>
+<SetStatusBarResponse>
+  <StatusData success="1" />
+</SetStatusBarResponse>
+DEBUG (   16.817): Entering SetStatusBarReader.walkBicNode
+DEBUG (   16.817): Exiting SetStatusBarReader.walkBicNode
+DEBUG (   16.818): Exiting CSOperationHandlerImpl.SetStatusBar(String)
+INFO (   16.818): PERF: Teamcenter Open ( test (test) - Engineering/Designer [IMC--2012505271] ) Dialog Displayed
+DEBUG (   16.818): Pausing PERF SUM
+INFO (   16.818): PERFSUM: Teamcenter Open ( test (test) - Engineering/Designer [IMC--2012505271] ), time=8.823, SOA count=28
+DEBUG (  142.129): Entering OperationCollectionDialog.cancelAction for Teamcenter Open ( test (test) - Engineering/Designer [IMC--2012505271] )
+DEBUG (  142.134): Exiting OperationCollectionDialog.cancelAction for Teamcenter Open ( test (test) - Engineering/Designer [IMC--2012505271] )
+DEBUG (  142.134): Done activating dialog Teamcenter Open ( test (test) - Engineering/Designer [IMC--2012505271] )
+DEBUG (  142.135): OperationMonitor disabled
+DEBUG (  142.142): Saving registry files.
+DEBUG (  142.142): Done saving registry files.
+DEBUG (  142.143): Number of bytes reported by cadscript: 115
+DEBUG (  142.143): Number of bytes read by swim: 115
+DEBUG (  142.143): <?xml version="1.0" encoding="utf-8"?>
+<ExitBICModeResponse>
+  <StatusData success="1" />
+</ExitBICModeResponse>
+DEBUG (  142.144): Entering ExitBICModeReader.walkBicNode
+DEBUG (  142.144): Exiting ExitBICModeReader.walkBicNode
+DEBUG (  142.144): Sending
+DEBUG (  142.145): Entering SOABracketHelper.closeBracket
+DEBUG (  142.145): Exiting SOABracketHelper.closeBracket
+DEBUG (  142.145): Exiting Operations.checkOut
+DEBUG (  142.145): Entering CSHelper#close
+DEBUG (  142.145): Exiting CSHelper#close
+DEBUG (  142.146): Exiting CSHelper#processEvents
+DEBUG (  142.146): Entering CSHelper.connect
+DEBUG (  315.869): Created a socket connection.
+DEBUG (  315.869): Obtained input stream.
+DEBUG (  315.870): Obtained output stream.
+DEBUG (  315.870): Connected to CADscript. Calling CSHelper.processEvents.
+DEBUG (  315.870): Sanity Check
+DEBUG (  315.870): Entering CSHelper#processEvents
+DEBUG (  315.870): Number of bytes reported by cadscript: 87
+DEBUG (  315.870): Number of bytes read by swim: 87
+DEBUG (  315.870): <?xml version="1.0" encoding="utf-8"?>
+<MenuCallbackCmd callbackId="PRE_EXIT_EVENT" />
+DEBUG (  315.870): java.io.StringReader@3394214b
+DEBUG (  315.870): Calling CSOperations.processCIC.
+DEBUG (  315.871): Entering CicCsXmlReader#walkCicNode
+DEBUG (  315.872): Exiting CicCsXmlReader#walkCicNode
+DEBUG (  315.872): Entering Operations.preExitEvent
+DEBUG (  315.872): Entering CSHelper#setTerminationFlag
+DEBUG (  315.872): Exiting CSHelper#setTerminationFlag
+DEBUG (  315.872): Operations.preExitEvent() entering try
+DEBUG (  315.872): Number of bytes reported by cadscript: 115
+DEBUG (  315.872): Number of bytes read by swim: 115
+DEBUG (  315.873): <?xml version="1.0" encoding="utf-8"?>
+<ExitBICModeResponse>
+  <StatusData success="1" />
+</ExitBICModeResponse>
+DEBUG (  315.874): Entering ExitBICModeReader.walkBicNode
+DEBUG (  315.874): Exiting ExitBICModeReader.walkBicNode
+DEBUG (  315.874): Exiting Operations.preExitEvent
+DEBUG (  315.874): Entering CSHelper#close
+DEBUG (  315.874): Exiting CSHelper#close
+DEBUG (  315.874): Exiting CSHelper#processEvents
+DEBUG (  315.875): Exiting MainSwim - no more events to process.
+DEBUG (  315.876): ITI100932.35759.01.test.00029 - Service Request: Core-2006-03-Session:getAvailableServices
+DEBUG (  315.911): ITI100932.35759.01.test.00029 - Service Response: Core-2006-03-Session:getAvailableServices
+DEBUG (  315.914): ITI100932.35759.01.test.00030 - Service Request: Core-2008-03-Session:connect
+DEBUG (  315.917): ITI100932.35759.01.test.00030 - Service Response: Core-2008-03-Session:connect
+DEBUG (  315.919): ITI100932.35759.01.test.00031 - Service Request: Core-2006-03-Session:logout
+DEBUG (  315.991): ITI100932.35759.01.test.00031 - Service Response: Core-2006-03-Session:logout
+DEBUG (  315.992): Total SOA Server Call Count: 31
+DEBUG (  315.992): Saving registry files.
+DEBUG (  315.993): Done saving registry files.
+DEBUG (  315.993): Exiting CSHelper#close

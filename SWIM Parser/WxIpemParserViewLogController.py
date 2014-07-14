@@ -168,6 +168,7 @@ class WxIpemParserViewLogController():
       #openDict {'openStart|openEnd|complete/cacel':[[('TCstart,TCend,TCdesc1,TCdesc2')],[('ProEstart,ProEend,ProEdesc1,ProEdesc2')],[('UserStart,UserEnd,Userdesc1,Userdesc2')],[('DownloadStart,DownloadEnd,Dowloaddesc1,Downloaddesc2')]]}
       logCounter = 0
       logOperationDict = {}
+      swimTimeList = []
       for file_path in listOfFiles:
 
          #######################OPEN Variables#######################
@@ -214,6 +215,7 @@ class WxIpemParserViewLogController():
          saveCompleteCounter = 0
          saveStartFound = False
          saveuserTimeBeginsInitiallyFound = False
+         swimTime = 0
 
          saveDict = {}
          #######################SAVE Variables#######################
@@ -246,21 +248,19 @@ class WxIpemParserViewLogController():
          manStartFound = False
          manuserTimeBeginsInitiallyFound = False
          manDict = {}
-         # if type of integration is SWIM:
-         swimTime = 0
 
          #######################MAN Variables#######################
          for line in open(file_path, 'r'):
             line = line.lower()
 
 
-            if CADEndKeyword in line:
-               lineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', line)
-               oldLineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', oldLine)
-               swimTime += (float(lineTime[0]) - float(oldLineTime[0]))
-               print oldLine, line, '\n'
-
-            oldLine = line
+            # if CADEndKeyword in line:
+            #    lineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', line)
+            #    oldLineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', oldLine)
+            #    # swimTime += (float(lineTime[0]) - float(oldLineTime[0]))
+            #    # print oldLine, line, swimTime, '\n'
+            #
+            # # oldLine = line
          ############################MAN####################################
             if manStartKeyword in line:
                manStartTime,desc= numberFormat(line)
@@ -269,6 +269,16 @@ class WxIpemParserViewLogController():
 
 
             if manStartFound == True:
+               if CADEndKeyword in line:
+                  lineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', line)
+                  oldLineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', oldLine)
+                  if len(oldLineTime[0]) < 5:
+                     oldLineTime = oldLineTime[1]
+                  else:
+                     oldLineTime = oldLineTime[0]
+                  swimTime += (float(lineTime[0]) - float(oldLineTime))
+
+               oldLine = line
 
                #skip first occurrence of begin. Because that is just the way the log works out.
                if "beginning perf sum" in line and not manuserTimeBeginsInitiallyFound:
@@ -387,6 +397,16 @@ class WxIpemParserViewLogController():
 
 
             if saveStartFound == True:
+               if CADEndKeyword in line:
+                  lineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', line)
+                  oldLineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', oldLine)
+                  if len(oldLineTime[0]) < 5:
+                     oldLineTime = oldLineTime[1]
+                  else:
+                     oldLineTime = oldLineTime[0]
+                  swimTime += (float(lineTime[0]) - float(oldLineTime))
+
+               oldLine = line
 
                #skip first occuranve of begin
                if "beginning perf sum" in line and not saveuserTimeBeginsInitiallyFound:
@@ -482,6 +502,17 @@ class WxIpemParserViewLogController():
 
             if openStartFound == True:
 
+               if CADEndKeyword in line:
+                  lineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', line)
+                  oldLineTime = re.findall(r'[-+]?[0-9]*\.?[0-9]+', oldLine)
+                  if len(oldLineTime[0]) < 5:
+                     oldLineTime = oldLineTime[1]
+                  else:
+                     oldLineTime = oldLineTime[0]
+                  swimTime += (float(lineTime[0]) - float(oldLineTime))
+
+               oldLine = line
+
 
                if downloadStartKeywords in line:
                   downloadStartTime, desc = numberFormat(line)
@@ -562,15 +593,13 @@ class WxIpemParserViewLogController():
 
                      openuserTimeBeginsInitiallyFound = False
                      openStartFound = False
-
-
-
-
+         swimTimeList.append(swimTime)
 
          ##########################OPEN##########################################
          logOperationDictKey = "log_" + str(logCounter)
          logOperationDict[logOperationDictKey] = [openDict,saveDict,manDict]
          logCounter += 1
+
 
       totalTcTimeList = []
       totalDlTimeList = []
@@ -822,7 +851,7 @@ class WxIpemParserViewLogController():
                   manuserEndTimeList.append(str(endTime))
                   manuserDescList.append(str(startDesc))
 
-         if 'swimTime' in locals(): print "Total SWIM time: %ss" % swimTime
+         # if 'swimTime' in locals(): print "Total SWIM time: %ss" % swimTime
 
 
          for number in opentcElapsedTimeList:
@@ -851,8 +880,8 @@ class WxIpemParserViewLogController():
          totalTcTime = totalOpenTcTime + totalSaveTcTime + totalManTcTime
          totalDlTime = totalManDlTime + totalOpenDlTime + totalSaveDlTime
          totalUserTime = totalManUserTime + totalSaveUserTime + totalOpenUserTime
-         totalOperationTime = elapsedOpenTimeTotal + elapsedsaveTimeTotal + elapsedmanTimeTotal
-         totalOperationTimeWithoutUserTime = totalOperationTime - totalUserTime
+         totalOperationTime = swimTime + totalDlTime + totalTcTime + totalUserTime
+         totalOperationTimeWithoutUserTime = swimTime + totalTcTime + totalDlTime#totalOperationTime - totalUserTime
          totalProEandSwimTime = totalOperationTime - totalUserTime - totalDlTime - totalTcTime
          totalNumberOfOperations = openOpCounter + saveOpCounter + manOpCounter
 
@@ -861,7 +890,7 @@ class WxIpemParserViewLogController():
          totalUserTimeList.append(totalUserTime)
          totalOperationTimeList.append(totalOperationTime)
          totalOperationTimeWithoutUserTimeList.append(totalOperationTimeWithoutUserTime)
-         totalProEandSwimTimeList.append(totalProEandSwimTime)
+         totalProEandSwimTimeList = swimTimeList#.append(swimTime)#totalProEandSwimTime)
 
          totalOpenOperationList.append(openOpCounter)
          totalSaveOperationList.append(saveOpCounter)
