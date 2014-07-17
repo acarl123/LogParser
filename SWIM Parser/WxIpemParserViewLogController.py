@@ -1,6 +1,8 @@
 '''
 Program that parses IPEM and SWIM logs and measures performance characteristics.
 Developed by JDH 5/29/14
+
+Fixed for SWIM by AHC 17-Jul-2014
 '''
 
 import wx
@@ -11,7 +13,6 @@ import sys
 import pprint
 
 _VERSION = "1.0"
-#added a comment
 
 def numberFormat(line):
    line = line.split(':')
