@@ -13,11 +13,15 @@ import pprint
 _VERSION = "1.0"
 
 def numberFormat(line):
-	line = line.split(':')
-	desc = line[-1].strip()
-	digitList = re.findall('\d+', line[0])
-	line = digitList[0] + "." + digitList[1]
-	return line, desc
+   line = line.split(':')
+   desc = line[-1].strip()
+   digitList = re.findall('\d+', line[0])
+   if digitList:
+      line = digitList[0] + "." + digitList[1]
+      return line, desc
+   else:
+      return False, False
+
 
 def findAverage(inputlist):
    average = sum(inputlist) / float(len(inputlist))
@@ -133,7 +137,7 @@ class WxIpemParserViewLogController():
       openEndKeyWordList = ["perf: open from teamcenter complete","exiting operationcollectiondialog.cancelaction for teamcenter open", "Exiting Operations.cancelCheckOut".lower()]
 
       saveStartKeyword = "perf: teamcenter -> save as begins"
-      saveEndKeyWordList = ["perf: save to teamcenter complete","exiting operationcollectiondialog.cancelaction for teamcenter save as"]
+      saveEndKeyWordList = ["perf: save to teamcenter complete","exiting operationcollectiondialog.cancelaction for teamcenter save", "Save to Teamcenter may have been unsuccessful".lower()]
 
       manStartKeyword = "perf: manager begins"
       manEndKeyWordList = ["perfsum: manager complete","exiting operationcollectiondialog.cancelaction for teamcenter manager"]
@@ -532,8 +536,9 @@ class WxIpemParserViewLogController():
 
                if userTimeStartKeyword in line:
                   userStartTime, desc = numberFormat(line)
-                  userStartTimesList.append(userStartTime)
-                  userStarttcDescList.append(desc)
+                  if userStartTime:
+                     userStartTimesList.append(userStartTime)
+                     userStarttcDescList.append(desc)
 
 
                for userEndWord in userTimeEndKeyword:
@@ -900,7 +905,7 @@ class WxIpemParserViewLogController():
 
 
       ##########################OPEN DETAILS##########################################
-      summaryColumnHeader = ("ProE/SWIM/IPEM","Teamcenter","User Time","Download","Total Operation","Total Operation w/o User",'Total Save','Total Open','Total Manager',"Total Operations")
+      summaryColumnHeader = ("SWIM Time","Teamcenter Time","User Time","Download Time","Total Operation Time","Total Operation w/o User",'Total Save','Total Open','Total Manager',"Total Operations")
       summaryResultsDict = {}
       summaryRowLabelDict = {}
       summaryAvgColDict = {}
