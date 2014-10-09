@@ -1,6 +1,6 @@
 # -*- mode: python -*-
 a = Analysis(['mainapp.py'],
-             pathex=['C:\\workdir\\IPEM_Timing_Proto\\GUI'],
+             pathex=['C:\\Users\\ahc\\Documents\\GitHub\\LogParser'],
              hiddenimports=[],
              hookspath=None,
              runtime_hooks=None)

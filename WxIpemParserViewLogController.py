@@ -662,49 +662,49 @@ class WxIpemParserViewLogController():
                   elapsedOpenTimeTotal = elapsedOpenTime + elapsedOpenTimeTotal
                   elapsedOpenTimeList.append(elapsedOpenTimeTotal)
 
-               # if len(operationLists) >=2:
-               tcTimeList = operationLists[0]
-               userTimeList = operationLists[1]
-               dlTimeList = operationLists[2]
+               if len(operationLists) >=2:
+                  tcTimeList = operationLists[0]
+                  userTimeList = operationLists[1]
+                  dlTimeList = operationLists[2]
 
-               for dlDescTuple in dlTimeList:
-                  startTime = float(dlDescTuple[0])
-                  endTime = float(dlDescTuple[1])
-                  startDesc = dlDescTuple[2]
-                  endDesc = dlDescTuple[3]
-                  elapsedTime = endTime - startTime
+                  for dlDescTuple in dlTimeList:
+                     startTime = float(dlDescTuple[0])
+                     endTime = float(dlDescTuple[1])
+                     startDesc = dlDescTuple[2]
+                     endDesc = dlDescTuple[3]
+                     elapsedTime = endTime - startTime
 
-                  opendownloadElapsedTimeList.append(elapsedTime)
-                  opendownloadStartTimeList.append(str(startTime))
-                  opendownloadEndTimeList.append(str(endTime))
-                  opendownloadDescList.append(str(startDesc))
-
-
-               for timeDescTuple in tcTimeList:
-                  startTime = float(timeDescTuple[0])
-                  endTime = float(timeDescTuple[1])
-                  startDesc = timeDescTuple[2]
-                  endDesc = timeDescTuple[3]
-                  elapsedTime = endTime - startTime
-
-                  opentcElapsedTimeList.append(elapsedTime)
-                  opentcStartTimeList.append(str(startTime))
-                  opentcEndTimeList.append(str(endTime))
-                  opentcDescList.append(str(startDesc))
+                     opendownloadElapsedTimeList.append(elapsedTime)
+                     opendownloadStartTimeList.append(str(startTime))
+                     opendownloadEndTimeList.append(str(endTime))
+                     opendownloadDescList.append(str(startDesc))
 
 
-               for timeDescTuple in userTimeList:
-                  startTime = float(timeDescTuple[0])
-                  endTime = float(timeDescTuple[1])
-                  startDesc = timeDescTuple[2]
-                  endDesc = timeDescTuple[3]
-                  elapsedTime = endTime - startTime
+                  for timeDescTuple in tcTimeList:
+                     startTime = float(timeDescTuple[0])
+                     endTime = float(timeDescTuple[1])
+                     startDesc = timeDescTuple[2]
+                     endDesc = timeDescTuple[3]
+                     elapsedTime = endTime - startTime
+
+                     opentcElapsedTimeList.append(elapsedTime)
+                     opentcStartTimeList.append(str(startTime))
+                     opentcEndTimeList.append(str(endTime))
+                     opentcDescList.append(str(startDesc))
 
 
-                  openuserElapsedTimeList.append(elapsedTime)
-                  openuserStartTimeList.append(str(startTime))
-                  openuserEndTimeList.append(str(endTime))
-                  openuserDescList.append(str(startDesc))
+                  for timeDescTuple in userTimeList:
+                     startTime = float(timeDescTuple[0])
+                     endTime = float(timeDescTuple[1])
+                     startDesc = timeDescTuple[2]
+                     endDesc = timeDescTuple[3]
+                     elapsedTime = endTime - startTime
+
+
+                     openuserElapsedTimeList.append(elapsedTime)
+                     openuserStartTimeList.append(str(startTime))
+                     openuserEndTimeList.append(str(endTime))
+                     openuserDescList.append(str(startDesc))
 
 
          if saveDict:

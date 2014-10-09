@@ -702,6 +702,7 @@ class WxIpemParserViewLogController():
                   elapsedOpenTimeList.append(elapsedOpenTimeTotal)
 
                # if len(operationLists) >=2:
+               print operationLists
                tcTimeList = operationLists[0]
                userTimeList = operationLists[1]
                dlTimeList = operationLists[2]
