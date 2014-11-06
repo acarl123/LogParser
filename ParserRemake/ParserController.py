@@ -95,6 +95,7 @@ class MainController:
          }
       opCountDict = defaultdict(int)
       opTimeDict = defaultdict(int)
+      outOfLoop = False
 
       for line in data:
          numberInLine = re.search(r'[0-9]*\.[0-9]*.:', line)
@@ -129,17 +130,16 @@ class MainController:
             currentOpDict['manage'] = False
             opTimeDict['totalOp'] += (float(numberInLine.group(0)[:-2]) - manStartTime)
 
-         # if not any(value for value in currentOpDict.itervalues()): continue
+         if not any(value for value in currentOpDict.itervalues()):continue# outOfLoop = True
 
          # User time
          if userTimeStartKeyword in line.lower():
+            # if outOfLoop: outOfLoop=False;continue
             opCountDict['user'] += 1
-            currentOpDict['user'] = True
             userStartTime = float(numberInLine.group(0)[:-2])
 
          if any(key in line.lower() for key in userTimeEndKeyword) and 'userStartTime' in locals():
-            currentOpDict['user'] = False
-            print line
+            # if outOfLoop: del userStartTime;outOfLoop=False;continue
             opTimeDict['user'] += (float(numberInLine.group(0)[:-2]) - userStartTime)
             del userStartTime
 
@@ -148,12 +148,10 @@ class MainController:
             try:
                tcStartTime = float(numberInLine.group(0)[:-2])
                opCountDict['teamcenter'] += 1
-               currentOpDict['teamcenter'] = True
             except:
                print 'time not found, possible corrupted log file'
 
          if tcEndKeywords in line.lower() and 'tcStartTime' in locals():
-            currentOpDict['teamcenter'] = False
             try:
                opTimeDict['teamcenter'] += (float(numberInLine.group(0)[:-2]) - tcStartTime)
             except:
@@ -163,11 +161,9 @@ class MainController:
          # Download time
          if downloadStartKeywords in line.lower():
             opCountDict['download'] += 1
-            currentOpDict['download'] = True
             downloadStartTime = float(numberInLine.group(0)[:-2])
 
          if downloadEndKeywords in line.lower() and 'downloadStartTime' in locals():
-            currentOpDict['download'] = False
             opTimeDict['download'] += (float(numberInLine.group(0)[:-2]) - downloadStartTime)
             del downloadStartTime
 
