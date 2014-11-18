@@ -96,6 +96,7 @@ class MainController:
       opCountDict = defaultdict(int)
       opTimeDict = defaultdict(int)
       outOfLoop = False
+      tempList = []
 
       for line in data:
          numberInLine = re.search(r'[0-9]*\.[0-9]*.:', line)
@@ -105,20 +106,27 @@ class MainController:
             opCountDict['open'] += 1
             currentOpDict['open'] = True
             openStartTime = float(numberInLine.group(0)[:-2])
+            tempList.append(line)
 
          if any(key in line.lower() for key in openEndKeyWordList):
             currentOpDict['open'] = False
             opTimeDict['totalOp'] += (float(numberInLine.group(0)[:-2]) - openStartTime)
+            tempList.append('%s %s\n' % (line, opTimeDict))
 
          # Save time
          if saveStartKeyword in line.lower():
             opCountDict['save'] += 1
             currentOpDict['save'] = True
             saveStartTime = float(numberInLine.group(0)[:-2])
+            tempList.append(line)
 
          if any(key in line.lower() for key in saveEndKeyWordList):
             currentOpDict['save'] = False
             opTimeDict['totalOp'] += (float(numberInLine.group(0)[:-2]) - saveStartTime)
+            tempList.append('%s %s\n' % (line, opTimeDict))
+            if 'userStartTime' in locals():
+               opCountDict['user'] -= 1
+               del userStartTime
 
          # Manage time
          if manStartKeyword in line.lower():
@@ -137,11 +145,13 @@ class MainController:
             # if outOfLoop: outOfLoop=False;continue
             opCountDict['user'] += 1
             userStartTime = float(numberInLine.group(0)[:-2])
+            tempList.append(line)
 
          if any(key in line.lower() for key in userTimeEndKeyword) and 'userStartTime' in locals():
             # if outOfLoop: del userStartTime;outOfLoop=False;continue
             opTimeDict['user'] += (float(numberInLine.group(0)[:-2]) - userStartTime)
             del userStartTime
+            tempList.append('%s %s\n' % (line, opTimeDict))
 
          # Teamcenter time
          if tcStartKeywords in line.lower():
@@ -170,6 +180,9 @@ class MainController:
       opTimeDict['totalOpNoUser'] = opTimeDict['totalOp'] - opTimeDict['user']
       opTimeDict['integration'] = opTimeDict['totalOpNoUser'] - opTimeDict['teamcenter'] - opTimeDict['download']
       opCountDict['total'] = opCountDict['save'] + opCountDict['open'] + opCountDict['manage']
+
+      # with open('debugFile.txt', 'w+') as debugFile:
+      #    debugFile.writelines(tempList)
 
       return opTimeDict, opCountDict, logFileName
 
