@@ -103,40 +103,40 @@ class MainController:
 
          # Open Time
          if openStartKeyword in line.lower():
-            opCountDict['open'] += 1
-            currentOpDict['open'] = True
-            openStartTime = float(numberInLine.group(0)[:-2])
-            tempList.append(line)
+            # opCountDict['open'] += 1
+            # currentOpDict['open'] = True
+            # openStartTime = float(numberInLine.group(0)[:-2])
+            # tempList.append(line)
 
          if any(key in line.lower() for key in openEndKeyWordList):
-            currentOpDict['open'] = False
-            opTimeDict['totalOp'] += (float(numberInLine.group(0)[:-2]) - openStartTime)
-            tempList.append('%s %s\n' % (line, opTimeDict))
+            # currentOpDict['open'] = False
+            # opTimeDict['totalOp'] += (float(numberInLine.group(0)[:-2]) - openStartTime)
+            # tempList.append('%s %s\n' % (line, opTimeDict))
 
          # Save time
          if saveStartKeyword in line.lower():
-            opCountDict['save'] += 1
-            currentOpDict['save'] = True
-            saveStartTime = float(numberInLine.group(0)[:-2])
-            tempList.append(line)
+            # opCountDict['save'] += 1
+            # currentOpDict['save'] = True
+            # saveStartTime = float(numberInLine.group(0)[:-2])
+            # tempList.append(line)
 
          if any(key in line.lower() for key in saveEndKeyWordList):
-            currentOpDict['save'] = False
-            opTimeDict['totalOp'] += (float(numberInLine.group(0)[:-2]) - saveStartTime)
-            tempList.append('%s %s\n' % (line, opTimeDict))
-            if 'userStartTime' in locals():
-               opCountDict['user'] -= 1
-               del userStartTime
+            # currentOpDict['save'] = False
+            # opTimeDict['totalOp'] += (float(numberInLine.group(0)[:-2]) - saveStartTime)
+            # tempList.append('%s %s\n' % (line, opTimeDict))
+            # if 'userStartTime' in locals():
+            #    opCountDict['user'] -= 1
+            #    del userStartTime
 
          # Manage time
          if manStartKeyword in line.lower():
-            opCountDict['manage'] += 1
-            currentOpDict['manage'] = True
-            manStartTime = float(numberInLine.group(0)[:-2])
+            # opCountDict['manage'] += 1
+            # currentOpDict['manage'] = True
+            # manStartTime = float(numberInLine.group(0)[:-2])
 
          if any(key in line.lower() for key in manEndKeyWordList):
-            currentOpDict['manage'] = False
-            opTimeDict['totalOp'] += (float(numberInLine.group(0)[:-2]) - manStartTime)
+            # currentOpDict['manage'] = False
+            # opTimeDict['totalOp'] += (float(numberInLine.group(0)[:-2]) - manStartTime)
 
          if not any(value for value in currentOpDict.itervalues()):continue# outOfLoop = True
 
@@ -181,8 +181,8 @@ class MainController:
       opTimeDict['integration'] = opTimeDict['totalOpNoUser'] - opTimeDict['teamcenter'] - opTimeDict['download']
       opCountDict['total'] = opCountDict['save'] + opCountDict['open'] + opCountDict['manage']
 
-      # with open('debugFile.txt', 'w+') as debugFile:
-      #    debugFile.writelines(tempList)
+      with open('debugFile.txt', 'w+') as debugFile:
+         debugFile.writelines(tempList)
 
       return opTimeDict, opCountDict, logFileName
 
