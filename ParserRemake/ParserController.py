@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import defaultdict, Counter
 from ParserView import LogView
 import wx
 import os, sys, re, threading
@@ -94,9 +94,20 @@ class MainController:
          'manage': False
          }
       opCountDict = defaultdict(int)
-      opTimeDict = defaultdict(int)
+      opTimeDict = Counter({
+         'totalOp'   : 0,
+         'user'      : 0,
+         'teamcenter': 0,
+         'download'  : 0,
+      })
+      auxTimeDict = Counter({
+         'user'      : 0,
+         'teamcenter': 0,
+         'download'  : 0,
+      })
+      emptyAuxTimeDict = auxTimeDict
       tempList = []
-
+      errList = []
       currentTaskDict = {}
       auxTaskDict = {}
 
@@ -107,6 +118,7 @@ class MainController:
 
             # Open Time
             if openStartKeyword in line.lower():
+               auxTimeDict = emptyAuxTimeDict.copy()
                currentTaskDict = {}
                auxTaskDict = {}
                currentTaskDict['open'] = numberInLine
@@ -118,23 +130,26 @@ class MainController:
                opCountDict['open'] += 1
             #    currentOpDict['open'] = False
                opTimeDict['totalOp'] += (numberInLine - currentTaskDict['open'])
+               opTimeDict = opTimeDict + auxTimeDict
                tempList.append('%s %s\n' % (line, opTimeDict))
                currentTaskDict = {}
                auxTaskDict = {}
             #
             # Save time
             if saveStartKeyword in line.lower():
+               auxTimeDict = emptyAuxTimeDict.copy()
                currentTaskDict = {}
                auxTaskDict = {}
                currentTaskDict['save'] = numberInLine
             #    currentOpDict['save'] = True
             #    saveStartTime = float(numberInLine.group(0)[:-2])
-            #    tempList.append(line)
+               tempList.append(line)
             #
             if any(key in line.lower() for key in saveEndKeyWordList) and currentTaskDict.get('save'):
                opCountDict['save'] += 1
             #    currentOpDict['save'] = False
                opTimeDict['totalOp'] += (numberInLine - currentTaskDict['save'])
+               opTimeDict = opTimeDict + auxTimeDict
                tempList.append('%s %s\n' % (line, opTimeDict))
                currentTaskDict = {}
                auxTaskDict = {}
@@ -144,6 +159,7 @@ class MainController:
             #
             # Manage time
             if manStartKeyword in line.lower() and not currentOpDict['manage']:
+               auxTimeDict = emptyAuxTimeDict.copy()
                currentTaskDict = {}
                auxTaskDict = {}
                currentTaskDict['manage'] = numberInLine
@@ -154,6 +170,7 @@ class MainController:
                opCountDict['manage'] += 1
             #    currentOpDict['manage'] = False
                opTimeDict['totalOp'] += (numberInLine - currentTaskDict['manage'])
+               opTimeDict = opTimeDict + auxTimeDict
                currentTaskDict = {}
                auxTaskDict = {}
             #
@@ -169,7 +186,7 @@ class MainController:
             #
             if any(key in line.lower() for key in userTimeEndKeyword) and auxTaskDict.get('user'):
             #    # if outOfLoop: del userStartTime;outOfLoop=False;continue
-               opTimeDict['user'] += (numberInLine - auxTaskDict['user'])
+               auxTimeDict['user'] += (numberInLine - auxTaskDict['user'])
                auxTaskDict['user'] = None
             #    del userStartTime
                tempList.append('%s %s\n' % (line, opTimeDict))
@@ -184,7 +201,7 @@ class MainController:
             #
             if tcEndKeywords in line.lower() and auxTaskDict.get('teamcenter'):
                try:
-                  opTimeDict['teamcenter'] += (numberInLine - auxTaskDict['teamcenter'])
+                  auxTimeDict['teamcenter'] += (numberInLine - auxTaskDict['teamcenter'])
                except:
                   print 'time not found, possible corrupted log file'
                auxTaskDict['teamcenter'] = None
@@ -196,12 +213,13 @@ class MainController:
             #    downloadStartTime = float(numberInLine.group(0)[:-2])
             #
             if downloadEndKeywords in line.lower() and auxTaskDict.get('download'):
-               opTimeDict['download'] += (numberInLine - auxTaskDict['download'])
+               auxTimeDict['download'] += (numberInLine - auxTaskDict['download'])
                auxTaskDict['download'] = None
             #    del downloadStartTime
 
          except Exception, e:
-            print e, line
+            print e
+            errList.append('\n%s in line %s\n' % (e, line))
 
       opTimeDict['totalOpNoUser'] = opTimeDict['totalOp'] - opTimeDict['user']
       opTimeDict['integration'] = opTimeDict['totalOpNoUser'] - opTimeDict['teamcenter'] - opTimeDict['download']
@@ -209,6 +227,7 @@ class MainController:
 
       with open('debugFile.txt', 'w+') as debugFile:
          debugFile.writelines(tempList)
+         debugFile.writelines(errList)
 
       return opTimeDict, opCountDict, logFileName
 
