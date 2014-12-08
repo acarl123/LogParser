@@ -9,7 +9,6 @@
 
 import wx
 import wx.xrc
-from CustomControls import *
 
 ###########################################################################
 ## Class LogView
@@ -33,9 +32,9 @@ class LogView ( wx.Frame ):
 		self.m_staticText2.Wrap( -1 )
 		optionsSizer.Add( self.m_staticText2, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
-		self.LogFileListCtrl = FileListCtrl( self.mainPanel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LC_LIST )
-		self.FileDropTarget = FileDropTarget(self.LogFileListCtrl)
-		self.LogFileListCtrl.SetDropTarget(self.FileDropTarget)
+		self.LogFileListCtrl = wx.ListCtrl( self.mainPanel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LC_LIST )
+		# self.FileDropTarget = FileDropTarget(self.LogFileListCtrl)
+		# self.LogFileListCtrl.SetDropTarget(self.FileDropTarget)
 		optionsSizer.Add( self.LogFileListCtrl, 1, wx.ALL|wx.EXPAND, 5 )
 		
 		self.btnAddFiles = wx.Button( self.mainPanel, wx.ID_ANY, u"Add Files...", wx.DefaultPosition, wx.DefaultSize, 0 )

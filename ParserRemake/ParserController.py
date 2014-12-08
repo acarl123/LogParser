@@ -31,12 +31,16 @@ class MainController:
       # Init member vars
       self.mainWindow = LogView(None)
       self.totalOpenTime = 0
+      self.mainWindow.LogFileListCtrl.DragAcceptFiles(True)
 
       # Bind events
+      self.mainWindow.LogFileListCtrl.Bind(wx.EVT_LIST_KEY_DOWN, self.onDelete)
       self.mainWindow.btnAddFiles.Bind(wx.EVT_BUTTON, self.onFile)
       self.mainWindow.calcButton.Bind(wx.EVT_BUTTON, self.onCalc)
       self.mainWindow.clearButton.Bind(wx.EVT_BUTTON, self.onClear)
       self.mainWindow.LogFileListCtrl.Bind(wx.EVT_CONTEXT_MENU, self.onRClick)
+      self.mainWindow.LogFileListCtrl.Bind(wx.EVT_DROP_FILES, self.onFile)
+      self.mainWindow.displaySummaryListCtrl.Bind(wx.EVT_LIST_COL_RIGHT_CLICK, self.onColRClick)
       self.dirPaths = []
 
       # Setup view
@@ -45,12 +49,15 @@ class MainController:
       self.mainWindow.Show()
 
    def onFile(self, event):
-      logFilePicker = wx.FileDialog(self.mainWindow, 'Choose a File', "", "",
-                             u"log files (*.txt, *.log)|*.txt; *.log|All Files (*.*)|*.*", wx.MULTIPLE)
-      if logFilePicker.ShowModal() == wx.ID_OK:
-         filelist = logFilePicker.GetPaths()
-      else:
-         return
+      try:
+         filelist = event.GetFiles()
+      except:
+         logFilePicker = wx.FileDialog(self.mainWindow, 'Choose a File', "", "",
+                                u"log files (*.txt, *.log)|*.txt; *.log|All Files (*.*)|*.*", wx.MULTIPLE)
+         if logFilePicker.ShowModal() == wx.ID_OK:
+            filelist = logFilePicker.GetPaths()
+         else:
+            return
 
       for logFile in filelist:
          self.dirPaths.append(os.path.dirname(logFile))
@@ -68,7 +75,23 @@ class MainController:
       menu.Destroy()
 
    def onDelete(self, event):
-      self.mainWindow.LogFileListCtrl.DeleteItem(self.mainWindow.LogFileListCtrl.GetNextSelected(-1))
+      try:
+         key = event.GetKeyCode()
+         if not key == wx.WXK_DELETE: return
+      except AttributeError: pass
+      finally:
+         indexList = []
+         index = self.mainWindow.LogFileListCtrl.GetNextSelected(-1)
+         indexList.append(index)
+         while index != -1:
+            index = self.mainWindow.LogFileListCtrl.GetNextSelected(index)
+            indexList.append(index)
+
+         for counter, index in enumerate(list(set(indexList))):
+            self.mainWindow.LogFileListCtrl.DeleteItem(index-counter)
+
+   def onColRClick(self, event):
+      print event.GetColumn()
 
    def onCalc(self, event):
       if self.mainWindow.LogFileListCtrl.ItemCount == 0: return
