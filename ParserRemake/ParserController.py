@@ -1,5 +1,6 @@
 from collections import defaultdict, Counter
 from ParserView import LogView
+from ParserDetailsController import ParserDetailsController
 import wx
 import os, sys, re, threading
 
@@ -91,7 +92,21 @@ class MainController:
             self.mainWindow.LogFileListCtrl.DeleteItem(index-counter)
 
    def onColRClick(self, event):
-      print event.GetColumn()
+      col = event.m_col
+      if col <= 0: return
+      if not hasattr(self, 'popupId2'):
+         self.popupId2 = wx.NewId()
+         self.mainWindow.Bind(wx.EVT_MENU, self.onDetails, id=self.popupId2)
+
+      menu = wx.Menu()
+      menu.Append(self.popupId2, 'View Details...')
+
+      self.mainWindow.PopupMenu(menu)
+      menu.Destroy()
+
+   def onDetails(self, event):
+      detailsController = ParserDetailsController(self.mainWindow,)
+      detailsController.show()
 
    def onCalc(self, event):
       if self.mainWindow.LogFileListCtrl.ItemCount == 0: return
