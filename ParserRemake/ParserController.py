@@ -33,6 +33,9 @@ class MainController:
       self.mainWindow = LogView(None)
       self.totalOpenTime = 0
       self.mainWindow.LogFileListCtrl.DragAcceptFiles(True)
+      self.times = defaultdict(dict)
+      self.count = defaultdict(dict)
+      self.timelineDict = defaultdict(dict)
 
       # Bind events
       self.mainWindow.LogFileListCtrl.Bind(wx.EVT_LIST_KEY_DOWN, self.onDelete)
@@ -43,8 +46,6 @@ class MainController:
       self.mainWindow.LogFileListCtrl.Bind(wx.EVT_DROP_FILES, self.onFile)
       self.mainWindow.displaySummaryListCtrl.Bind(wx.EVT_LIST_COL_RIGHT_CLICK, self.onColRClick)
       self.dirPaths = []
-
-      # Setup view
 
    def show(self, *args):
       self.mainWindow.Show()
@@ -62,7 +63,6 @@ class MainController:
 
       for logFile in filelist:
          self.dirPaths.append(os.path.dirname(logFile))
-
          self.mainWindow.LogFileListCtrl.InsertStringItem(self.mainWindow.LogFileListCtrl.GetItemCount(), str(os.path.basename(logFile)))
 
    def onRClick(self, event):
@@ -96,20 +96,22 @@ class MainController:
       if col <= 0: return
       if not hasattr(self, 'popupId2'):
          self.popupId2 = wx.NewId()
-         self.mainWindow.Bind(wx.EVT_MENU, self.onDetails, id=self.popupId2)
+      self.mainWindow.Bind(wx.EVT_MENU, lambda event: self.onDetails(event, col), id=self.popupId2)
 
       menu = wx.Menu()
       menu.Append(self.popupId2, 'View Details...')
 
       self.mainWindow.PopupMenu(menu)
       menu.Destroy()
+      self.mainWindow.Unbind(wx.EVT_MENU, id=self.popupId2)
 
-   def onDetails(self, event):
-      detailsController = ParserDetailsController(self.mainWindow,)
+   def onDetails(self, event, column):
+      detailsController = ParserDetailsController(self.mainWindow, self.times[column], self.count[column], self.timelineDict[column])
       detailsController.show()
 
    def onCalc(self, event):
       if self.mainWindow.LogFileListCtrl.ItemCount == 0: return
+      self.mainWindow.SetCursor(wx.StockCursor(wx.CURSOR_WAIT))
       self.onClear()
       self.initList()
       threads = []
@@ -125,7 +127,6 @@ class MainController:
          worker.start()
 
    def calcTimes(self, data, logFileName):
-      self.mainWindow.SetCursor(wx.StockCursor(wx.CURSOR_WAIT))
       currentOpDict = {
          'open': False,
          'save': False,
@@ -148,6 +149,7 @@ class MainController:
       errList = []
       currentTaskDict = {}
       auxTaskDict = {}
+      timelineDict = {}
 
       for line in data:
          try:
@@ -156,104 +158,95 @@ class MainController:
 
             # Open Time
             if openStartKeyword in line.lower():
+               timelineDict[numberInLine] = line
                auxTimeDict = emptyAuxTimeDict.copy()
                currentTaskDict = {}
                auxTaskDict = {}
                currentTaskDict['open'] = numberInLine
-            #    currentOpDict['open'] = True
-            #    openStartTime = float(numberInLine.group(0)[:-2])
                tempList.append(line)
-            #
+
             if any(key in line.lower() for key in openEndKeyWordList) and currentTaskDict.get('open'):
+               timelineDict[numberInLine] = line
                opCountDict['open'] += 1
-            #    currentOpDict['open'] = False
                opTimeDict['totalOp'] += (numberInLine - currentTaskDict['open'])
                opTimeDict = opTimeDict + auxTimeDict
                tempList.append('%s %s\n' % (line, opTimeDict))
                currentTaskDict = {}
                auxTaskDict = {}
-            #
+
             # Save time
             if saveStartKeyword in line.lower():
+               timelineDict[numberInLine] = line
                auxTimeDict = emptyAuxTimeDict.copy()
                currentTaskDict = {}
                auxTaskDict = {}
                currentTaskDict['save'] = numberInLine
-            #    currentOpDict['save'] = True
-            #    saveStartTime = float(numberInLine.group(0)[:-2])
                tempList.append(line)
-            #
+
             if any(key in line.lower() for key in saveEndKeyWordList) and currentTaskDict.get('save'):
+               timelineDict[numberInLine] = line
                opCountDict['save'] += 1
-            #    currentOpDict['save'] = False
                opTimeDict['totalOp'] += (numberInLine - currentTaskDict['save'])
                opTimeDict = opTimeDict + auxTimeDict
                tempList.append('%s %s\n' % (line, opTimeDict))
                currentTaskDict = {}
                auxTaskDict = {}
-            #    if 'userStartTime' in locals():
-            #       opCountDict['user'] -= 1
-            #       del userStartTime
-            #
+
             # Manage time
             if manStartKeyword in line.lower() and not currentOpDict['manage']:
+               timelineDict[numberInLine] = line
                auxTimeDict = emptyAuxTimeDict.copy()
                currentTaskDict = {}
                auxTaskDict = {}
                currentTaskDict['manage'] = numberInLine
-            #    currentOpDict['manage'] = True
-            #    manStartTime = float(numberInLine.group(0)[:-2])
-            #
+
             if any(key in line.lower() for key in manEndKeyWordList) and currentTaskDict.get('manage'):
+               timelineDict[numberInLine] = line
                opCountDict['manage'] += 1
-            #    currentOpDict['manage'] = False
                opTimeDict['totalOp'] += (numberInLine - currentTaskDict['manage'])
                opTimeDict = opTimeDict + auxTimeDict
                currentTaskDict = {}
                auxTaskDict = {}
-            #
-            # if not any(value for value in currentOpDict.itervalues()):continue# outOfLoop = True
-            #
+
             if not currentTaskDict: continue
 
             # User time
             if userTimeStartKeyword in line.lower():
+               timelineDict[numberInLine] = line
                auxTaskDict['user'] = numberInLine
-            #    userStartTime = float(numberInLine.group(0)[:-2])
                tempList.append(line)
-            #
+
             if any(key in line.lower() for key in userTimeEndKeyword) and auxTaskDict.get('user'):
-            #    # if outOfLoop: del userStartTime;outOfLoop=False;continue
+               timelineDict[numberInLine] = line
                auxTimeDict['user'] += (numberInLine - auxTaskDict['user'])
                auxTaskDict['user'] = None
-            #    del userStartTime
                tempList.append('%s %s\n' % (line, opTimeDict))
-            #
+
             # Teamcenter time
             if tcStartKeywords in line.lower():
                try:
+                  timelineDict[numberInLine] = line
                   auxTaskDict['teamcenter'] = numberInLine
-                  # opCountDict['teamcenter'] += 1
                except:
                   print 'time not found, possible corrupted log file'
-            #
+
             if tcEndKeywords in line.lower() and auxTaskDict.get('teamcenter'):
                try:
+                  timelineDict[numberInLine] = line
                   auxTimeDict['teamcenter'] += (numberInLine - auxTaskDict['teamcenter'])
                except:
                   print 'time not found, possible corrupted log file'
                auxTaskDict['teamcenter'] = None
-            #
+
             # Download time
             if downloadStartKeywords in line.lower():
+               timelineDict[numberInLine] = line
                auxTaskDict['download'] = numberInLine
-            #    opCountDict['download'] += 1
-            #    downloadStartTime = float(numberInLine.group(0)[:-2])
-            #
+
             if downloadEndKeywords in line.lower() and auxTaskDict.get('download'):
+               timelineDict[numberInLine] = line
                auxTimeDict['download'] += (numberInLine - auxTaskDict['download'])
                auxTaskDict['download'] = None
-            #    del downloadStartTime
 
          except Exception, e:
             print e
@@ -267,9 +260,9 @@ class MainController:
          debugFile.writelines(tempList)
          debugFile.writelines(errList)
 
-      return opTimeDict, opCountDict, logFileName
+      return opTimeDict, opCountDict, logFileName, timelineDict
 
-   def populateList(self, times, count, colName):
+   def populateList(self, times, count, colName, timeInfo={}):
       curCol = self.mainWindow.displaySummaryListCtrl.ColumnCount
       self.mainWindow.displaySummaryListCtrl.InsertColumn(curCol, os.path.basename(colName))
       self.mainWindow.displaySummaryListCtrl.SetStringItem(0, curCol, str(times['integration']))
@@ -282,6 +275,10 @@ class MainController:
       self.mainWindow.displaySummaryListCtrl.SetStringItem(7, curCol, str(count['open']))
       self.mainWindow.displaySummaryListCtrl.SetStringItem(8, curCol, str(count['manage']))
       self.mainWindow.displaySummaryListCtrl.SetStringItem(9, curCol, str(count['total']))
+
+      self.times[curCol] = times
+      self.count[curCol] = count
+      self.timelineDict[curCol] = timeInfo
 
       if len(threading.enumerate()) <= 2:
          self.mainWindow.SetCursor(wx.StockCursor(wx.CURSOR_ARROW))
