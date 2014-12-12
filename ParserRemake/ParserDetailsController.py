@@ -32,7 +32,7 @@ class ParserDetailsController:
       self.mainWindow.lblTotalOpen.SetLabel('%s %s' % (self.mainWindow.lblTotalOpen.GetLabel(), str(self.count['open'])))
 
    def buildTimeline(self):
-      startTime = 0
+      startTime = self.timelineInfo.keys()[0]
       endTime = self.timelineInfo.keys()[-1]
       self.canvas.Canvas.AddLine([(startTime, 0),(endTime, 0)])
 
