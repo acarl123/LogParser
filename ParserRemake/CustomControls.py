@@ -1,4 +1,5 @@
 import wx
+from wx.lib.floatcanvas.FloatCanvas import *
 
 class FileDropTarget( wx.FileDropTarget ):
    def __init__(self, window):
@@ -21,3 +22,8 @@ class FileListCtrl( wx.ListCtrl ):
 
    def DeleteItem(*args, **kwargs):
       super(wx.ListCtrl).DeleteItem(*args, **kwargs)
+
+
+class nonScaledLine( Line ):
+   def __init__(self, Points):
+      Line.__init__(self, Points)

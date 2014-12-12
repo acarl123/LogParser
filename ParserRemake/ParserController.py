@@ -149,7 +149,7 @@ class MainController:
       errList = []
       currentTaskDict = {}
       auxTaskDict = {}
-      timelineDict = {}
+      timelineDict = defaultdict(list)
 
       for line in data:
          try:
@@ -158,7 +158,7 @@ class MainController:
 
             # Open Time
             if openStartKeyword in line.lower():
-               timelineDict[numberInLine] = line
+               timelineDict[numberInLine].append('Start open operation')
                auxTimeDict = emptyAuxTimeDict.copy()
                currentTaskDict = {}
                auxTaskDict = {}
@@ -166,7 +166,7 @@ class MainController:
                tempList.append(line)
 
             if any(key in line.lower() for key in openEndKeyWordList) and currentTaskDict.get('open'):
-               timelineDict[numberInLine] = line
+               timelineDict[numberInLine].append('End open operation')
                opCountDict['open'] += 1
                opTimeDict['totalOp'] += (numberInLine - currentTaskDict['open'])
                opTimeDict = opTimeDict + auxTimeDict
@@ -176,7 +176,7 @@ class MainController:
 
             # Save time
             if saveStartKeyword in line.lower():
-               timelineDict[numberInLine] = line
+               timelineDict[numberInLine].append('Start save operation')
                auxTimeDict = emptyAuxTimeDict.copy()
                currentTaskDict = {}
                auxTaskDict = {}
@@ -184,7 +184,7 @@ class MainController:
                tempList.append(line)
 
             if any(key in line.lower() for key in saveEndKeyWordList) and currentTaskDict.get('save'):
-               timelineDict[numberInLine] = line
+               timelineDict[numberInLine].append('End save operation')
                opCountDict['save'] += 1
                opTimeDict['totalOp'] += (numberInLine - currentTaskDict['save'])
                opTimeDict = opTimeDict + auxTimeDict
@@ -194,14 +194,14 @@ class MainController:
 
             # Manage time
             if manStartKeyword in line.lower() and not currentOpDict['manage']:
-               timelineDict[numberInLine] = line
+               timelineDict[numberInLine].append('Start manage operation')
                auxTimeDict = emptyAuxTimeDict.copy()
                currentTaskDict = {}
                auxTaskDict = {}
                currentTaskDict['manage'] = numberInLine
 
             if any(key in line.lower() for key in manEndKeyWordList) and currentTaskDict.get('manage'):
-               timelineDict[numberInLine] = line
+               timelineDict[numberInLine].append('End manage operation')
                opCountDict['manage'] += 1
                opTimeDict['totalOp'] += (numberInLine - currentTaskDict['manage'])
                opTimeDict = opTimeDict + auxTimeDict
@@ -212,12 +212,12 @@ class MainController:
 
             # User time
             if userTimeStartKeyword in line.lower():
-               timelineDict[numberInLine] = line
+               timelineDict[numberInLine].append('Begin user interaction')
                auxTaskDict['user'] = numberInLine
                tempList.append(line)
 
             if any(key in line.lower() for key in userTimeEndKeyword) and auxTaskDict.get('user'):
-               timelineDict[numberInLine] = line
+               timelineDict[numberInLine].append('End user interaction')
                auxTimeDict['user'] += (numberInLine - auxTaskDict['user'])
                auxTaskDict['user'] = None
                tempList.append('%s %s\n' % (line, opTimeDict))
@@ -225,14 +225,14 @@ class MainController:
             # Teamcenter time
             if tcStartKeywords in line.lower():
                try:
-                  timelineDict[numberInLine] = line
+                  timelineDict[numberInLine].append('Begin Teamcenter op')
                   auxTaskDict['teamcenter'] = numberInLine
                except:
                   print 'time not found, possible corrupted log file'
 
             if tcEndKeywords in line.lower() and auxTaskDict.get('teamcenter'):
                try:
-                  timelineDict[numberInLine] = line
+                  timelineDict[numberInLine].append('End Teamcenter op')
                   auxTimeDict['teamcenter'] += (numberInLine - auxTaskDict['teamcenter'])
                except:
                   print 'time not found, possible corrupted log file'
@@ -240,11 +240,11 @@ class MainController:
 
             # Download time
             if downloadStartKeywords in line.lower():
-               timelineDict[numberInLine] = line
+               timelineDict[numberInLine].append('Start download')
                auxTaskDict['download'] = numberInLine
 
             if downloadEndKeywords in line.lower() and auxTaskDict.get('download'):
-               timelineDict[numberInLine] = line
+               timelineDict[numberInLine].append('End download')
                auxTimeDict['download'] += (numberInLine - auxTaskDict['download'])
                auxTaskDict['download'] = None
 

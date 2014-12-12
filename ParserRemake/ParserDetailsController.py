@@ -1,6 +1,7 @@
 from ParserDetailsView import MyFrame1
 from wx.lib.floatcanvas import GUIMode, FloatCanvas
 from collections import OrderedDict
+import wx
 
 
 class ParserDetailsController:
@@ -10,11 +11,20 @@ class ParserDetailsController:
       self.count = count
       self.timelineInfo = OrderedDict((k, timeLineInfo[k]) for k in sorted(timeLineInfo.keys()))
       self.canvas = self.mainWindow.canvas
+      self.tcTime = True
+      self.userTime = True
+      self.dlTime = True
 
       # init display
       self.popData()
       # self.canvas.SetMode(GUIMode.GUIMove())
       self.buildTimeline()
+      self.canvas.ZoomToFit(None)
+
+      #Bind events
+      self.mainWindow.lblTCTime.Bind(wx.EVT_CHECKBOX, self.onTCTimeCheck)
+      self.mainWindow.lblUserTime.Bind(wx.EVT_CHECKBOX, self.onUserTimeCheck)
+      self.mainWindow.lblDLTime.Bind(wx.EVT_CHECKBOX, self.onDLTimeCheck)
 
    def show(self):
       self.mainWindow.Show()
@@ -31,13 +41,32 @@ class ParserDetailsController:
       self.mainWindow.lblUserTime.SetLabel('%s %s' % (self.mainWindow.lblUserTime.GetLabel(), str(self.details['user'])))
       self.mainWindow.lblTotalOpen.SetLabel('%s %s' % (self.mainWindow.lblTotalOpen.GetLabel(), str(self.count['open'])))
 
+   def onTCTimeCheck(self, event):
+      self.tcTime = not self.tcTime
+      self.buildTimeline()
+
+   def onUserTimeCheck(self, event):
+      self.userTime = not self.userTime
+      self.buildTimeline()
+
+   def onDLTimeCheck(self, event):
+      self.dlTime = not self.dlTime
+      self.buildTimeline()
+
    def buildTimeline(self):
-      startTime = self.timelineInfo.keys()[0]
+      self.canvas.Canvas.ClearAll(False)
+      startTime = 0# self.timelineInfo.keys()[0]
       endTime = self.timelineInfo.keys()[-1]
       self.canvas.Canvas.AddLine([(startTime, 0),(endTime, 0)])
 
-      for time, logEvent in self.timelineInfo.iteritems():
-         self.canvas.Canvas.AddLine([(time, 0),(time, 25)])
+      for time, logEventList in self.timelineInfo.iteritems():
+         for logEvent in logEventList:
+            if 'teamcenter' in logEvent.lower() and not self.tcTime: continue
+            if 'user' in logEvent.lower() and not self.userTime: continue
+            if 'download' in logEvent.lower() and not self.dlTime: continue
+
+            self.canvas.Canvas.AddLine([(time, 0),(time, 25)])
+            self.canvas.Canvas.AddText(str(time), (time, 0), Size=7)
+            self.canvas.Canvas.AddText(logEvent, (time, 25), Size=7)
 
       self.canvas.Canvas.Draw(True)
-      self.canvas.ZoomToFit(None)

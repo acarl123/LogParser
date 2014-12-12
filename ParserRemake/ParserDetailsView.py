@@ -27,6 +27,7 @@ class MyFrame1 ( wx.Frame ):
 		gSizer1 = wx.GridSizer( 0, 2, 0, 0 )
 		
 		self.lblIPEMTime = wx.StaticText( self.m_panel1, wx.ID_ANY, u"IPEM Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
+		# self.lblIPEMTime.SetValue(True)
 		self.lblIPEMTime.Wrap( -1 )
 		gSizer1.Add( self.lblIPEMTime, 0, wx.ALL, 5 )
 		
@@ -34,31 +35,34 @@ class MyFrame1 ( wx.Frame ):
 		self.lblTotalOpNoUser.Wrap( -1 )
 		gSizer1.Add( self.lblTotalOpNoUser, 0, wx.ALL, 5 )
 		
-		self.lblTCTime = wx.StaticText( self.m_panel1, wx.ID_ANY, u"Teamcenter Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.lblTCTime.Wrap( -1 )
+		self.lblTCTime = wx.CheckBox( self.m_panel1, wx.ID_ANY, u"Teamcenter Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.lblTCTime.SetValue(True)
+		# self.lblTCTime.Wrap( -1 )
 		gSizer1.Add( self.lblTCTime, 0, wx.ALL, 5 )
 		
 		self.lblTotalSave = wx.StaticText( self.m_panel1, wx.ID_ANY, u"Number of Save Ops:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.lblTotalSave.Wrap( -1 )
 		gSizer1.Add( self.lblTotalSave, 0, wx.ALL, 5 )
 		
-		self.lblUserTime = wx.StaticText( self.m_panel1, wx.ID_ANY, u"User Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.lblUserTime.Wrap( -1 )
+		self.lblUserTime = wx.CheckBox( self.m_panel1, wx.ID_ANY, u"User Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.lblUserTime.SetValue(True)
+		# self.lblUserTime.Wrap( -1 )
 		gSizer1.Add( self.lblUserTime, 0, wx.ALL, 5 )
 		
 		self.lblTotalOpen = wx.StaticText( self.m_panel1, wx.ID_ANY, u"Number of Open Ops:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.lblTotalOpen.Wrap( -1 )
 		gSizer1.Add( self.lblTotalOpen, 0, wx.ALL, 5 )
 		
-		self.lblDLTime = wx.StaticText( self.m_panel1, wx.ID_ANY, u"Download Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.lblDLTime.Wrap( -1 )
+		self.lblDLTime = wx.CheckBox( self.m_panel1, wx.ID_ANY, u"Download Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.lblDLTime.SetValue(True)
+		# self.lblDLTime.Wrap( -1 )
 		gSizer1.Add( self.lblDLTime, 0, wx.ALL, 5 )
 		
 		self.lblTotalMan = wx.StaticText( self.m_panel1, wx.ID_ANY, u"Number of Manage Ops:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.lblTotalMan.Wrap( -1 )
 		gSizer1.Add( self.lblTotalMan, 0, wx.ALL, 5 )
 		
-		self.lblTotalOp = wx.StaticText( self.m_panel1, wx.ID_ANY, u"TotalOperation Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.lblTotalOp = wx.StaticText( self.m_panel1, wx.ID_ANY, u"Total Operation Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.lblTotalOp.Wrap( -1 )
 		gSizer1.Add( self.lblTotalOp, 0, wx.ALL, 5 )
 		
