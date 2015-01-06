@@ -72,6 +72,5 @@ class ParserDetailsController:
             self.canvas.Canvas.AddObject(textAbove)
             self.canvas.Canvas.AddObject(timeBelow)
             self.canvas.Canvas.AddLine([(time, 0),(time, 25)])
-            # self.canvas.Canvas.AddText(logEvent, (time, 25), Size=7)
 
       self.canvas.Canvas.ZoomToBB(None, True)
