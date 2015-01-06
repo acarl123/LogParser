@@ -2,7 +2,7 @@ from ParserDetailsView import MyFrame1
 from wx.lib.floatcanvas import GUIMode, FloatCanvas
 from collections import OrderedDict
 import wx
-
+import CustomText
 
 class ParserDetailsController:
    def __init__(self, parent, details={}, count={}, timeLineInfo={}):
@@ -19,7 +19,6 @@ class ParserDetailsController:
       self.popData()
       # self.canvas.SetMode(GUIMode.GUIMove())
       self.buildTimeline()
-      self.canvas.ZoomToFit(None)
 
       #Bind events
       self.mainWindow.lblTCTime.Bind(wx.EVT_CHECKBOX, self.onTCTimeCheck)
@@ -59,14 +58,20 @@ class ParserDetailsController:
       endTime = self.timelineInfo.keys()[-1]
       self.canvas.Canvas.AddLine([(startTime, 0),(endTime, 0)])
 
+      dc = wx.ClientDC(self.canvas.Canvas)
+      dc.SetPen(wx.Pen('WHITE', 3, wx.SOLID))
+      dc.SetBrush(wx.BLACK_BRUSH)
+      dc.SetLogicalFunction(wx.XOR)
       for time, logEventList in self.timelineInfo.iteritems():
          for logEvent in logEventList:
             if 'teamcenter' in logEvent.lower() and not self.tcTime: continue
             if 'user' in logEvent.lower() and not self.userTime: continue
             if 'download' in logEvent.lower() and not self.dlTime: continue
-
+            textAbove = CustomText.RotatedText(logEvent, (time, 0), 90)
+            timeBelow = CustomText.RotatedText(str(time), (time, 0), 0)
+            self.canvas.Canvas.AddObject(textAbove)
+            self.canvas.Canvas.AddObject(timeBelow)
             self.canvas.Canvas.AddLine([(time, 0),(time, 25)])
-            self.canvas.Canvas.AddText(str(time), (time, 0), Size=7)
-            self.canvas.Canvas.AddText(logEvent, (time, 25), Size=7)
+            # self.canvas.Canvas.AddText(logEvent, (time, 25), Size=7)
 
-      self.canvas.Canvas.Draw(True)
+      self.canvas.Canvas.ZoomToBB(None, True)
