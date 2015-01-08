@@ -96,5 +96,3 @@ class MyFrame1 ( wx.Frame ):
 	
 	def __del__( self ):
 		pass
-	
-
