@@ -52,6 +52,7 @@ class ParserDetailsController:
    def onDLTimeCheck(self, event):
       self.dlTime = not self.dlTime
       self.buildTimeline()
+
    def buildTimeline(self):
       self.canvas.Canvas.ClearAll(False)
       startTime = 0# self.timelineInfo.keys()[0]
