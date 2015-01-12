@@ -137,7 +137,7 @@ class NavGuiMove( GUIMode.GUIMove ):
       self.Canvas._RaiseMouseEvent(event, FloatCanvas.EVT_FC_MOTION)
       if event.Dragging() and event.LeftIsDown() and not self.StartMove is None:
          self.EndMove = event.GetPosition()
-         self.MoveImage(event) ## This call shows the pan as it happens on both the x axis and y axis
+         self.MoveImage(event) ## This call shows the pan as it happens on both the x axis and y axis.
          DiffMove = self.MidMove - self.EndMove
          DiffMove = DiffMove[0], 0
          self.Canvas.MoveImage(DiffMove, 'Pixel', ReDraw=False)  # This call does the final pan along the x axis only
