@@ -2,7 +2,7 @@ from ParserDetailsView import MyFrame1
 from wx.lib.floatcanvas import GUIMode, FloatCanvas
 from collections import OrderedDict
 import wx
-import CustomText
+import CustomFloatCanvas
 
 class ParserDetailsController:
    def __init__(self, parent, details={}, count={}, timeLineInfo={}):
@@ -67,8 +67,8 @@ class ParserDetailsController:
             if 'teamcenter' in logEvent.lower() and not self.tcTime: continue
             if 'user' in logEvent.lower() and not self.userTime: continue
             if 'download' in logEvent.lower() and not self.dlTime: continue
-            textAbove = CustomText.RotatedText(logEvent, (time, 0), 90)
-            timeBelow = CustomText.RotatedText(str(time), (time, 0), 0)
+            textAbove = CustomFloatCanvas.RotatedText(logEvent, (time, 0), 90)
+            timeBelow = CustomFloatCanvas.RotatedText(str(time), (time, 0), 0)
             self.canvas.Canvas.AddObject(textAbove)
             self.canvas.Canvas.AddObject(timeBelow)
             self.canvas.Canvas.AddLine([(time, 0),(time, 25)])
