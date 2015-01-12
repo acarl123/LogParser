@@ -37,7 +37,7 @@ class MyFrame1 ( wx.Frame ):
 		gSizer1.Add( self.lblTotalOpNoUser, 0, wx.ALL, 5 )
 		
 		self.lblTCTime = wx.CheckBox( self.m_panel1, wx.ID_ANY, u"Teamcenter Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.lblTCTime.SetValue(True)
+		self.lblTCTime.SetValue(False)
 		# self.lblTCTime.Wrap( -1 )
 		gSizer1.Add( self.lblTCTime, 0, wx.ALL, 5 )
 		
@@ -46,7 +46,7 @@ class MyFrame1 ( wx.Frame ):
 		gSizer1.Add( self.lblTotalSave, 0, wx.ALL, 5 )
 		
 		self.lblUserTime = wx.CheckBox( self.m_panel1, wx.ID_ANY, u"User Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.lblUserTime.SetValue(True)
+		self.lblUserTime.SetValue(False)
 		# self.lblUserTime.Wrap( -1 )
 		gSizer1.Add( self.lblUserTime, 0, wx.ALL, 5 )
 		
@@ -55,7 +55,7 @@ class MyFrame1 ( wx.Frame ):
 		gSizer1.Add( self.lblTotalOpen, 0, wx.ALL, 5 )
 		
 		self.lblDLTime = wx.CheckBox( self.m_panel1, wx.ID_ANY, u"Download Time:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.lblDLTime.SetValue(True)
+		self.lblDLTime.SetValue(False)
 		# self.lblDLTime.Wrap( -1 )
 		gSizer1.Add( self.lblDLTime, 0, wx.ALL, 5 )
 		

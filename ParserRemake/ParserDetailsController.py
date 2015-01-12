@@ -11,9 +11,9 @@ class ParserDetailsController:
       self.count = count
       self.timelineInfo = OrderedDict((k, timeLineInfo[k]) for k in sorted(timeLineInfo.keys()))
       self.canvas = self.mainWindow.canvas
-      self.tcTime = True
-      self.userTime = True
-      self.dlTime = True
+      self.tcTime = False
+      self.userTime = False
+      self.dlTime = False
 
       # init display
       self.popData()
@@ -25,6 +25,7 @@ class ParserDetailsController:
       self.mainWindow.lblUserTime.Bind(wx.EVT_CHECKBOX, self.onUserTimeCheck)
       self.mainWindow.lblDLTime.Bind(wx.EVT_CHECKBOX, self.onDLTimeCheck)
 
+      self.canvas.Canvas.ZoomToBB(None, True)
    def show(self):
       self.mainWindow.Show()
 
@@ -51,13 +52,13 @@ class ParserDetailsController:
    def onDLTimeCheck(self, event):
       self.dlTime = not self.dlTime
       self.buildTimeline()
-
    def buildTimeline(self):
       self.canvas.Canvas.ClearAll(False)
       startTime = 0# self.timelineInfo.keys()[0]
       endTime = self.timelineInfo.keys()[-1]
-      self.canvas.Canvas.AddLine([(startTime, 0),(endTime, 0)])
-
+      timeLine = FloatCanvas.Line([(startTime, 0),(endTime, 0)])
+      self.canvas.Canvas.AddObject(timeLine)
+      self.canvas.timeLine = timeLine
       dc = wx.ClientDC(self.canvas.Canvas)
       dc.SetPen(wx.Pen('WHITE', 3, wx.SOLID))
       dc.SetBrush(wx.BLACK_BRUSH)
@@ -71,6 +72,4 @@ class ParserDetailsController:
             timeBelow = CustomFloatCanvas.RotatedText(str(time), (time, 0), 0)
             self.canvas.Canvas.AddObject(textAbove)
             self.canvas.Canvas.AddObject(timeBelow)
-            self.canvas.Canvas.AddLine([(time, 0),(time, 25)])
-
-      self.canvas.Canvas.ZoomToBB(None, True)
+            self.canvas.Canvas.AddLine([(time, 0),(time, 30)])
