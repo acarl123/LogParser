@@ -37,7 +37,7 @@ class MainController:
       self.mainWindow = LogView(None)
       self.totalOpenTime = 0
       self.mainWindow.LogFileListCtrl.DragAcceptFiles(True)
-      self.times = defaultdict(dict)
+      self.details = defaultdict(dict)
       self.count = defaultdict(dict)
       self.timelineDict = defaultdict(dict)
 
@@ -47,7 +47,7 @@ class MainController:
       self.mainWindow.clearButton.Bind(wx.EVT_BUTTON, self.onClear)
       self.mainWindow.LogFileListCtrl.Bind(wx.EVT_CONTEXT_MENU, self.onRClick)
       self.mainWindow.LogFileListCtrl.Bind(wx.EVT_DROP_FILES, self.onFile)
-      self.mainWindow.displaySummaryListCtrl.Bind(wx.EVT_LIST_COL_RIGHT_CLICK, self.onColRClick)
+      self.mainWindow.displaySummaryListCtrl.Bind(wx.EVT_LIST_ITEM_RIGHT_CLICK, self.onItemRClick)
 
       # Bind menu events
       self.mainWindow.Bind(wx.EVT_MENU, self.onFile, self.mainWindow.menuAdd)
@@ -103,12 +103,19 @@ class MainController:
          for counter, index in enumerate(list(set(indexList))):
             self.mainWindow.LogFileListCtrl.DeleteItem(index-counter)
 
-   def onColRClick(self, event):
-      col = event.m_col
-      if col <= 0: return
+   def onItemRClick(self, event):
+      # get all selected items
+      current = -1
+      next = 0
+      selItemList = []
+      while next != -1:
+         next = self.mainWindow.displaySummaryListCtrl.GetNextSelected(current)
+         if next != -1: selItemList.append(next)
+         current = next
+
       if not hasattr(self, 'popupId2'):
          self.popupId2 = wx.NewId()
-      self.mainWindow.Bind(wx.EVT_MENU, lambda event: self.onDetails(event, col), id=self.popupId2)
+      self.mainWindow.Bind(wx.EVT_MENU, lambda event: self.onDetails(event, selItemList), id=self.popupId2)
 
       menu = wx.Menu()
       menu.Append(self.popupId2, 'View Details...')
@@ -117,9 +124,10 @@ class MainController:
       menu.Destroy()
       self.mainWindow.Unbind(wx.EVT_MENU, id=self.popupId2)
 
-   def onDetails(self, event, column):
-      detailsController = ParserDetailsController(self.mainWindow, self.times[column], self.count[column], self.timelineDict[column])
-      detailsController.show()
+   def onDetails(self, event, items=[]):
+      for item in items:
+         detailsController = ParserDetailsController(self.mainWindow, self.details[item], self.count[item], self.timelineDict[item])
+         detailsController.show()
 
    def onCalc(self, event):
       if self.mainWindow.LogFileListCtrl.ItemCount == 0: return
@@ -290,9 +298,9 @@ class MainController:
       self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 9, str(count['manage']))
       self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 10, str(count['total']))
 
-      self.times[fileName] = times
-      self.count[fileName] = count
-      self.timelineDict[fileName] = timeInfo
+      self.details[index] = [times, fileName]
+      self.count[index] = count
+      self.timelineDict[index] = timeInfo
 
       if len(threading.enumerate()) <= 2:
          self.mainWindow.SetCursor(wx.StockCursor(wx.CURSOR_ARROW))
