@@ -173,6 +173,9 @@ class MainController:
       auxTaskDict = {}
       timelineDict = defaultdict(list)
 
+      #check to make sure file is actual log file
+      if 'INFO' not in data[0]: return {}, {}, logFileName
+
       for line in data:
          try:
             numberInLine = re.search(r'[0-9]*\.[0-9]*.:', line)
@@ -284,29 +287,34 @@ class MainController:
 
       return opTimeDict, opCountDict, logFileName, timelineDict
 
-   def populateList(self, times, count, fileName, timeInfo={}):
-      index = self.mainWindow.displaySummaryListCtrl.GetItemCount()
-      self.mainWindow.displaySummaryListCtrl.InsertStringItem(index, str(os.path.basename(fileName)))
-      self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 1, str(times['integration']))
-      self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 2, str(times['teamcenter']))
-      self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 3, str(times['user']))
-      self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 4, str(times['download']))
-      self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 5, str(times['totalOp']))
-      self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 6, str(times['totalOpNoUser']))
-      self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 7, str(count['save']))
-      self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 8, str(count['open']))
-      self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 9, str(count['manage']))
-      self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 10, str(count['total']))
+   def populateList(self, times={}, count={}, fileName='', timeInfo={}):
+      if not times:
+         dlg = wx.MessageDialog(None, '%s is not a valid logfile, skipping...' % fileName, 'Invalid File', wx.OK|wx.ICON_EXCLAMATION)
+         dlg.ShowModal()
 
-      self.details[index] = [times, fileName]
-      self.count[index] = count
-      self.timelineDict[index] = timeInfo
+      else:
+         index = self.mainWindow.displaySummaryListCtrl.GetItemCount()
+         self.mainWindow.displaySummaryListCtrl.InsertStringItem(index, str(os.path.basename(fileName)))
+         self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 1, str(times['integration']))
+         self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 2, str(times['teamcenter']))
+         self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 3, str(times['user']))
+         self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 4, str(times['download']))
+         self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 5, str(times['totalOp']))
+         self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 6, str(times['totalOpNoUser']))
+         self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 7, str(count['save']))
+         self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 8, str(count['open']))
+         self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 9, str(count['manage']))
+         self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 10, str(count['total']))
+
+         self.details[index] = [times, fileName]
+         self.count[index] = count
+         self.timelineDict[index] = timeInfo
 
       if len(threading.enumerate()) <= 2:
          self.mainWindow.SetCursor(wx.StockCursor(wx.CURSOR_ARROW))
          self.mainWindow.m_statusBar1.SetStatusText('%s files calculated in %.2f seconds' % (self.mainWindow.displaySummaryListCtrl.GetItemCount(), time.clock() - self.startTime))
 
-      self.mainWindow.SetSize((500, 520))
+      self.mainWindow.Refresh()
 
    def initList(self):
       self.mainWindow.displaySummaryListCtrl.InsertColumn(0, 'Filename')
