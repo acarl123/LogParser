@@ -150,3 +150,65 @@ class NavGuiMove( GUIMode.GUIMove ):
    def __del__(self):
       self.OnLeftUp(self.event)
       self.MoveTimer.Stop()
+
+   def MoveImage(self, event ):
+      #xy1 = N.array( event.GetPosition() )
+      xy1 = self.EndMove
+      wh = self.Canvas.PanelSize
+      xy_tl = xy1 - self.StartMove
+      dc = wx.ClientDC(self.Canvas)
+      dc.BeginDrawing()
+      x1,y1 = self.PrevMoveXY
+      x2,y2 = xy_tl
+      w,h = self.Canvas.PanelSize
+
+      ##fixme: This sure could be cleaner!
+      ##   This is all to fill in the background with the background color
+      ##   without flashing as the image moves.
+      if x2 > x1 and y2 > y1:
+         xa = xb = x1
+         ya = yb = y1
+         wa = w
+         ha = y2 - y1
+         wb = x2-  x1
+         hb = h
+      elif x2 > x1 and y2 <= y1:
+         xa = x1
+         ya = y1
+         wa = x2 - x1
+         ha = h
+         xb = x1
+         yb = y2 + h
+         wb = w
+         hb = y1 - y2
+      elif x2 <= x1 and y2 > y1:
+         xa = x1
+         ya = y1
+         wa = w
+         ha = y2 - y1
+         xb = x2 + w
+         yb = y1
+         wb = x1 - x2
+         hb = h - y2 + y1
+      elif x2 <= x1 and y2 <= y1:
+         xa = x2 + w
+         ya = y1
+         wa = x1 - x2
+         ha = h
+         xb = x1
+         yb = y2 + h
+         wb = w
+         hb = y1 - y2
+
+      dc.SetPen(wx.TRANSPARENT_PEN)
+      dc.SetBrush(self.Canvas.BackgroundBrush)
+      dc.DrawRectangle(xa, ya, wa, ha)
+      dc.DrawRectangle(xb, yb, wb, hb)
+      self.PrevMoveXY = xy_tl
+      xy_tl = xy_tl[0], 0
+      if self.Canvas._ForeDrawList:
+         dc.DrawBitmapPoint(self.Canvas._ForegroundBuffer,xy_tl)
+      else:
+         dc.DrawBitmapPoint(self.Canvas._Buffer,xy_tl)
+      dc.EndDrawing()
+      #self.Canvas.Update()
