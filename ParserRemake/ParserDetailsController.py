@@ -2,7 +2,7 @@ from ParserDetailsView import MyFrame1
 from wx.lib.floatcanvas import GUIMode, FloatCanvas
 from collections import OrderedDict
 import wx
-import CustomFloatCanvas
+import CustomText
 
 class ParserDetailsController:
    def __init__(self, parent, details={}, count={}, timeLineInfo={}):
@@ -11,15 +11,14 @@ class ParserDetailsController:
       self.count = count
       self.timelineInfo = OrderedDict((k, timeLineInfo[k]) for k in sorted(timeLineInfo.keys()))
       self.canvas = self.mainWindow.canvas
-      self.tcTime = False
-      self.userTime = False
-      self.dlTime = False
+      self.tcTime = True
+      self.userTime = True
+      self.dlTime = True
 
       # init display
       self.popData()
+      self.mainWindow.SetLabel(details[1])
       self.buildTimeline()
-
-      self.canvas.Canvas.ZoomToBB(None, True)
 
       #Bind events
       self.mainWindow.lblTCTime.Bind(wx.EVT_CHECKBOX, self.onTCTimeCheck)
@@ -30,15 +29,15 @@ class ParserDetailsController:
       self.mainWindow.Show()
 
    def popData(self):
-      self.mainWindow.lblDLTime.SetLabel('%s %s' % (self.mainWindow.lblDLTime.GetLabel(), str(self.details['download'])))
-      self.mainWindow.lblIPEMTime.SetLabel('%s %s' % (self.mainWindow.lblIPEMTime.GetLabel(), str(self.details['integration'])))
-      self.mainWindow.lblTCTime.SetLabel('%s %s' % (self.mainWindow.lblTCTime.GetLabel(), str(self.details['teamcenter'])))
+      self.mainWindow.lblDLTime.SetLabel('%s %s' % (self.mainWindow.lblDLTime.GetLabel(), str(self.details[0]['download'])))
+      self.mainWindow.lblIPEMTime.SetLabel('%s %s' % (self.mainWindow.lblIPEMTime.GetLabel(), str(self.details[0]['integration'])))
+      self.mainWindow.lblTCTime.SetLabel('%s %s' % (self.mainWindow.lblTCTime.GetLabel(), str(self.details[0]['teamcenter'])))
       self.mainWindow.lblTotal.SetLabel('%s %s' % (self.mainWindow.lblTotal.GetLabel(), str(self.count['total'])))
       self.mainWindow.lblTotalMan.SetLabel('%s %s' % (self.mainWindow.lblTotalMan.GetLabel(), str(self.count['manage'])))
-      self.mainWindow.lblTotalOp.SetLabel('%s %s' % (self.mainWindow.lblTotalOp.GetLabel(), str(self.details['totalOp'])))
-      self.mainWindow.lblTotalOpNoUser.SetLabel('%s %s' % (self.mainWindow.lblTotalOpNoUser.GetLabel(), str(self.details['totalOpNoUser'])))
+      self.mainWindow.lblTotalOp.SetLabel('%s %s' % (self.mainWindow.lblTotalOp.GetLabel(), str(self.details[0]['totalOp'])))
+      self.mainWindow.lblTotalOpNoUser.SetLabel('%s %s' % (self.mainWindow.lblTotalOpNoUser.GetLabel(), str(self.details[0]['totalOpNoUser'])))
       self.mainWindow.lblTotalSave.SetLabel('%s %s' % (self.mainWindow.lblTotalSave.GetLabel(), str(self.count['save'])))
-      self.mainWindow.lblUserTime.SetLabel('%s %s' % (self.mainWindow.lblUserTime.GetLabel(), str(self.details['user'])))
+      self.mainWindow.lblUserTime.SetLabel('%s %s' % (self.mainWindow.lblUserTime.GetLabel(), str(self.details[0]['user'])))
       self.mainWindow.lblTotalOpen.SetLabel('%s %s' % (self.mainWindow.lblTotalOpen.GetLabel(), str(self.count['open'])))
 
    def onTCTimeCheck(self, event):
@@ -57,9 +56,8 @@ class ParserDetailsController:
       self.canvas.Canvas.ClearAll(False)
       startTime = 0# self.timelineInfo.keys()[0]
       endTime = self.timelineInfo.keys()[-1]
-      timeLine = FloatCanvas.Line([(startTime, 0),(endTime, 0)])
-      self.canvas.Canvas.AddObject(timeLine)
-      self.canvas.timeLine = timeLine
+      self.canvas.Canvas.AddLine([(startTime, 0),(endTime, 0)])
+
       dc = wx.ClientDC(self.canvas.Canvas)
       dc.SetPen(wx.Pen('WHITE', 3, wx.SOLID))
       dc.SetBrush(wx.BLACK_BRUSH)
@@ -69,8 +67,10 @@ class ParserDetailsController:
             if 'teamcenter' in logEvent.lower() and not self.tcTime: continue
             if 'user' in logEvent.lower() and not self.userTime: continue
             if 'download' in logEvent.lower() and not self.dlTime: continue
-            textAbove = CustomFloatCanvas.RotatedText(logEvent, (time, 0), 90)
-            timeBelow = CustomFloatCanvas.RotatedText(str(time), (time, 0), 0)
+            textAbove = CustomText.RotatedText(logEvent, (time, 0), 90)
+            timeBelow = CustomText.RotatedText(str(time), (time, 0), 0)
             self.canvas.Canvas.AddObject(textAbove)
             self.canvas.Canvas.AddObject(timeBelow)
-            self.canvas.Canvas.AddLine([(time, 0),(time, 50)])
+            self.canvas.Canvas.AddLine([(time, 0),(time, 25)])
+
+      self.canvas.Canvas.ZoomToBB(None, True)

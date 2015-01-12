@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 
 ###########################################################################
-## Python code generated with wxFormBuilder (version Feb 26 2014)
+## Python code generated with wxFormBuilder (version Jun  5 2014)
 ## http://www.wxformbuilder.org/
 ##
 ## PLEASE DO "NOT" EDIT THIS FILE!
@@ -17,7 +17,7 @@ import wx.xrc
 class LogView ( wx.Frame ):
 	
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 550,520 ), style = wx.CAPTION|wx.CLOSE_BOX|wx.RESIZE_BORDER|wx.SYSTEM_MENU|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 500,520 ), style = wx.CAPTION|wx.CLOSE_BOX|wx.RESIZE_BORDER|wx.SYSTEM_MENU|wx.TAB_TRAVERSAL )
 		
 		self.SetSizeHintsSz( wx.Size( 500,-1 ), wx.DefaultSize )
 		
@@ -33,17 +33,16 @@ class LogView ( wx.Frame ):
 		optionsSizer.Add( self.m_staticText2, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
 		self.LogFileListCtrl = wx.ListCtrl( self.mainPanel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LC_LIST )
-		# self.FileDropTarget = FileDropTarget(self.LogFileListCtrl)
-		# self.LogFileListCtrl.SetDropTarget(self.FileDropTarget)
 		optionsSizer.Add( self.LogFileListCtrl, 1, wx.ALL|wx.EXPAND, 5 )
-		
-		self.btnAddFiles = wx.Button( self.mainPanel, wx.ID_ANY, u"Add Files...", wx.DefaultPosition, wx.DefaultSize, 0 )
-		optionsSizer.Add( self.btnAddFiles, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
 		
 		mainPanelSizer.Add( optionsSizer, 0, wx.ALL|wx.EXPAND, 5 )
 		
 		bSizer5 = wx.BoxSizer( wx.VERTICAL )
+		
+		self.lblResults = wx.StaticText( self.mainPanel, wx.ID_ANY, u"Results:", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.lblResults.Wrap( -1 )
+		bSizer5.Add( self.lblResults, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
 		bSizer81 = wx.BoxSizer( wx.VERTICAL )
 		
@@ -84,8 +83,26 @@ class LogView ( wx.Frame ):
 		
 		self.SetSizer( mainSizer )
 		self.Layout()
+		self.m_menubar1 = wx.MenuBar( 0 )
+		self.menuFile = wx.Menu()
+		self.menuAdd = wx.MenuItem( self.menuFile, wx.ID_ANY, u"Add Files...", wx.EmptyString, wx.ITEM_NORMAL )
+		self.menuFile.AppendItem( self.menuAdd )
+		
+		self.menuExport = wx.MenuItem( self.menuFile, wx.ID_ANY, u"Export to Excel...", wx.EmptyString, wx.ITEM_NORMAL )
+		self.menuFile.AppendItem( self.menuExport )
+		
+		self.menuExit = wx.MenuItem( self.menuFile, wx.ID_ANY, u"&Exit", wx.EmptyString, wx.ITEM_NORMAL )
+		self.menuFile.AppendItem( self.menuExit )
+		
+		self.m_menubar1.Append( self.menuFile, u"File" ) 
+		
+		self.SetMenuBar( self.m_menubar1 )
+		
+		self.m_statusBar1 = self.CreateStatusBar( 1, wx.ST_SIZEGRIP, wx.ID_ANY )
 		
 		self.Centre( wx.BOTH )
 	
 	def __del__( self ):
 		pass
+	
+
