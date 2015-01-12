@@ -10,6 +10,7 @@
 import wx
 import wx.xrc
 from wx.lib.floatcanvas import FloatCanvas, NavCanvas
+from CustomFloatCanvas import CustomCanvas
 ###########################################################################
 ## Class MyFrame1
 ###########################################################################
@@ -79,7 +80,7 @@ class MyFrame1 ( wx.Frame ):
 		self.m_panel2 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer2 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.canvas = NavCanvas.NavCanvas(self.m_panel2, Debug=0, BackgroundColor=(120, 172, 255))
+		self.canvas = CustomCanvas(self.m_panel2, Debug=0, BackgroundColor=(120, 172, 255))
 		bSizer2.Add( self.canvas, 1, wx.GROW )
 		
 		
