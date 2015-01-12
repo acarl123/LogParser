@@ -2,7 +2,7 @@ from ParserDetailsView import MyFrame1
 from wx.lib.floatcanvas import GUIMode, FloatCanvas
 from collections import OrderedDict
 import wx
-import CustomText
+import CustomFloatCanvas
 
 class ParserDetailsController:
    def __init__(self, parent, details={}, count={}, timeLineInfo={}):
@@ -11,14 +11,15 @@ class ParserDetailsController:
       self.count = count
       self.timelineInfo = OrderedDict((k, timeLineInfo[k]) for k in sorted(timeLineInfo.keys()))
       self.canvas = self.mainWindow.canvas
-      self.tcTime = True
-      self.userTime = True
-      self.dlTime = True
+      self.tcTime = False
+      self.userTime = False
+      self.dlTime = False
 
       # init display
       self.popData()
-      # self.canvas.SetMode(GUIMode.GUIMove())
       self.buildTimeline()
+
+      self.canvas.Canvas.ZoomToBB(None, True)
 
       #Bind events
       self.mainWindow.lblTCTime.Bind(wx.EVT_CHECKBOX, self.onTCTimeCheck)
@@ -56,8 +57,9 @@ class ParserDetailsController:
       self.canvas.Canvas.ClearAll(False)
       startTime = 0# self.timelineInfo.keys()[0]
       endTime = self.timelineInfo.keys()[-1]
-      self.canvas.Canvas.AddLine([(startTime, 0),(endTime, 0)])
-
+      timeLine = FloatCanvas.Line([(startTime, 0),(endTime, 0)])
+      self.canvas.Canvas.AddObject(timeLine)
+      self.canvas.timeLine = timeLine
       dc = wx.ClientDC(self.canvas.Canvas)
       dc.SetPen(wx.Pen('WHITE', 3, wx.SOLID))
       dc.SetBrush(wx.BLACK_BRUSH)
@@ -67,10 +69,8 @@ class ParserDetailsController:
             if 'teamcenter' in logEvent.lower() and not self.tcTime: continue
             if 'user' in logEvent.lower() and not self.userTime: continue
             if 'download' in logEvent.lower() and not self.dlTime: continue
-            textAbove = CustomText.RotatedText(logEvent, (time, 0), 90)
-            timeBelow = CustomText.RotatedText(str(time), (time, 0), 0)
+            textAbove = CustomFloatCanvas.RotatedText(logEvent, (time, 0), 90)
+            timeBelow = CustomFloatCanvas.RotatedText(str(time), (time, 0), 0)
             self.canvas.Canvas.AddObject(textAbove)
             self.canvas.Canvas.AddObject(timeBelow)
-            self.canvas.Canvas.AddLine([(time, 0),(time, 25)])
-
-      self.canvas.Canvas.ZoomToBB(None, True)
+            self.canvas.Canvas.AddLine([(time, 0),(time, 50)])
