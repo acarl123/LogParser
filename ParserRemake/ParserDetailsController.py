@@ -73,3 +73,4 @@ class ParserDetailsController:
             self.canvas.Canvas.AddObject(textAbove)
             self.canvas.Canvas.AddObject(timeBelow)
             self.canvas.Canvas.AddLine([(time, 0),(time, 30)])
+      self.canvas.Canvas.Draw()
