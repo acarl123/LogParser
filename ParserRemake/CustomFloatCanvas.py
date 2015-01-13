@@ -98,26 +98,26 @@ class NavGuiZoomIn( GUIMode.GUIZoomIn ):
       pass
 
    def OnLeftUp(self, event):
-        if event.LeftUp() and not self.StartRBBox is None:
-            self.PrevRBBox = None
-            StartRBBox = self.StartRBBox
-            StartRBBox = StartRBBox[0],115
-            Center = self.Canvas.PixelToWorld(StartRBBox)
-            self.Canvas.Zoom(1.5, Center)
-            self.StartRBBox = None
+      if event.LeftUp() and not self.StartRBBox is None:
+         self.PrevRBBox = None
+         StartRBBox = self.StartRBBox
+         StartRBBox = StartRBBox[0],116
+         Center = self.Canvas.PixelToWorld(StartRBBox)
+         self.Canvas.Zoom(1.5, Center)
+         self.StartRBBox = None
 
 class NavGuiZoomOut( GUIMode.GUIZoomOut):
    def __init__(self, event=None, canvas=None):
         super(NavGuiZoomOut, self).__init__(canvas)
         self.Canvas = canvas
         self.event = event
+
    def OnLeftDown(self, event):
         xy = event.GetPosition()[0], 93
         Center = self.Canvas.PixelToWorld(xy)
         self.Canvas.Zoom(1/1.5, Center)
 
    def OnRightDown(self, event):
-        # self.Canvas.Zoom(1.5, event.GetPosition(), centerCoords="pixel")
         pass
 
 class NavGuiMove( GUIMode.GUIMove ):
