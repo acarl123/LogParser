@@ -6,7 +6,7 @@ import CustomFloatCanvas
 
 class ParserDetailsController:
    def __init__(self, parent, details={}, count={}, timeLineInfo={}):
-      self.mainWindow = MyFrame1(parent)
+      self.mainWindow = MyFrame1(parent, self)
       self.details = details
       self.count = count
       self.timelineInfo = OrderedDict((k, timeLineInfo[k]) for k in sorted(timeLineInfo.keys()))
@@ -55,8 +55,8 @@ class ParserDetailsController:
 
    def buildTimeline(self):
       self.canvas.Canvas.ClearAll(False)
-      startTime = 0# self.timelineInfo.keys()[0]
-      endTime = self.timelineInfo.keys()[-1]
+      startTime = 0 # * self.canvas.Canvas.Scale# self.timelineInfo.keys()[0]
+      endTime = self.timelineInfo.keys()[-1] * self.canvas.Canvas.Scale
       timeLine = FloatCanvas.Line([(startTime, 0),(endTime, 0)])
       self.canvas.Canvas.AddObject(timeLine)
       self.canvas.timeLine = timeLine
@@ -65,6 +65,7 @@ class ParserDetailsController:
       dc.SetBrush(wx.BLACK_BRUSH)
       dc.SetLogicalFunction(wx.XOR)
       for time, logEventList in self.timelineInfo.iteritems():
+         time = time * self.canvas.Canvas.Scale
          for logEvent in logEventList:
             if 'teamcenter' in logEvent.lower() and not self.tcTime: continue
             if 'user' in logEvent.lower() and not self.userTime: continue

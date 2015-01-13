@@ -58,7 +58,7 @@ class CustomCanvas( NavCanvas.NavCanvas, wx.Panel):
       box = wx.BoxSizer(wx.VERTICAL)
       box.Add(self.ToolBar, 0, wx.ALL | wx.ALIGN_LEFT | wx.GROW, 1)
 
-      self.Canvas = FloatCanvas.FloatCanvas(self, **kwargs)
+      self.Canvas = CustomFloatCanvas(self, **kwargs)
       box.Add(self.Canvas, 1, wx.ALL | wx.EXPAND)
 
       self.SetSizerAndFit(box)
@@ -205,3 +205,21 @@ class NavGuiMove( GUIMode.GUIMove ):
          dc.DrawBitmapPoint(self.Canvas._Buffer,xy_tl)
       dc.EndDrawing()
       #self.Canvas.Update()
+
+class CustomFloatCanvas(FloatCanvas.FloatCanvas):
+   def __init__(self, parent, id = -1,
+                 size = wx.DefaultSize,
+                 ProjectionFun = None,
+                 BackgroundColor = "WHITE",
+                 Debug = False,
+                 **kwargs):
+      super(CustomFloatCanvas, self).__init__(parent, id, size, ProjectionFun, BackgroundColor, Debug, **kwargs)
+      self.parent = parent
+
+   def MoveImage(self, shift, CoordType, ReDraw=True):
+      xshift = shift[0], 0
+      super(CustomFloatCanvas, self).MoveImage(xshift, CoordType, ReDraw)
+
+   def Zoom(self, factor, center = None, centerCoords="world", keepPointInPlace=False):
+      self.Scale = self.Scale*factor
+      self.parent.GetParent().GetParent().controller.buildTimeline()
