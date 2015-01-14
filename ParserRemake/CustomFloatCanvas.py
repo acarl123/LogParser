@@ -68,7 +68,7 @@ class CustomCanvas( NavCanvas.NavCanvas, wx.Panel):
       self.ToolBar = tb
       tb.SetToolBitmapSize((16, 16))
       self.AddToolbarModeButtons(tb, self.Modes)
-      self.AddToolbarZoomButton(tb)
+      # self.AddToolbarZoomButton(tb)
       tb.Realize()
 
    def AddToolbarModeButtons(self, tb, Modes):
@@ -97,14 +97,17 @@ class NavGuiZoomIn( GUIMode.GUIZoomIn ):
       """ Must pass this method to overwrite all onDrag events."""
       pass
 
+   def OnLeftDown(self, event):
+      pass
+
    def OnLeftUp(self, event):
       if event.LeftUp() and not self.StartRBBox is None:
-         self.PrevRBBox = None
-         StartRBBox = self.StartRBBox
-         StartRBBox = StartRBBox[0],116
-         Center = self.Canvas.PixelToWorld(StartRBBox)
-         self.Canvas.Zoom(1.5, Center)
-         self.StartRBBox = None
+      #    self.PrevRBBox = None
+      #    StartRBBox = self.StartRBBox
+      #    StartRBBox = StartRBBox[0],116
+      #    Center = self.Canvas.PixelToWorld(StartRBBox)
+         self.Canvas.Zoom(1.5, )
+      #    self.StartRBBox = None
 
 class NavGuiZoomOut( GUIMode.GUIZoomOut):
    def __init__(self, event=None, canvas=None):
@@ -113,9 +116,9 @@ class NavGuiZoomOut( GUIMode.GUIZoomOut):
         self.event = event
 
    def OnLeftDown(self, event):
-        xy = event.GetPosition()[0], 93
-        Center = self.Canvas.PixelToWorld(xy)
-        self.Canvas.Zoom(1/1.5, Center)
+        # xy = event.GetPosition()[0], 93
+        # Center = self.Canvas.PixelToWorld(xy)
+        self.Canvas.Zoom(1/1.5, )
 
    def OnRightDown(self, event):
         pass
