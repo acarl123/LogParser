@@ -97,17 +97,17 @@ class NavGuiZoomIn( GUIMode.GUIZoomIn ):
       """ Must pass this method to overwrite all onDrag events."""
       pass
 
-   def OnLeftDown(self, event):
-      pass
+   # def OnLeftDown(self, event):
+   #    pass
 
    def OnLeftUp(self, event):
       if event.LeftUp() and not self.StartRBBox is None:
-      #    self.PrevRBBox = None
-      #    StartRBBox = self.StartRBBox
-      #    StartRBBox = StartRBBox[0],116
-      #    Center = self.Canvas.PixelToWorld(StartRBBox)
+         self.PrevRBBox = None
+         StartRBBox = self.StartRBBox
+         StartRBBox = StartRBBox[0],116
+         Center = self.Canvas.PixelToWorld(StartRBBox)
          self.Canvas.Zoom(1.5, )
-      #    self.StartRBBox = None
+         self.StartRBBox = None
 
 class NavGuiZoomOut( GUIMode.GUIZoomOut):
    def __init__(self, event=None, canvas=None):
@@ -116,8 +116,8 @@ class NavGuiZoomOut( GUIMode.GUIZoomOut):
         self.event = event
 
    def OnLeftDown(self, event):
-        # xy = event.GetPosition()[0], 93
-        # Center = self.Canvas.PixelToWorld(xy)
+        xy = event.GetPosition()[0], 93
+        Center = self.Canvas.PixelToWorld(xy)
         self.Canvas.Zoom(1/1.5, )
 
    def OnRightDown(self, event):
