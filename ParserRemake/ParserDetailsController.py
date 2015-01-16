@@ -71,14 +71,14 @@ class ParserDetailsController:
       dc.SetBrush(wx.BLACK_BRUSH)
       dc.SetLogicalFunction(wx.XOR)
       for time, logEventList in self.timelineInfo.iteritems():
-         scaledTime = time * self.canvas.Canvas.Scale
+         scaledTime = time * self.canvas.Canvas.xScale
          for logEvent in logEventList:
             if 'teamcenter' in logEvent.lower() and not self.tcTime: continue
             if 'user' in logEvent.lower() and not self.userTime: continue
             if 'download' in logEvent.lower() and not self.dlTime: continue
-            textAbove = CustomFloatCanvas.RotatedText(logEvent, (scaledTime, 0), 90)
-            timeBelow = CustomFloatCanvas.RotatedText(str(time), (scaledTime, 0), 0)
+            textAbove = CustomFloatCanvas.RotatedText(logEvent, (scaledTime, bottom), 90)
+            timeBelow = CustomFloatCanvas.RotatedText(str(time), (scaledTime, bottom), 0)
             self.canvas.Canvas.AddObject(textAbove)
             self.canvas.Canvas.AddObject(timeBelow)
-            self.canvas.Canvas.AddLine([(scaledTime, 0),(scaledTime, 30)])
+            self.canvas.Canvas.AddLine([(scaledTime, bottom),(scaledTime, 30)])
       self.canvas.Canvas.Draw(True)
