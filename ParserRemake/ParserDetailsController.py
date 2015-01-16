@@ -26,6 +26,7 @@ class ParserDetailsController:
       self.mainWindow.lblDLTime.Bind(wx.EVT_CHECKBOX, self.onDLTimeCheck)
 
       self.canvas.Canvas.ZoomToBB(None, True)
+
    def show(self):
       self.mainWindow.Show()
 
@@ -65,14 +66,14 @@ class ParserDetailsController:
       dc.SetBrush(wx.BLACK_BRUSH)
       dc.SetLogicalFunction(wx.XOR)
       for time, logEventList in self.timelineInfo.iteritems():
-         time = time * self.canvas.Canvas.Scale
+         scaledTime = time * self.canvas.Canvas.Scale
          for logEvent in logEventList:
             if 'teamcenter' in logEvent.lower() and not self.tcTime: continue
             if 'user' in logEvent.lower() and not self.userTime: continue
             if 'download' in logEvent.lower() and not self.dlTime: continue
-            textAbove = CustomFloatCanvas.RotatedText(logEvent, (time, 0), 90)
-            timeBelow = CustomFloatCanvas.RotatedText(str(time), (time, 0), 0)
+            textAbove = CustomFloatCanvas.RotatedText(logEvent, (scaledTime, 0), 90)
+            timeBelow = CustomFloatCanvas.RotatedText(str(time), (scaledTime, 0), 0)
             self.canvas.Canvas.AddObject(textAbove)
             self.canvas.Canvas.AddObject(timeBelow)
-            self.canvas.Canvas.AddLine([(time, 0),(time, 30)])
-      self.canvas.Canvas.Draw()
+            self.canvas.Canvas.AddLine([(scaledTime, 0),(scaledTime, 30)])
+      self.canvas.Canvas.Draw(True)
