@@ -68,7 +68,7 @@ class CustomCanvas( NavCanvas.NavCanvas, wx.Panel):
       self.ToolBar = tb
       tb.SetToolBitmapSize((16, 16))
       self.AddToolbarModeButtons(tb, self.Modes)
-      # self.AddToolbarZoomButton(tb)
+      self.AddToolbarZoomButton(tb)
       tb.Realize()
 
    def AddToolbarModeButtons(self, tb, Modes):
@@ -85,7 +85,9 @@ class CustomCanvas( NavCanvas.NavCanvas, wx.Panel):
       self.ZoomButton.Bind(wx.EVT_BUTTON, self.ZoomToFit)
 
    def ZoomToFit(self, event):
-      super(CustomCanvas, self).ZoomToFit(event)
+      self.Canvas.xScale = self.Canvas.Scale
+      self.Canvas.parent.GetParent().GetParent().controller.buildTimeline()
+      # super(CustomCanvas, self).ZoomToFit(event)
 
 class NavGuiZoomIn( GUIMode.GUIZoomIn ):
    def __init__(self, event=None, canvas=None):
@@ -218,11 +220,12 @@ class CustomFloatCanvas(FloatCanvas.FloatCanvas):
                  **kwargs):
       super(CustomFloatCanvas, self).__init__(parent, id, size, ProjectionFun, BackgroundColor, Debug, **kwargs)
       self.parent = parent
+      self.xScale = self.Scale
 
    def MoveImage(self, shift, CoordType, ReDraw=True):
       xshift = shift[0], 0
       super(CustomFloatCanvas, self).MoveImage(xshift, CoordType, ReDraw)
 
    def Zoom(self, factor, center = None, centerCoords="world", keepPointInPlace=False):
-      self.Scale = self.Scale*factor
+      self.xScale = self.xScale*factor
       self.parent.GetParent().GetParent().controller.buildTimeline()

@@ -55,9 +55,14 @@ class ParserDetailsController:
 
    def buildTimeline(self):
       self.canvas.Canvas.ClearAll(False)
-      startTime = 0 # * self.canvas.Canvas.Scale# self.timelineInfo.keys()[0]
-      endTime = self.timelineInfo.keys()[-1] * self.canvas.Canvas.Scale
-      timeLine = FloatCanvas.Line([(startTime, 0),(endTime, 0)])
+      startTime = 0
+      endTime = self.timelineInfo.keys()[-1] * self.canvas.Canvas.xScale
+
+      bottom = self.canvas.Canvas.WorldToPixel((self.canvas.Canvas.ViewPortBB[1][1],0))[0]
+      bottom = int(bottom)
+      bottom = -300
+
+      timeLine = FloatCanvas.Line([(startTime, bottom),(endTime, bottom)])
       self.canvas.Canvas.AddObject(timeLine)
       self.canvas.timeLine = timeLine
       dc = wx.ClientDC(self.canvas.Canvas)
@@ -65,14 +70,14 @@ class ParserDetailsController:
       dc.SetBrush(wx.BLACK_BRUSH)
       dc.SetLogicalFunction(wx.XOR)
       for time, logEventList in self.timelineInfo.iteritems():
-         time = time * self.canvas.Canvas.Scale
+         drawTime = time * self.canvas.Canvas.xScale
          for logEvent in logEventList:
             if 'teamcenter' in logEvent.lower() and not self.tcTime: continue
             if 'user' in logEvent.lower() and not self.userTime: continue
             if 'download' in logEvent.lower() and not self.dlTime: continue
-            textAbove = CustomFloatCanvas.RotatedText(logEvent, (time, 0), 90)
-            timeBelow = CustomFloatCanvas.RotatedText(str(time), (time, 0), 0)
+            textAbove = CustomFloatCanvas.RotatedText(logEvent, (drawTime, bottom), 90)
+            timeBelow = CustomFloatCanvas.RotatedText(str(time), (drawTime, bottom), 0)
             self.canvas.Canvas.AddObject(textAbove)
             self.canvas.Canvas.AddObject(timeBelow)
-            self.canvas.Canvas.AddLine([(time, 0),(time, 30)])
+            self.canvas.Canvas.AddLine([(drawTime, bottom),(drawTime, bottom+30)])
       self.canvas.Canvas.Draw()
