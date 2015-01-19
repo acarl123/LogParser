@@ -5,8 +5,8 @@ import wx
 import time
 import os, sys, re, threading
 
-# sys.path.append(r'c:\hg\tools_lag\EFS_Utils')
-# import Excel
+sys.path.append(r'c:\hg\tools_lag\EFS_Utils')
+import Excel
 
 
 openStartKeyword = "perf: teamcenter -> open begins"

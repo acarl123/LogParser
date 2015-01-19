@@ -227,7 +227,7 @@ class CustomFloatCanvas(FloatCanvas.FloatCanvas):
 
    def Zoom(self, factor, center = None, centerCoords="world", keepPointInPlace=False, event=None):
       self.xScale = self.xScale*factor
-      if event: shift = event.GetPosition()[0], 0
+      if event: shift = event.GetPosition()[0]*self.xScale/10, 0
       else: shift = 1, 0
       self.parent.GetParent().GetParent().controller.buildTimeline()
       # if factor < 1: shift = shift[0]*-1, 0
