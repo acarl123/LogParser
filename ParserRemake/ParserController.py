@@ -309,6 +309,7 @@ class MainController:
          self.details[index] = [times, fileName]
          self.count[index] = count
          self.timelineDict[index] = timeInfo
+         print self.details
 
       if len(threading.enumerate()) <= 2:
          self.mainWindow.SetCursor(wx.StockCursor(wx.CURSOR_ARROW))
