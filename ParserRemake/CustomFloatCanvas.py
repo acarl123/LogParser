@@ -87,6 +87,8 @@ class CustomCanvas( NavCanvas.NavCanvas, wx.Panel):
    def ZoomToFit(self, event):
       self.Canvas.xScale = self.Canvas.Scale
       self.Canvas.parent.GetParent().GetParent().controller.buildTimeline()
+      self.Canvas.parent.GetParent().GetParent().controller.setDefaultImage()
+
       # super(CustomCanvas, self).ZoomToFit(event)
 
 class NavGuiZoomIn( GUIMode.GUIZoomIn ):
