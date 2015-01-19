@@ -107,7 +107,7 @@ class NavGuiZoomIn( GUIMode.GUIZoomIn ):
 
    def OnLeftUp(self, event):
       if event.LeftUp() and not self.StartRBBox is None:
-         self.Canvas.Zoom(1.5, )
+         self.Canvas.Zoom(1.5, event=event)
 
 class NavGuiZoomOut( GUIMode.GUIZoomOut):
    def __init__(self, event=None, canvas=None):
@@ -116,7 +116,7 @@ class NavGuiZoomOut( GUIMode.GUIZoomOut):
         self.event = event
 
    def OnLeftDown(self, event):
-        self.Canvas.Zoom(1/1.5, )
+        self.Canvas.Zoom(1/1.5, event=event)
 
    def OnRightDown(self, event):
         pass
@@ -225,9 +225,10 @@ class CustomFloatCanvas(FloatCanvas.FloatCanvas):
    def MoveImageY(self, shift, CoordType, ReDraw=True):
       super(CustomFloatCanvas, self).MoveImage(shift, CoordType, ReDraw)
 
-   def Zoom(self, factor, center = None, centerCoords="world", keepPointInPlace=False):
+   def Zoom(self, factor, center = None, centerCoords="world", keepPointInPlace=False, event=None):
       self.xScale = self.xScale*factor
+      if event: shift = event.GetPosition()[0], 0
+      else: shift = 1, 0
       self.parent.GetParent().GetParent().controller.buildTimeline()
-      shift = self.ViewPortCenter[0]/10, 0
-      if factor < 1: shift = shift[0]*-1, 0
+      # if factor < 1: shift = shift[0]*-1, 0
       self.MoveImage(shift, "Pixel")
