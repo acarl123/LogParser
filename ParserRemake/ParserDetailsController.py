@@ -95,8 +95,8 @@ class ParserDetailsController:
 
    def checkTimes(self, scaledTime):
       for time in self.timeList:
-         timeAbove = time+5
-         timeBelow = time-5
+         timeAbove = time+(.2*self.canvas.Canvas.xScale)
+         timeBelow = time-(.2*self.canvas.Canvas.xScale)
          if scaledTime > timeBelow and scaledTime < timeAbove:
             return 1
       return 0
