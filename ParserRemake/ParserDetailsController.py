@@ -14,7 +14,7 @@ class ParserDetailsController:
       self.tcTime = False
       self.userTime = False
       self.dlTime = False
-
+      self.timeList = []
       # init display
       self.popData()
       self.mainWindow.SetLabel(details['fileName'])
@@ -31,7 +31,7 @@ class ParserDetailsController:
       self.canvas.Canvas.ZoomToBB(None, True)
 
       shift = (self.timelineInfo.keys()[-1] * self.canvas.Canvas.xScale)/2, 10
-      if shift[0] > 200: shift = 0,10
+      if shift[0] > 200: shift = 0,20
       self.canvas.Canvas.MoveImageY(shift, "Pixel")
       self.canvas.Canvas.Zoom(2.25,)
       self.canvas.Canvas.Draw()
@@ -65,10 +65,9 @@ class ParserDetailsController:
 
    def buildTimeline(self):
       self.canvas.Canvas.ClearAll(False)
+      self.timeList = []
       startTime = 0
       endTime = self.timelineInfo.keys()[-1] * self.canvas.Canvas.xScale
-      # bottom = self.canvas.Canvas.WorldToPixel((self.canvas.Canvas.ViewPortBB[1][1],0))[0]
-      # bottom = int(bottom)
       bottom = -300
 
       timeLine = FloatCanvas.Line([(startTime, bottom),(endTime, bottom)])
@@ -80,9 +79,24 @@ class ParserDetailsController:
             if 'teamcenter' in logEvent.lower() and not self.tcTime: continue
             if 'user' in logEvent.lower() and not self.userTime: continue
             if 'download' in logEvent.lower() and not self.dlTime: continue
-            textAbove = CustomFloatCanvas.RotatedText(logEvent, (scaledTime, bottom), 90)
+            check = self.checkTimes(scaledTime)
+            self.timeList.append(scaledTime)
+
+            textAbove = CustomFloatCanvas.RotatedText(logEvent, (scaledTime-25, bottom), 90)
             timeBelow = CustomFloatCanvas.RotatedText(str(time), (scaledTime, bottom), 0)
+            if check == 1:
+               textAbove = CustomFloatCanvas.RotatedText(logEvent, (scaledTime, bottom), 90)
+            # if check == 2:
+            #    timeBelow = CustomFloatCanvas.RotatedText(str(time), (scaledTime, bottom-20), 0)
             self.canvas.Canvas.AddObject(textAbove)
             self.canvas.Canvas.AddObject(timeBelow)
             self.canvas.Canvas.AddLine([(scaledTime, bottom),(scaledTime, 30)])
       self.canvas.Canvas.Draw(True)
+
+   def checkTimes(self, scaledTime):
+      for time in self.timeList:
+         timeAbove = time+5
+         timeBelow = time-5
+         if scaledTime > timeBelow and scaledTime < timeAbove:
+            return 1
+      return 0
