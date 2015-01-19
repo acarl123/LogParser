@@ -35,7 +35,7 @@ class MainController:
    def __init__(self):
       # Init member vars
       self.mainWindow = LogView(None)
-      self.totalOpenTime = 0
+      # self.totalOpenTime = 0
       self.mainWindow.LogFileListCtrl.DragAcceptFiles(True)
       self.details = defaultdict(dict)
       self.count = defaultdict(dict)
@@ -75,6 +75,11 @@ class MainController:
 
       for logFile in filelist:
          self.dirPaths.append(os.path.dirname(logFile))
+         listLogFiles = []
+         for item in xrange(self.mainWindow.LogFileListCtrl.GetItemCount()):
+            fileItem = self.mainWindow.LogFileListCtrl.GetItem(itemId=item, col=0)
+            listLogFiles.append(fileItem.GetText())
+         if str(os.path.basename(logFile)) in listLogFiles: continue
          self.mainWindow.LogFileListCtrl.InsertStringItem(self.mainWindow.LogFileListCtrl.GetItemCount(), str(os.path.basename(logFile)))
 
    def onRClick(self, event):
@@ -143,12 +148,18 @@ class MainController:
          with open(logFileName, 'r') as log:
             read_data = log.readlines()
 
-         worker = Worker(name=logFileName, target=self.calcTimes, args=(read_data, logFileName), callafter=self.populateList)
+         worker = Worker(name=logFileName, target=self.calcTimes, args=(read_data, logFileName, self.details), callafter=self.populateList)
          threads.append(worker)
          # worker.setDaemon(True)
          worker.start()
 
-   def calcTimes(self, data, logFileName):
+   def calcTimes(self, data, logFileName, details):
+      # check if file was already calculated
+      for key, value in details.iteritems():
+         if logFileName == value['fileName']:
+            time.sleep(0.2*threading.active_count()) # cheap way to make sure the threads don't try to update the list at the same time
+            return value['times'], value['count'], value['fileName'], value['info']
+
       currentOpDict = {
          'open': False,
          'save': False,
@@ -305,11 +316,9 @@ class MainController:
          self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 8, str(count['open']))
          self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 9, str(count['manage']))
          self.mainWindow.displaySummaryListCtrl.SetStringItem(index, 10, str(count['total']))
-
-         self.details[index] = [times, fileName]
+         self.details[index] = {'times':times,'count':count,'info':timeInfo,'fileName':fileName}
          self.count[index] = count
          self.timelineDict[index] = timeInfo
-         print self.details
 
       if len(threading.enumerate()) <= 2:
          self.mainWindow.SetCursor(wx.StockCursor(wx.CURSOR_ARROW))
