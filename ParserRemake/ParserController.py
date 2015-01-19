@@ -35,7 +35,7 @@ class MainController:
    def __init__(self):
       # Init member vars
       self.mainWindow = LogView(None)
-      # self.totalOpenTime = 0
+      self.mainWindow.Raise()
       self.mainWindow.LogFileListCtrl.DragAcceptFiles(True)
       self.details = defaultdict(dict)
       self.count = defaultdict(dict)
@@ -48,6 +48,7 @@ class MainController:
       self.mainWindow.LogFileListCtrl.Bind(wx.EVT_CONTEXT_MENU, self.onRClick)
       self.mainWindow.LogFileListCtrl.Bind(wx.EVT_DROP_FILES, self.onFile)
       self.mainWindow.displaySummaryListCtrl.Bind(wx.EVT_LIST_ITEM_RIGHT_CLICK, self.onItemRClick)
+      self.mainWindow.Bind(wx.EVT_COMMAND_ENTER, self.onCalc)
 
       # Bind menu events
       self.mainWindow.Bind(wx.EVT_MENU, self.onFile, self.mainWindow.menuAdd)
@@ -65,6 +66,7 @@ class MainController:
    def onFile(self, event):
       try:
          filelist = event.GetFiles()
+         self.mainWindow.Raise()
       except:
          logFilePicker = wx.FileDialog(self.mainWindow, 'Choose a File', "", "",
                                 u"log files (*.txt, *.log)|*.txt; *.log|All Files (*.*)|*.*", wx.MULTIPLE)
@@ -136,7 +138,7 @@ class MainController:
 
    def onCalc(self, event):
       if self.mainWindow.LogFileListCtrl.ItemCount == 0: return
-      self.mainWindow.SetCursor(wx.StockCursor(wx.CURSOR_WAIT))
+      wx.BeginBusyCursor()
       self.onClear()
       self.initList()
       self.startTime = time.clock()
@@ -321,7 +323,9 @@ class MainController:
          self.timelineDict[index] = timeInfo
 
       if len(threading.enumerate()) <= 2:
-         self.mainWindow.SetCursor(wx.StockCursor(wx.CURSOR_ARROW))
+         wx.EndBusyCursor()
+         self.mainWindow.WarpPointer(wx.GetMousePosition().x - self.mainWindow.GetScreenPosition().x-5,
+                                     wx.GetMousePosition().y - self.mainWindow.GetScreenPosition().y-50)
          self.mainWindow.m_statusBar1.SetStatusText('%s files calculated in %.2f seconds' % (self.mainWindow.displaySummaryListCtrl.GetItemCount(), time.clock() - self.startTime))
 
       self.mainWindow.Refresh()
