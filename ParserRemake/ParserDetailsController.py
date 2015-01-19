@@ -25,6 +25,9 @@ class ParserDetailsController:
       self.mainWindow.lblUserTime.Bind(wx.EVT_CHECKBOX, self.onUserTimeCheck)
       self.mainWindow.lblDLTime.Bind(wx.EVT_CHECKBOX, self.onDLTimeCheck)
 
+      self.setDefaultImage()
+
+   def setDefaultImage(self):
       self.canvas.Canvas.ZoomToBB(None, True)
 
       shift = (self.timelineInfo.keys()[-1] * self.canvas.Canvas.xScale)/2, 10
