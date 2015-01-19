@@ -114,6 +114,7 @@ class MainController:
             indexList.append(index)
 
          for counter, index in enumerate(list(set(indexList))):
+            if self.dirPaths: self.dirPaths.pop(index-counter)
             self.mainWindow.LogFileListCtrl.DeleteItem(index-counter)
 
    def onItemRClick(self, event):
@@ -143,6 +144,7 @@ class MainController:
          detailsController.show()
 
    def onCalc(self, event):
+      print self.dirPaths
       if self.mainWindow.LogFileListCtrl.ItemCount == 0: return
       wx.BeginBusyCursor()
       self.onClear()
