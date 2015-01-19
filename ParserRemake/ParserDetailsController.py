@@ -26,8 +26,10 @@ class ParserDetailsController:
       self.mainWindow.lblDLTime.Bind(wx.EVT_CHECKBOX, self.onDLTimeCheck)
 
       self.canvas.Canvas.ZoomToBB(None, True)
-      print (self.timelineInfo.keys()[-1] * self.canvas.Canvas.xScale)/2
-      self.canvas.Canvas.MoveImageY(shift=((self.timelineInfo.keys()[-1] * self.canvas.Canvas.xScale)/2,10), CoordType="Pixel")
+
+      shift = (self.timelineInfo.keys()[-1] * self.canvas.Canvas.xScale)/2, 10
+      if shift[0] > 200: shift = 0,10
+      self.canvas.Canvas.MoveImageY(shift, "Pixel")
       self.canvas.Canvas.Zoom(2.25,)
       self.canvas.Canvas.Draw()
 
@@ -62,7 +64,6 @@ class ParserDetailsController:
       self.canvas.Canvas.ClearAll(False)
       startTime = 0
       endTime = self.timelineInfo.keys()[-1] * self.canvas.Canvas.xScale
-      print endTime
       # bottom = self.canvas.Canvas.WorldToPixel((self.canvas.Canvas.ViewPortBB[1][1],0))[0]
       # bottom = int(bottom)
       bottom = -300
