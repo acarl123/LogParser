@@ -99,8 +99,8 @@ class NavGuiZoomIn( GUIMode.GUIZoomIn ):
       """ Must pass this method to overwrite all onDrag events."""
       pass
 
-   # def OnLeftDown(self, event):
-   #    pass
+   def OnRightDown(self, event):
+      pass
 
    def OnLeftUp(self, event):
       if event.LeftUp() and not self.StartRBBox is None:
@@ -225,7 +225,6 @@ class CustomFloatCanvas(FloatCanvas.FloatCanvas):
    def Zoom(self, factor, center = None, centerCoords="world", keepPointInPlace=False):
       self.xScale = self.xScale*factor
       self.parent.GetParent().GetParent().controller.buildTimeline()
-      shift = (self.parent.GetParent().GetParent().controller.timelineInfo.keys()[-1] * self.xScale)/10, 0
+      shift = self.ViewPortCenter[0]/10, 0
       if factor < 1: shift = shift[0]*-1, 0
       self.MoveImage(shift, "Pixel")
-      print shift
