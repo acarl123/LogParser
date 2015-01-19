@@ -219,6 +219,13 @@ class CustomFloatCanvas(FloatCanvas.FloatCanvas):
       xshift = shift[0], 0
       super(CustomFloatCanvas, self).MoveImage(xshift, CoordType, ReDraw)
 
+   def MoveImageY(self, shift, CoordType, ReDraw=True):
+      super(CustomFloatCanvas, self).MoveImage(shift, CoordType, ReDraw)
+
    def Zoom(self, factor, center = None, centerCoords="world", keepPointInPlace=False):
       self.xScale = self.xScale*factor
       self.parent.GetParent().GetParent().controller.buildTimeline()
+      shift = (self.parent.GetParent().GetParent().controller.timelineInfo.keys()[-1] * self.xScale)/10, 0
+      if factor < 1: shift = shift[0]*-1, 0
+      self.MoveImage(shift, "Pixel")
+      print shift
