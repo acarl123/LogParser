@@ -11,11 +11,13 @@ import Excel
 
 openStartKeyword = "perf: teamcenter -> open begins"
 openEndKeyWordList = ["perf: open from teamcenter complete",
-                      "exiting operationcollectiondialog.cancelaction for teamcenter open"]
+                      "exiting operationcollectiondialog.cancelaction for teamcenter open",
+                      "Exiting Operations.cancelCheckOut".lower()]
 
 saveStartKeyword = "perf: teamcenter -> save as begins"
 saveEndKeyWordList = ["perf: save to teamcenter complete",
-                      "exiting operationcollectiondialog.cancelaction for teamcenter save as"]
+                      "exiting operationcollectiondialog.cancelaction for teamcenter save as",
+                      "Save to Teamcenter may have been unsuccessful".lower()]
 
 manStartKeyword = "perf: manager begins"
 manEndKeyWordList = ["perfsum: manager complete",
@@ -29,6 +31,10 @@ tcEndKeywords = "service response"
 
 downloadStartKeywords = "perf: fcc call starts - downloadfilestolocation"
 downloadEndKeywords = "perf: fcc call ends - downloadfilestolocation"
+
+# SWIM only
+CADStartKeyword = 'open command <?xml version'
+CADEndKeyword = 'number of bytes reported by cadscript:'
 
 
 class MainController:
@@ -189,6 +195,11 @@ class MainController:
       #check to make sure file is actual log file
       if 'INFO' not in data[0]: return {}, {}, logFileName
 
+      firstLine = data[0]
+      if 'Pro/ENGINEER' in firstLine: integrationType = 'IPEM'
+      elif 'SolidWorks' in firstLine: integrationType = 'SWIM'
+
+      # TODO: finish fully integrating SWIM
       for line in data:
          try:
             numberInLine = re.search(r'[0-9]*\.[0-9]*.:', line)
