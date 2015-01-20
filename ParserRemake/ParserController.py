@@ -82,13 +82,13 @@ class MainController:
             return
 
       for logFile in filelist:
-         self.dirPaths.append(os.path.dirname(logFile))
          listLogFiles = []
          for item in xrange(self.mainWindow.LogFileListCtrl.GetItemCount()):
             fileItem = self.mainWindow.LogFileListCtrl.GetItem(itemId=item, col=0)
             listLogFiles.append(fileItem.GetText())
          if str(os.path.basename(logFile)) in listLogFiles: continue
          self.mainWindow.LogFileListCtrl.InsertStringItem(self.mainWindow.LogFileListCtrl.GetItemCount(), str(os.path.basename(logFile)))
+         self.dirPaths.append(os.path.dirname(logFile))
 
    def onRClick(self, event):
       if self.mainWindow.LogFileListCtrl.GetNextSelected(-1) < 0: return
@@ -114,6 +114,7 @@ class MainController:
             indexList.append(index)
 
          for counter, index in enumerate(list(set(indexList))):
+            if index == -1: break
             if self.dirPaths: self.dirPaths.pop(index-counter)
             self.mainWindow.LogFileListCtrl.DeleteItem(index-counter)
 

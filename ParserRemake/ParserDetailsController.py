@@ -40,15 +40,15 @@ class ParserDetailsController:
       self.mainWindow.Show()
 
    def popData(self):
-      self.mainWindow.lblDLTime.SetLabel('%s %s' % (self.mainWindow.lblDLTime.GetLabel(), str(self.details['times']['download'])))
-      self.mainWindow.lblIPEMTime.SetLabel('%s %s' % (self.mainWindow.lblIPEMTime.GetLabel(), str(self.details['times']['integration'])))
-      self.mainWindow.lblTCTime.SetLabel('%s %s' % (self.mainWindow.lblTCTime.GetLabel(), str(self.details['times']['teamcenter'])))
+      self.mainWindow.lblDLTime.SetLabel('%s %ss' % ("Download Time:", self.details['times']['download']))
+      self.mainWindow.lblIPEMTime.SetLabel('%s %ss' % (self.mainWindow.lblIPEMTime.GetLabel(), str(self.details['times']['integration'])))
+      self.mainWindow.lblTCTime.SetLabel('%s %ss' % ("Teamcenter Time:", self.details['times']['teamcenter']))
       self.mainWindow.lblTotal.SetLabel('%s %s' % (self.mainWindow.lblTotal.GetLabel(), str(self.count['total'])))
       self.mainWindow.lblTotalMan.SetLabel('%s %s' % (self.mainWindow.lblTotalMan.GetLabel(), str(self.count['manage'])))
-      self.mainWindow.lblTotalOp.SetLabel('%s %s' % (self.mainWindow.lblTotalOp.GetLabel(), str(self.details['times']['totalOp'])))
-      self.mainWindow.lblTotalOpNoUser.SetLabel('%s %s' % (self.mainWindow.lblTotalOpNoUser.GetLabel(), str(self.details['times']['totalOpNoUser'])))
+      self.mainWindow.lblTotalOp.SetLabel('%s %ss' % (self.mainWindow.lblTotalOp.GetLabel(), str(self.details['times']['totalOp'])))
+      self.mainWindow.lblTotalOpNoUser.SetLabel('%s %ss' % (self.mainWindow.lblTotalOpNoUser.GetLabel(), str(self.details['times']['totalOpNoUser'])))
       self.mainWindow.lblTotalSave.SetLabel('%s %s' % (self.mainWindow.lblTotalSave.GetLabel(), str(self.count['save'])))
-      self.mainWindow.lblUserTime.SetLabel('%s %s' % (self.mainWindow.lblUserTime.GetLabel(), str(self.details['times']['user'])))
+      self.mainWindow.lblUserTime.SetLabel('%s %ss' % ("User Time:", self.details['times']['user']))
       self.mainWindow.lblTotalOpen.SetLabel('%s %s' % (self.mainWindow.lblTotalOpen.GetLabel(), str(self.count['open'])))
 
    def onTCTimeCheck(self, event):
